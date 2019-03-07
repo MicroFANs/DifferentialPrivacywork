@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e6ae69e-0ad6-4fd2-a17e-6556a0f8e25f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/experiment2/DPk-means.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment2/DPkmeans.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment2/DPkmeans_numpy.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/experiment2/kmeans_numpy.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dataset/set.txt" beforeDir="false" afterPath="$PROJECT_DIR$/dataset/set.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/experiment2/Data preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiment2/Data preprocessing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment2/k-means.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiment2/k-means.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,37 +15,57 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="DifferentialPrivacywork" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="adult.data.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dataset/adult.data.csv">
-          <provider selected="true" editor-type-id="csv-text-editor" />
-        </entry>
-      </file>
-      <file leaf-file-name="DPk-means.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/experiment2/DPk-means.py">
+      <file leaf-file-name="DPkmeans_numpy.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/experiment2/DPkmeans_numpy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="79" column="45" selection-start-line="79" selection-start-column="45" selection-end-line="79" selection-end-column="45" />
+            <state relative-caret-position="266">
+              <caret line="88" column="38" lean-forward="true" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
               <folding>
-                <element signature="e#83#95#0" expanded="true" />
+                <element signature="e#88#106#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="exponential.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/experiment1/exponential.py">
+      <file leaf-file-name="fromnumeric.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/numpy/core/fromnumeric.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="17" column="50" selection-start-line="17" selection-start-column="50" selection-end-line="17" selection-end-column="50" />
+            <state relative-caret-position="190">
+              <caret line="1880" selection-start-line="1880" selection-end-line="1880" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="epslion.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/experiment1/epslion.py">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file leaf-file-name="_pydev_execfile.py" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pydevd.py" pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="1067" selection-start-line="1067" selection-end-line="1067" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index_tricks.py" pinned="false" current-in-tab="false">
+        <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/numpy/lib/index_tricks.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="308" selection-start-line="308" selection-end-line="308" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file leaf-file-name="set.txt" pinned="false" current-in-tab="false">
@@ -60,37 +80,31 @@
       <file leaf-file-name="k-means.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/experiment2/k-means.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="860">
+            <state relative-caret-position="1798">
               <caret line="63" column="49" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="testSet.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dataset/testSet.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Laplaciannoise.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/experiment1/Laplaciannoise.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="21" column="1" selection-start-line="21" selection-end-line="21" selection-end-column="67" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DPkmeans.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DPkmeans.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/experiment2/DPkmeans.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="91" column="68" selection-start-line="91" selection-start-column="68" selection-end-line="91" selection-end-column="68" />
+            <state relative-caret-position="-1102">
+              <caret line="61" column="38" lean-forward="true" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
               <folding>
                 <element signature="e#84#103#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="kmeans_numpy.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/experiment2/kmeans_numpy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1421">
+              <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+              <folding>
+                <element signature="e#86#104#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -99,8 +113,8 @@
       <file leaf-file-name="Data preprocessing.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/experiment2/Data preprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="26" column="76" lean-forward="true" selection-start-line="26" selection-start-column="76" selection-end-line="26" selection-end-column="76" />
+            <state relative-caret-position="870">
+              <caret line="32" column="81" selection-start-line="32" selection-start-column="81" selection-end-line="32" selection-end-column="81" />
               <folding>
                 <element signature="e#93#112#0" expanded="true" />
               </folding>
@@ -127,21 +141,25 @@
         <option value="$PROJECT_DIR$/experiment1/Laplaciannoise.py" />
         <option value="$PROJECT_DIR$/experiment2/k-means.py" />
         <option value="$PROJECT_DIR$/experiment2/DPk-means.py" />
-        <option value="$PROJECT_DIR$/experiment2/Data preprocessing.py" />
         <option value="$PROJECT_DIR$/experiment2/DPkmeans.py" />
+        <option value="$PROJECT_DIR$/experiment2/kmeans_numpy.py" />
+        <option value="$PROJECT_DIR$/experiment2/Data preprocessing.py" />
+        <option value="$PROJECT_DIR$/experiment2/DPkmeans_numpy.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-7" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -168,7 +186,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -192,7 +209,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.DPkmeans">
+  <component name="RunManager" selected="Python.DPkmeans_numpy">
     <configuration name="DPk-means" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DifferentialPrivacywork" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -229,6 +246,24 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="DPkmeans_numpy" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="DifferentialPrivacywork" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiment2" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiment2/DPkmeans_numpy.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="Data preprocessing" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DifferentialPrivacywork" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -247,25 +282,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="Laplaciannoise" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="DifferentialPrivacywork" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiment1" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiment1/Laplaciannoise.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="k-means" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="kmeans_numpy" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DifferentialPrivacywork" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -277,26 +294,26 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiment2/k-means.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiment2/kmeans_numpy.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.k-means" />
-      <item itemvalue="Python.Laplaciannoise" />
       <item itemvalue="Python.DPkmeans" />
       <item itemvalue="Python.DPk-means" />
       <item itemvalue="Python.Data preprocessing" />
+      <item itemvalue="Python.kmeans_numpy" />
+      <item itemvalue="Python.DPkmeans_numpy" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.DPkmeans" />
+        <item itemvalue="Python.DPkmeans_numpy" />
         <item itemvalue="Python.Data preprocessing" />
+        <item itemvalue="Python.kmeans_numpy" />
+        <item itemvalue="Python.DPkmeans" />
         <item itemvalue="Python.DPk-means" />
-        <item itemvalue="Python.k-means" />
-        <item itemvalue="Python.Laplaciannoise" />
       </list>
     </recent_temporary>
   </component>
@@ -322,18 +339,18 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31002086" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49893618" weight="0.1265625" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.5829787" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5800215" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Structure" order="1" sideWeight="0.5010638" side_tool="true" weight="0.1265625" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.2744681" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3393617" />
+      <window_info id="Favorites" order="2" side_tool="true" weight="0.32982087" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -342,6 +359,25 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
     </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5829787" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49893618" visible="true" weight="0.1265625" />
+      <window_info id="Structure" order="1" sideWeight="0.5010638" side_tool="true" weight="0.1265625" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3393617" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="2" side_tool="true" weight="0.32982087" />
+    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -352,50 +388,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="10" />
+      <option name="time" value="15" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/experiment1/epslion.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiment2/Data preprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="174">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-          <folding>
-            <element signature="e#93#112#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/testSet.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2320">
-          <caret line="80" selection-start-line="80" selection-end-line="80" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiment1/Laplaciannoise.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="21" column="1" selection-start-line="21" selection-end-line="21" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiment1/meansquareerror.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://D:/下载/plot_kmeans_digits.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2204">
-          <caret line="84" column="7" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
-          <folding>
-            <element signature="e#1032#1053#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/experiment2/DPkmeans.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2117">
@@ -457,9 +453,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2204">
           <caret line="84" column="7" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
-          <folding>
-            <element signature="e#1032#1053#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -583,9 +576,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2204">
           <caret line="84" column="7" selection-start-line="84" selection-start-column="7" selection-end-line="84" selection-end-column="7" />
-          <folding>
-            <element signature="e#1032#1053#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -612,27 +602,20 @@
     <entry file="file://$PROJECT_DIR$/dataset/adult.data.csv">
       <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/experiment2/DPk-means.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="79" column="45" selection-start-line="79" selection-start-column="45" selection-end-line="79" selection-end-column="45" />
-          <folding>
-            <element signature="e#83#95#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiment2/k-means.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="860">
-          <caret line="63" column="49" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dataset/testSet.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="87">
           <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment2/DPk-means.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2146">
+          <caret line="79" column="45" selection-start-line="79" selection-start-column="45" selection-end-line="79" selection-end-column="45" />
+          <folding>
+            <element signature="e#83#95#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -645,20 +628,75 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/experiment2/Data preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="26" column="76" lean-forward="true" selection-start-line="26" selection-start-column="76" selection-end-line="26" selection-end-column="76" />
+        <state relative-caret-position="870">
+          <caret line="32" column="81" selection-start-line="32" selection-start-column="81" selection-end-line="32" selection-end-column="81" />
           <folding>
             <element signature="e#93#112#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/experiment2/kmeans_numpy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1421">
+          <caret line="51" column="9" selection-start-line="51" selection-start-column="9" selection-end-line="51" selection-end-column="9" />
+          <folding>
+            <element signature="e#86#104#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment2/k-means.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1798">
+          <caret line="63" column="49" selection-start-line="63" selection-start-column="49" selection-end-line="63" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/numpy/lib/index_tricks.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="308" selection-start-line="308" selection-end-line="308" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="1067" selection-start-line="1067" selection-end-line="1067" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/numpy/core/fromnumeric.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="1880" selection-start-line="1880" selection-end-line="1880" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/experiment2/DPkmeans.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="91" column="68" selection-start-line="91" selection-start-column="68" selection-end-line="91" selection-end-column="68" />
+        <state relative-caret-position="-1102">
+          <caret line="61" column="38" lean-forward="true" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
           <folding>
             <element signature="e#84#103#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment2/DPkmeans_numpy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="88" column="38" lean-forward="true" selection-start-line="88" selection-start-column="38" selection-end-line="88" selection-end-column="38" />
+          <folding>
+            <element signature="e#88#106#0" expanded="true" />
           </folding>
         </state>
       </provider>

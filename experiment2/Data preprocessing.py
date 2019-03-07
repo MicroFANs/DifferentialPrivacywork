@@ -30,5 +30,5 @@ print(dataMat)
 normaldataset=normalization(dataMat)
 print(normaldataset)
 print(type(normaldataset))
-np.savetxt('D:\Git\DifferentialPrivacywork\dataset/set.txt',normaldataset,fmt="%.18f",delimiter="\n")
+np.savetxt('D:\Git\DifferentialPrivacywork\dataset/set.txt',normaldataset,fmt="%.8f",delimiter="\t")
 
