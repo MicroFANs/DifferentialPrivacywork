@@ -14,7 +14,7 @@ def loadDataSettxt(fileName):      #general function to parse tab -delimited flo
         curLine = line.strip().split('\t')
         fltLine = list(map(float,curLine)) #map all elements to float()
         dataMat.append(fltLine)
-    return dataMat
+    return dataMat #格式是list
 
 def loadcsv(filename):
     return 0
@@ -31,18 +31,22 @@ def randCent(dataSet, k): # 获取随机初始点
         centroids[:,j] = mat(minJ + rangeJ * random.rand(k,1))
     return centroids
 def myrandCent(dataSet,k):
-    m=shape(dataMat)[0]#行数
-    n=shape(dataMat)[1]#维度、列数
-    centriods=[] # 创建list用来装中心点
-    first=[] #创建list用来存k个随机数，用来找随机的k个初试点
-    for i in range(k):
-        first=random.randint(0,m-1)# 随机数在0-m-1之间
-        centriods.append(dataMat[first])
-    return mat(centriods)
+    # m=shape(dataMat)[0]#行数
+    # n=shape(dataMat)[1]#维度、列数
+    # centriods=[] # 创建list用来装中心点
+    # first=[] #创建list用来存k个随机数，用来找随机的k个初试点
+    # for i in range(k):
+    #     first=random.randint(0,m-1)# 随机数在0-m-1之间
+    #     centriods.append(dataMat[first])
+    # return mat(centriods)
+    m = shape(dataSet)[0]  # 行数
+    n = shape(dataSet)[1]  # 维度、列数
+    centroids = dataSet.take(np.random.choice(m, k), axis=0)
+    return centroids
 
 
 
-def kMeans(dataSet, k, distMeas=distEclud, createCent=randCent):
+def kMeans(dataSet, k, distMeas=distEclud, createCent=randCent): # dataSet的格式是矩阵<class 'numpy.matrixlib.defmatrix.matrix'>
     m = shape(dataSet)[0] #行数
     clusterAssment = mat(zeros((m,2)))#create mat to assign data points存放样本属于的类和质心距离SE
                                       #to a centroid, also holds SE of each point
@@ -65,7 +69,7 @@ def kMeans(dataSet, k, distMeas=distEclud, createCent=randCent):
             centroids[cent,:] = mean(pointsInCluster, axis=0) #assign centroid to mean
     return centroids, clusterAssment
 
-dataMat=loadDataSettxt('D:\Git\DifferentialPrivacywork\dataset/testSet.txt')
+dataMat=loadDataSettxt('D:\Git\DifferentialPrivacywork\dataset/testSet.txt') # datamat是list
 # print(dataMat)
 # print('随机点：')
 #
@@ -79,6 +83,9 @@ dataMat=loadDataSettxt('D:\Git\DifferentialPrivacywork\dataset/testSet.txt')
 # print(distEclud(y[0],y[1]))
 #
 # z=kMeans(mat(dataMat),4)
-myCentroids,clustAssing = kMeans(mat(dataMat),4)
+print(type(mat(dataMat)))
+myCentroids,clustAssing = kMeans(mat(dataMat),4) #
+print("聚类结果：")
+print(clustAssing)
 # print (myCentroids)
 # print (clustAssing)
