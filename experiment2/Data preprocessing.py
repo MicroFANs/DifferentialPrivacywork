@@ -7,6 +7,7 @@
 from numpy import *
 from sklearn import preprocessing
 import numpy as np
+import pandas as pd
 
 
 def loadDataSettxt(fileName):      #general function to parse tab -delimited floats
@@ -24,11 +25,24 @@ def normalization(list): #  0-1归一化
     normaldataset=min_max_scaler.fit_transform(dataset)
     return normaldataset
 
-dataMat=loadDataSettxt('D:\Git\DifferentialPrivacywork\dataset/testSet.txt')
-print(type(dataMat))
-print(dataMat)
-normaldataset=normalization(dataMat)
-print(normaldataset)
-print(type(normaldataset))
-np.savetxt('D:\Git\DifferentialPrivacywork\dataset/set.txt',normaldataset,fmt="%.8f",delimiter="\t")
+
+# txt 文件
+# dataMat=loadDataSettxt('D:\Git\DifferentialPrivacywork\dataset/testSet.txt')
+# print(type(dataMat))
+# print(dataMat)
+# normaldataset=normalization(dataMat)
+# print(normaldataset)
+# print(type(normaldataset))
+# np.savetxt('D:\Git\DifferentialPrivacywork\dataset/set.txt',normaldataset,fmt="%.8f",delimiter="\t") # 保留8位小数
+
+
+
+# csv文件
+data=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset/Iris.csv',header=None)
+dataset=[]
+dataset=np.array(data)
+normal=normalization(dataset)
+savefile = pd.DataFrame(normal)
+savefile.to_csv('D:\Git\DifferentialPrivacywork\dataset\Iris_normal.csv',header=False,index=False,float_format = '%.8f')
+print(savefile)
 
