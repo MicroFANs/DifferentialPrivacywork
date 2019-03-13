@@ -48,9 +48,8 @@ def kmeans(data,k,iters=20):
     return km  # temp是ndarray标签,km是原数据+标签
 
 
-# cent=center(dataset,3)
-# print(cent)
-tp=kmeans(dataset,3)
+tp=kmeans(dataset,3,30)
 savefile = pd.DataFrame(tp)
-savefile.to_csv('D:\Git\DifferentialPrivacywork\experiment2/output/Irisresult_normal.csv',header=False,index=False)
+savefile.to_csv('D:\Git\DifferentialPrivacywork\experiment2/output/Irisresult_normal1.csv',header=False,index=False)
 print(tp)
+

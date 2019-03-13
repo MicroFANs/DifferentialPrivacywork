@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e6ae69e-0ad6-4fd2-a17e-6556a0f8e25f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/experiment2/Evaluation.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/experiment2/F-meansure.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/experiment2/DPkmeans_numpy.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiment2/DPkmeans_numpy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/experiment2/Data preprocessing.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiment2/Data preprocessing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment2/F-meansure.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiment2/F-meansure.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/experiment2/kmeans_numpy.py" beforeDir="false" afterPath="$PROJECT_DIR$/experiment2/kmeans_numpy.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/experiment2/output/Irisresult_normal.csv" beforeDir="false" afterPath="$PROJECT_DIR$/experiment2/output/Irisresult_normal.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,8 +22,8 @@
       <file leaf-file-name="DPkmeans_numpy.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/experiment2/DPkmeans_numpy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="108" column="35" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
+            <state relative-caret-position="294">
+              <caret line="150" column="14" selection-start-line="150" selection-start-column="12" selection-end-line="150" selection-end-column="42" />
               <folding>
                 <element signature="e#88#106#0" expanded="true" />
               </folding>
@@ -33,11 +31,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Irisresult.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/experiment2/output/Irisresult.csv">
+          <provider selected="true" editor-type-id="csv-text-editor" />
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="F-meansure.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/experiment2/F-meansure.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="693">
-              <caret line="52" column="18" lean-forward="true" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+              <caret line="54" column="18" lean-forward="true" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
               <folding>
                 <element signature="e#85#103#0" expanded="true" />
               </folding>
@@ -45,19 +51,28 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="DPk-means.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/experiment2/DPk-means.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1268">
+              <caret line="79" column="45" selection-start-line="79" selection-start-column="45" selection-end-line="79" selection-end-column="45" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Iris_normal_lable.csv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataset/Iris_normal_lable.csv">
+          <provider selected="true" editor-type-id="csv-text-editor" />
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
           </provider>
-          <provider selected="true" editor-type-id="csv-text-editor" />
         </entry>
       </file>
       <file leaf-file-name="Data preprocessing.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/experiment2/Data preprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="46" column="15" lean-forward="true" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
+            <state relative-caret-position="1247">
+              <caret line="46" column="15" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
               <folding>
                 <element signature="e#93#112#0" expanded="true" />
               </folding>
@@ -67,61 +82,34 @@
       </file>
       <file leaf-file-name="2019-03-12-22_16_00DPIirs_out.csv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/experiment2/output/2019-03-12-22_16_00DPIirs_out.csv">
+          <provider selected="true" editor-type-id="csv-text-editor" />
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-          </provider>
-          <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="-4017" />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Iris.csv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dataset/Iris.csv">
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-          </provider>
           <provider selected="true" editor-type-id="csv-text-editor">
-            <state relative-caret-position="-2697">
-              <caret line="27" column="15" lean-forward="true" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+            <state relative-caret-position="783">
+              <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Laplaciannoise.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/experiment1/Laplaciannoise.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="812">
-              <caret line="39" column="24" lean-forward="true" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="kmeansresult.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/experiment2/output/kmeansresult.csv">
           <provider editor-type-id="csv-table-editor">
             <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
           </provider>
-          <provider selected="true" editor-type-id="csv-text-editor" />
         </entry>
       </file>
       <file leaf-file-name="kmeans_numpy.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/experiment2/kmeans_numpy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="11" column="68" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
+            <state relative-caret-position="271">
+              <caret line="50" column="23" lean-forward="true" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
               <folding>
                 <element signature="e#86#104#0" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Irisresult_normal.csv" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/experiment2/output/Irisresult_normal.csv">
-          <provider editor-type-id="csv-table-editor">
-            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-          </provider>
-          <provider selected="true" editor-type-id="csv-text-editor" />
         </entry>
       </file>
     </leaf>
@@ -351,7 +339,7 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.37186477" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.45038167" />
       <window_info id="Structure" order="1" sideWeight="0.5010638" side_tool="true" weight="0.1265625" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32982087" />
@@ -378,9 +366,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/experiment1/Laplaciannoise.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/experiment1/adult.data.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -481,32 +466,32 @@
     <entry file="file://$PROJECT_DIR$/experiment2/2019-03-08-11_01_22DPkmeans_out.csv" />
     <entry file="file://$PROJECT_DIR$/experiment2/output/2019-03-11-16_24_56DPkmeans_out.csv" />
     <entry file="file://$PROJECT_DIR$/dataset/testSet.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/experiment2/output/2019-03-08-11_01_22DPkmeans_out.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/experiment2/output/2019-03-08-11_00_09DPkmeans_out.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="290">
           <caret line="10" column="25" lean-forward="true" selection-start-line="10" selection-start-column="25" selection-end-line="10" selection-end-column="25" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiment2/output/2019-03-11-16_25_38DPkmeans_out.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment2/output/2019-03-11-16_25_38DPkmeans_out.csv">
       <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/experiment2/Evaluation.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -516,10 +501,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dataset/Iris_label.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/dataset/set.txt">
       <provider selected="true" editor-type-id="text-editor">
@@ -529,30 +514,24 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dataset/set.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="174">
           <caret line="6" column="21" lean-forward="true" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/Iris_normal.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/Iris_normal.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="464">
           <caret line="49" column="43" selection-start-line="49" selection-start-column="43" selection-end-line="49" selection-end-column="43" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiment2/output/Irisresult.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/experiment2/k-means.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -565,104 +544,97 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="61" column="38" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment2/output/2019-03-12-20_40_01DPIirs_out.csv" />
+    <entry file="file://$PROJECT_DIR$/experiment1/Laplaciannoise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1073">
+          <caret line="39" column="24" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment2/output/kmeansresult.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment2/output/Irisresult_normal.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/Iris.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="783">
+          <caret line="27" column="15" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment2/output/2019-03-12-22_13_04DPIirs_out.csv" />
+    <entry file="file://$PROJECT_DIR$/experiment2/output/2019-03-12-22_16_00DPIirs_out.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/Iris_normal_lable.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment2/Data preprocessing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1247">
+          <caret line="46" column="15" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
           <folding>
-            <element signature="e#84#103#0" expanded="true" />
+            <element signature="e#93#112#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/experiment2/DPk-means.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2146">
+        <state relative-caret-position="1268">
           <caret line="79" column="45" selection-start-line="79" selection-start-column="45" selection-end-line="79" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/experiment2/output/2019-03-12-20_40_01DPIirs_out.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="-4048" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiment1/Laplaciannoise.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="812">
-          <caret line="39" column="24" lean-forward="true" selection-start-line="39" selection-start-column="24" selection-end-line="39" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiment2/output/kmeansresult.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/experiment2/output/Irisresult.csv">
       <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiment2/output/Irisresult_normal.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment2/output/Irisresult_normal1.csv">
       <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/Iris.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="-2697">
-          <caret line="27" column="15" lean-forward="true" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/experiment2/kmeans_numpy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="11" column="68" selection-start-line="11" selection-start-column="68" selection-end-line="11" selection-end-column="68" />
+        <state relative-caret-position="271">
+          <caret line="50" column="23" lean-forward="true" selection-start-line="50" selection-start-column="23" selection-end-line="50" selection-end-column="23" />
           <folding>
             <element signature="e#86#104#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/experiment2/output/2019-03-12-22_13_04DPIirs_out.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="-1305" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiment2/output/2019-03-12-22_16_00DPIirs_out.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="-4017" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/experiment2/DPkmeans_numpy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="108" column="35" selection-start-line="108" selection-start-column="35" selection-end-line="108" selection-end-column="35" />
+        <state relative-caret-position="294">
+          <caret line="150" column="14" selection-start-line="150" selection-start-column="12" selection-end-line="150" selection-end-column="42" />
           <folding>
             <element signature="e#88#106#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/Iris_normal_lable.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiment2/Data preprocessing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="46" column="15" lean-forward="true" selection-start-line="46" selection-start-column="15" selection-end-line="46" selection-end-column="15" />
-          <folding>
-            <element signature="e#93#112#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -670,7 +642,7 @@
     <entry file="file://$PROJECT_DIR$/experiment2/F-meansure.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="693">
-          <caret line="52" column="18" lean-forward="true" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="18" />
+          <caret line="54" column="18" lean-forward="true" selection-start-line="54" selection-start-column="18" selection-end-line="54" selection-end-column="18" />
           <folding>
             <element signature="e#85#103#0" expanded="true" />
           </folding>

@@ -48,6 +48,7 @@ def laplacenoise_array(sensitivity,epslion,len,num):  #  产生laplace噪声数�
 # kmeans iters为迭代次数，默认为20次迭代
 def DPkmeans(data,k,iters=4,epslion=6):
     sensitivity=dataset.shape[1]+1 # 数据维数为d，敏感度为d+1
+    #sensitivity=1
 
     epslion=epslion/iters # 平均分隐私预算
 
@@ -61,7 +62,7 @@ def DPkmeans(data,k,iters=4,epslion=6):
     for n in range(iters):
         for i in range(data.shape[0]):
             dis=[distance(data[i,:],center_array_noise[j,:]) for j in range(k)]
-            index=np.argmin(dis)# 取使dis最小时的i
+            index=np.argmin(dis)  #  取使dis最小时的i
             temp[i]=index
         for j in range(k):
             temp_res=data[temp==j]
@@ -75,28 +76,44 @@ def DPkmeans(data,k,iters=4,epslion=6):
             noise1=laplacenoise(sensitivity,epslion,1)
             sum1_noise=sum1+noise1[0].astype('float64')
             print(sum1,'+',noise1,'=',sum1_noise)
-            if sum1==0:print('sum1:warning\n')
+            #if sum1==0:print('sum1:warning\n')
+            if sum1_noise<0:
+                sum1_noise==0
+            elif sum1_noise>1:
+                sum1_noise==1
             x1=sum1_noise/num
 
             sum2=np.sum(temp_res[:,1])
             noise2 = laplacenoise(sensitivity, epslion, 1)
             sum2_noise = sum2 + noise2[0].astype('float64')
             print(sum2, '+', noise2, '=', sum2_noise)
-            if sum2==0:print('sum2:warning\n')
+            #if sum2==0:print('sum2:warning\n')
+            if sum2_noise < 0:
+                sum2_noise == 0
+            elif sum2_noise > 1:
+                sum2_noise == 1
             x2=sum2_noise/num
 
             sum3 = np.sum(temp_res[:, 2])
             noise3 = laplacenoise(sensitivity, epslion, 1)
-            sum3_noise = sum2 + noise3[0].astype('float64')
+            sum3_noise = sum3 + noise3[0].astype('float64')
             print(sum3, '+', noise3, '=', sum3_noise)
-            if sum3 == 0: print('sum3:warning\n')
+            #if sum3 == 0: print('sum3:warning\n')
+            if sum3_noise < 0:
+                sum3_noise == 0
+            elif sum3_noise > 1:
+                sum3_noise == 1
             x3 = sum3_noise / num
 
             sum4 = np.sum(temp_res[:, 3])
             noise4 = laplacenoise(sensitivity, epslion, 1)
-            sum4_noise = sum2 + noise4[0].astype('float64')
+            sum4_noise = sum4 + noise4[0].astype('float64')
             print(sum4, '+', noise4, '=', sum4_noise,'\n')
-            if sum4 == 0: print('sum4:warning\n')
+            #if sum4 == 0: print('sum4:warning\n')
+            if sum4_noise < 0:
+                sum4_noise == 0
+            elif sum4_noise > 1:
+                sum4_noise == 1
             x4 = sum4_noise / num
 
             center_array_noise[j,:]=[x1,x2,x3,x4]
@@ -131,7 +148,7 @@ def name_time():
 # x=laplacenoise_array(1,0.5,2,4)
 # print(cent+x)
 
-tp=DPkmeans(dataset,3,iters=20,epslion=500)
+tp=DPkmeans(dataset,3,iters=20,epslion=100)
 filename=name_time()
 savefile = pd.DataFrame(tp)
 print(tp)
