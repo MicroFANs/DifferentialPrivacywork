@@ -38,11 +38,12 @@ def normalization(list): #  0-1归一化
 
 
 # csv文件
-data=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset/Iris.csv',header=None)
+data=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset\Blood Transfusion Service Center Data Set.csv',header=None)
 dataset=[]
 dataset=np.array(data)
 normal=normalization(dataset)
-savefile = pd.DataFrame(normal)
-savefile.to_csv('D:\Git\DifferentialPrivacywork\dataset\Iris_normal.csv',header=False,index=False,float_format = '%.8f')
+unique=np.unique(normal,axis=0) # 去除重复的行
+savefile = pd.DataFrame(unique)
+savefile.to_csv('D:\Git\DifferentialPrivacywork\dataset\Blood Transfusion Service Center Data Set_normal.csv',header=False,index=False,float_format = '%.8f')
 print(savefile)
 

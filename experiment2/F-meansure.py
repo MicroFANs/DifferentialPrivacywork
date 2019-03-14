@@ -14,11 +14,11 @@ from matplotlib import pyplot as plt
 
 
 # 数据
-origindata=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset\Iris_normal_lable.csv',header=None)
-kmeansdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output\Irisresult_normal.csv',header=None)
-DPdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output/2019-03-13-16_51_46DPIirs_out.csv',header=None)
+#origindata=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset\Iris_normal_lable.csv',header=None)
+kmeansdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output\BloodDataSetresult_normal.csv',header=None)
+DPdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output/2019-03-14-16_15_23DPBlood_out.csv',header=None)
 
-origin=np.array(origindata[4])
+#origin=np.array(origindata[4])
 kmeans=np.array(kmeansdata[4])
 DP=np.array(DPdata[4])
 
@@ -51,5 +51,4 @@ def measure(y_true,y_pred):
     return 0
 
 # measure(origin,kmeans)
-# measure(kmeans,DP)
-measure(origin,DP)
+measure(kmeans,DP)

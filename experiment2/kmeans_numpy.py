@@ -9,7 +9,7 @@ import random
 import pandas as pd
 
 # 数据
-data=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset/Iris_normal.csv',header=None)
+data=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset\Blood Transfusion Service Center Data Set_normal.csv',header=None)
 # print(data.shape)
 # print(data[1])
 dataset=[]
@@ -48,8 +48,8 @@ def kmeans(data,k,iters=20):
     return km  # temp是ndarray标签,km是原数据+标签
 
 
-tp=kmeans(dataset,3,30)
+tp=kmeans(dataset,2,300)
 savefile = pd.DataFrame(tp)
-savefile.to_csv('D:\Git\DifferentialPrivacywork\experiment2/output/Irisresult_normal1.csv',header=False,index=False)
+savefile.to_csv('D:\Git\DifferentialPrivacywork\experiment2\output\BloodDataSetresult_normal.csv',header=False,index=False)
 print(tp)
 
