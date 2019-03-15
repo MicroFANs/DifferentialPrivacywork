@@ -1,8 +1,8 @@
 # -*- coding:utf-8 -*-
 """
 @author:FZX
-@file:DPkmeans_numpy.py
-@time:2019/3/7 16:30
+@file:myDPkmeans.py
+@time:2019/3/15 20:30
 """
 import numpy as np
 import random
@@ -45,22 +45,42 @@ def laplacenoise_array(sensitivity,epslion,len,num):  #  产生laplace噪声数�
         Laplacian_noise=np.array(list)
     return Laplacian_noise
 
-# kmeans iters为迭代次数，默认为20次迭代
-def DPkmeans(data,k,iters=4,epslion=6):
-    sensitivity=dataset.shape[1]+1 # 数据维数为d，敏感度为d+1
-    #sensitivity=1
+# 计算每次迭代的最小预算
+def mineps(k,N,d):
+    minepslion=np.sqrt(((500*k**3)/N**2)*np.power((d+(4*d*0.225**2)**(1/3)),3))
+    result=round(minepslion,3)
+    return result
 
-    epslion=epslion/iters # 平均分隐私预算
-    print(epslion)
+# 计算迭代次数
+def rounds(mineps,epslion):
+    N=min(epslion/mineps,7)
+    return np.int(N)
+
+# 计算每一次迭代的隐私预算
+def eacheps(iters,epslion,mineps):
+    d=(2/(iters-1))*((epslion/iters)-mineps)
+    eps=np.zeros(iters)
+    for n in range(iters):
+        e=mineps+n*d
+        eps[n]=e
+    return eps[::-1]
+
+# kmeans iters为迭代次数
+def DPkmeans(data,k,epslion=6):
+    sensitivity = dataset.shape[1] + 1  # 数据维数为d，敏感度为d+1
+    minepslion=mineps(k,data.shape[0],data.shape[1]) # 求最小预算
+    iters=rounds(minepslion,epslion) # 求迭代轮数
+    eachepslion=eacheps(iters,epslion,minepslion) # 分配每次迭代的隐私预算 等差数列发分配隐私预算
 
     temp=np.zeros(data.shape[0])
     center_array=center(data,k)
     # center_noise=laplacenoise_array(1,0.5,2,k)
     # center_array_noise=center_array+center_noise  # 终于找到问题在哪了，如果把数据0-1归一化，一旦添加噪声后的初始点出了这个0-1的范围，你们它将永远不会有点与它最近，即没有点会分到它的簇中去
     center_array_noise=center_array #　初始点不能加噪
-
     print('初始点:',center_array_noise,'\n')
+
     for n in range(iters):
+        epsofrounds=eachepslion[n]
         for i in range(data.shape[0]):
             dis=[distance(data[i,:],center_array_noise[j,:]) for j in range(k)]
             index=np.argmin(dis)  #  取使dis最小时的i
@@ -68,7 +88,7 @@ def DPkmeans(data,k,iters=4,epslion=6):
         for j in range(k):
             temp_res=data[temp==j]
             num = temp_res.shape[0]
-            noise0=laplacenoise(sensitivity,epslion,1)
+            noise0=laplacenoise(sensitivity,epsofrounds,1)
             num_noise=num+noise0[0]
             #print('num_noise:',num, '+', noise0, '=', num_noise)
             # print('temp',temp_res)
@@ -77,7 +97,7 @@ def DPkmeans(data,k,iters=4,epslion=6):
             # x2=np.mean(temp_res[:,1])
 
             sum1=np.sum(temp_res[:,0]) # sum的格式为float64
-            noise1=laplacenoise(sensitivity,epslion,1)
+            noise1=laplacenoise(sensitivity,epsofrounds,1)
             sum1_noise=sum1+noise1[0].astype('float64')
            # print(sum1,'+',noise1,'=',sum1_noise)
             #if sum1==0:print('sum1:warning\n')
@@ -88,7 +108,7 @@ def DPkmeans(data,k,iters=4,epslion=6):
             #     x1 = 1
 
             sum2=np.sum(temp_res[:,1])
-            noise2 = laplacenoise(sensitivity, epslion, 1)
+            noise2 = laplacenoise(sensitivity,epsofrounds, 1)
             sum2_noise = sum2 + noise2[0].astype('float64')
             #print(sum2, '+', noise2, '=', sum2_noise)
             #if sum2==0:print('sum2:warning\n')
@@ -99,7 +119,7 @@ def DPkmeans(data,k,iters=4,epslion=6):
             #     x2 = 1
 
             sum3 = np.sum(temp_res[:, 2])
-            noise3 = laplacenoise(sensitivity, epslion, 1)
+            noise3 = laplacenoise(sensitivity,epsofrounds, 1)
             sum3_noise = sum3 + noise3[0].astype('float64')
             #print(sum3, '+', noise3, '=', sum3_noise)
             #if sum3 == 0: print('sum3:warning\n')
@@ -110,7 +130,7 @@ def DPkmeans(data,k,iters=4,epslion=6):
             #     x3 = 1
 
             sum4 = np.sum(temp_res[:, 3])
-            noise4 = laplacenoise(sensitivity, epslion, 1)
+            noise4 = laplacenoise(sensitivity,epsofrounds, 1)
             sum4_noise = sum4 + noise4[0].astype('float64')
             #print(sum4, '+', noise4, '=', sum4_noise)
             #if sum4 == 0: print('sum4:warning\n')
@@ -122,10 +142,7 @@ def DPkmeans(data,k,iters=4,epslion=6):
 
             center_array_noise[j,:]=[x1,x2,x3,x4]
             print('第'+str(n)+'次迭代第'+str(j)+'簇的中心：',center_array_noise[j])
-        #print('epslion=',epslion)
-
-        #epslion=epslion/2 # 二分法分配隐私预算
-        print('epslion:',epslion)
+        print('epslion:',epsofrounds)
         print('============================================================================')
     km=np.c_[data,temp] # 将原数据和标签结合
     return km  # temp是ndarray标签,km是原数据+标签
@@ -133,29 +150,24 @@ def DPkmeans(data,k,iters=4,epslion=6):
 # 获取当前日期作为文件名
 def name_time():
     now=time.strftime("%Y-%m-%d-%H_%M_%S",time.localtime(time.time()))
-    filename='D:\Git\DifferentialPrivacywork\experiment2/output/'+now+'DPBlood_out.csv'
+    filename='D:\Git\DifferentialPrivacywork\experiment2/output/'+now+'myDPBlood_out.csv'
     return filename
 
 '''
 =======================================================================================
 '''
 
-# cent=center(dataset,4)
-# print(cent)
-# x=laplacenoise_array(1,0.5,2,4)
-# print(cent+x)
 
-tp=DPkmeans(dataset,2,iters=7,epslion=10)
+
+tp=DPkmeans(dataset,k=2,epslion=10)
 filename=name_time()
 savefile = pd.DataFrame(tp)
 print(tp)
-#savefile.to_csv(filename,header=False,index=False)
+savefile.to_csv(filename,header=False,index=False)
 
 
-# # 测试噪声函数
-# # x=laplacenoise_array(1,0.5,2,80)
-# # print(x)
-# # print(type(x))
-# # z=dataset+x
-# # print(z)
-# # print(kmeans(z,4))
+
+
+
+
+

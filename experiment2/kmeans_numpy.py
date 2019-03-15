@@ -33,10 +33,13 @@ def kmeans(data,k,iters=20):
     temp=np.zeros(data.shape[0])
     center_array=center(data,k)
     for n in range(iters):
+        print('第', n, '次迭代')
+
         for i in range(data.shape[0]):
             dis=[distance(data[i,:],center_array[j,:]) for j in range(k)]
             index=np.argmin(dis)
             temp[i]=index
+
         for j in range(k):
             temp_res=data[temp==j]
             x1=np.mean(temp_res[:,0])
@@ -44,12 +47,15 @@ def kmeans(data,k,iters=20):
             x3=np.mean(temp_res[:,2])
             x4=np.mean(temp_res[:,3])
             center_array[j,:]=[x1,x2,x3,x4]
+            print('第'+str(n)+'次迭代的第'+str(j)+'簇质心:',center_array[j])
+
     km=np.c_[data,temp]
     return km  # temp是ndarray标签,km是原数据+标签
 
 
-tp=kmeans(dataset,2,300)
+tp=kmeans(dataset,2,40)
 savefile = pd.DataFrame(tp)
-savefile.to_csv('D:\Git\DifferentialPrivacywork\experiment2\output\BloodDataSetresult_normal.csv',header=False,index=False)
+#savefile.to_csv('D:\Git\DifferentialPrivacywork\experiment2\output\BloodDataSetresult_normal.csv',header=False,index=False)
 print(tp)
+
 
