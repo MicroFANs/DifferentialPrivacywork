@@ -8,6 +8,7 @@ from numpy import *
 from sklearn import preprocessing
 import numpy as np
 import pandas as pd
+import sys
 
 
 def loadDataSettxt(fileName):      #general function to parse tab -delimited floats
@@ -38,12 +39,13 @@ def normalization(list): #  0-1归一化
 
 
 # csv文件
-data=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset\Blood Transfusion Service Center Data Set.csv',header=None)
+data=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset\housec8.csv',header=None)
 dataset=[]
-dataset=np.array(data)
+dataset=np.array(data,dtype=float64)
 normal=normalization(dataset)
-unique=np.unique(normal,axis=0) # 去除重复的行
-savefile = pd.DataFrame(unique)
-savefile.to_csv('D:\Git\DifferentialPrivacywork\dataset\Blood Transfusion Service Center Data Set_normal.csv',header=False,index=False,float_format = '%.8f')
-print(savefile)
+savefile = pd.DataFrame(normal)
+print(normal)
+savefile.to_csv('D:\Git\DifferentialPrivacywork\dataset\h8_normal.csv',header=False,index=False,float_format = '%.8f')
+
+
 

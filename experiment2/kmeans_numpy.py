@@ -7,14 +7,13 @@
 import numpy as np
 import random
 import pandas as pd
+import sys
 
 # 数据
-data=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset\Blood Transfusion Service Center Data Set_normal.csv',header=None)
-# print(data.shape)
-# print(data[1])
+data=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset\h8_normal.csv',header=None)
 dataset=[]
 dataset=np.array(data)
-#print(dataset)
+
 
 
 # 欧氏距离
@@ -24,20 +23,35 @@ def distance(x1,x2):
 
 # 初始化质心
 def center(data,k):
-    center_point=random.sample(range(data.shape[0]),k)
-    center_array=data[center_point]
+    # 随机初始化
+    # center_point=random.sample(range(data.shape[0]),k)
+    # center_array=data[center_point]
+
+    # 分成k块初始化
+    block=int(data.shape[0]/k)
+    x = 0
+    list=np.zeros((k,data.shape[1]))
+    for i in range(k):
+        list[i:]=data[x]
+        x=x+block
+    center_array=list
     return center_array
 
 # kmeans iters为迭代次数，默认为20次迭代
 def kmeans(data,k,iters=20):
-    temp=np.zeros(data.shape[0])
     center_array=center(data,k)
-    for n in range(iters):
-        print('第', n, '次迭代')
-
+    clusterchanged=True
+    N=0 # 记录迭代次数
+    temp = np.zeros(dataset.shape[0])
+    # 收敛条件
+    minsse= 10000
+    while (clusterchanged and N<iters+1):
+        clusterchanged=False
+        print(N)
         for i in range(data.shape[0]):
             dis=[distance(data[i,:],center_array[j,:]) for j in range(k)]
             index=np.argmin(dis)
+            #if temp[i]!=index:clusterchanged=True
             temp[i]=index
 
         for j in range(k):
@@ -45,17 +59,44 @@ def kmeans(data,k,iters=20):
             x1=np.mean(temp_res[:,0])
             x2=np.mean(temp_res[:,1])
             x3=np.mean(temp_res[:,2])
-            x4=np.mean(temp_res[:,3])
-            center_array[j,:]=[x1,x2,x3,x4]
-            print('第'+str(n)+'次迭代的第'+str(j)+'簇质心:',center_array[j])
+            # x4=np.mean(temp_res[:,3])
+            # center_array[j,:]=[x1,x2,x3,x4]
+            center_array[j, :] = [x1, x2,x3]
+            print('第'+str(N)+'次迭代的第'+str(j)+'簇质心:',center_array[j])
+
+        # 计算簇内误差平方和 用来判断收敛
+        # for j in range(k):
+        #     temp_res = data[temp == j]
+        #     cen=center_array[j,:]
+        #     se=distance(temp_res,cen)
+        # sse=np.sum(se)
+        sse = 0
+        for j in range(k):
+            temp_res = data[temp == j]
+            cen = center_array[j]
+            se = distance(temp_res, cen)
+            se2 = np.square(se)
+            sse = sse + se2
+        print('SSE:', sse)
+        if (minsse-sse)>0.1:
+            clusterchanged=True
+            minsse=sse
+        N=N+1
 
     km=np.c_[data,temp]
     return km  # temp是ndarray标签,km是原数据+标签
 
 
-tp=kmeans(dataset,2,40)
+tp=kmeans(dataset,k=3,iters=40)
 savefile = pd.DataFrame(tp)
-#savefile.to_csv('D:\Git\DifferentialPrivacywork\experiment2\output\BloodDataSetresult_normal.csv',header=False,index=False)
 print(tp)
+print('y：保存，n：退出')
+putin=input()
+if putin=='y':
+    savefile.to_csv('D:\Git\DifferentialPrivacywork\experiment2\output\h8\h8result_normal.csv',header=False,index=False)
+elif putin=='n':
+    sys.exit()
+
+
 
 

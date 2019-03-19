@@ -15,14 +15,15 @@ from matplotlib import pyplot as plt
 
 # 数据
 #origindata=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset\Iris_normal_lable.csv',header=None)
-kmeansdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output\BloodDataSetresult_normal.csv',header=None)
-DPdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output/2019-03-14-16_15_23DPBlood_out.csv',header=None)
-myDPdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output/2019-03-15-22_14_47myDPBlood_out.csv',header=None)
-
-#origin=np.array(origindata[4])
-kmeans=np.array(kmeansdata[4])
-DP=np.array(DPdata[4])
-myDP=np.array(myDPdata[4])
+kmeansdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output\h8\h8result_normal.csv',header=None)
+avgDPdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output\h8\h8avgDP2_7iters.csv',header=None)
+div2DPdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output\h8\h8div2DP2_6iters.csv',header=None)
+myDPdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output\h8\h8myDP2_8iters.csv',header=None)
+index=kmeansdata.shape[1]
+kmeans=np.array(kmeansdata[index-1])
+avgDP=np.array(avgDPdata[index-1])
+div2DP=np.array(div2DPdata[index-1])
+myDP=np.array(myDPdata[index-1])
 
 def measure(y_true,y_pred):
     # 混淆矩阵
@@ -41,16 +42,10 @@ def measure(y_true,y_pred):
     plt.ylabel('true label')
     plt.title('confusion matrix')
     plt.show()
-
-    # recall precision f-measure
-    # print ('precision:%.3f' %precision_score(y_true=kmeans, y_pred=DP1))
-    # print ('recall:%.3f' %recall_score(y_true=kmeans, y_pred=DP1))
-    # print ('F1:%.3f' %f1_score(y_true=kmeans, y_pred=DP1))
-    # print(precision_recall_fscore_support(y_true=kmeans, y_pred=DP1, average='macro'))
-
     measurelist=classification_report(y_true=y_true, y_pred=y_pred)
     print(measurelist)
     return 0
 
-# measure(origin,kmeans)
+measure(kmeans,avgDP)
+measure(kmeans,div2DP)
 measure(kmeans,myDP)
