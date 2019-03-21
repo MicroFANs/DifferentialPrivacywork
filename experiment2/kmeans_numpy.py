@@ -10,7 +10,7 @@ import pandas as pd
 import sys
 
 # 数据
-data=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset\h8_normal.csv',header=None)
+data=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset\ls_normal.csv',header=None)
 dataset=[]
 dataset=np.array(data)
 
@@ -59,9 +59,15 @@ def kmeans(data,k,iters=20):
             x1=np.mean(temp_res[:,0])
             x2=np.mean(temp_res[:,1])
             x3=np.mean(temp_res[:,2])
-            # x4=np.mean(temp_res[:,3])
+            x4=np.mean(temp_res[:,3])
+            x5 = np.mean(temp_res[:, 4])
+            x6 = np.mean(temp_res[:, 5])
+            x7 = np.mean(temp_res[:, 6])
+            x8 = np.mean(temp_res[:, 7])
+            x9 = np.mean(temp_res[:, 8])
+            x10 = np.mean(temp_res[:, 9])
             # center_array[j,:]=[x1,x2,x3,x4]
-            center_array[j, :] = [x1, x2,x3]
+            center_array[j, :] = [x1, x2,x3,x4,x5,x6,x7,x8,x9,x10]
             print('第'+str(N)+'次迭代的第'+str(j)+'簇质心:',center_array[j])
 
         # 计算簇内误差平方和 用来判断收敛
@@ -93,7 +99,7 @@ print(tp)
 print('y：保存，n：退出')
 putin=input()
 if putin=='y':
-    savefile.to_csv('D:\Git\DifferentialPrivacywork\experiment2\output\h8\h8result_normal.csv',header=False,index=False)
+    savefile.to_csv('D:\Git\DifferentialPrivacywork\experiment2\output\ls\lsresult_normal.csv',header=False,index=False)
 elif putin=='n':
     sys.exit()
 

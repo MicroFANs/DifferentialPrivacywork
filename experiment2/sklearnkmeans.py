@@ -10,7 +10,7 @@ import random
 import pandas as pd
 
 # 数据
-data=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset\h8_normal.csv',header=None)
+data=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset/ls_normal.csv',header=None)
 dataset=[]
 dataset=np.array(data)
 

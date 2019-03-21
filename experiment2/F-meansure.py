@@ -16,9 +16,9 @@ from matplotlib import pyplot as plt
 # 数据
 #origindata=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset\Iris_normal_lable.csv',header=None)
 kmeansdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output\h8\h8result_normal.csv',header=None)
-avgDPdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output\h8\h8avgDP2_7iters.csv',header=None)
+avgDPdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output\h8\h8avgDP0.05_2iters.csv',header=None)
 div2DPdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output\h8\h8div2DP2_6iters.csv',header=None)
-myDPdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output\h8\h8myDP2_8iters.csv',header=None)
+myDPdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output\h8\h8myDP0.2_5iters.csv',header=None)
 index=kmeansdata.shape[1]
 kmeans=np.array(kmeansdata[index-1])
 avgDP=np.array(avgDPdata[index-1])
@@ -44,8 +44,24 @@ def measure(y_true,y_pred):
     plt.show()
     measurelist=classification_report(y_true=y_true, y_pred=y_pred)
     print(measurelist)
-    return 0
 
-measure(kmeans,avgDP)
-measure(kmeans,div2DP)
-measure(kmeans,myDP)
+#measure(kmeans,avgDP)
+#measure(kmeans,div2DP)
+#measure(kmeans,myDP)
+
+
+def to_table(report):
+    report = report.splitlines()
+    res = []
+    res.append(['']+report[0].split())
+    for row in report[2:-2]:
+       res.append(row.split())
+    lr = report[-1].split()
+    res.append([' '.join(lr[:3])]+lr[3:])
+    return np.array(res)
+
+report = classification_report(kmeans, avgDP)
+#classifaction_report_csv(report)
+print(report)
+x=to_table(report)
+print(x[-1,3])

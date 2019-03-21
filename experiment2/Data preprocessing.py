@@ -39,13 +39,13 @@ def normalization(list): #  0-1归一化
 
 
 # csv文件
-data=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset\housec8.csv',header=None)
+data=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset/Lifesci.csv',header=None)
 dataset=[]
 dataset=np.array(data,dtype=float64)
 normal=normalization(dataset)
 savefile = pd.DataFrame(normal)
 print(normal)
-savefile.to_csv('D:\Git\DifferentialPrivacywork\dataset\h8_normal.csv',header=False,index=False,float_format = '%.8f')
+savefile.to_csv('D:\Git\DifferentialPrivacywork\dataset/ls_normal.csv',header=False,index=False,float_format = '%.8f')
 
 
 

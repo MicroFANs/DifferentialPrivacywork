@@ -12,7 +12,7 @@ import sys
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
 # 数据
-data=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset\h8_normal.csv',header=None)
+data=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset/ls_normal.csv',header=None)
 dataset=[]
 dataset=np.array(data)
 
@@ -64,25 +64,31 @@ def mineps(k,N,d):
 
 # 计算迭代次数
 def rounds(mineps,epslion):
-    # N=(epslion/mineps,10)
+    # N=min(epslion/mineps,10)
     # iters=np.int(N)
-    # if iters<=2:
-    #     iters=3
+    # if iters<=10:
+    #     iters=8
+
     # N=np.int(epslion/mineps)
     # if N>=7:
     #     iters=7
     # else:iters=N
-    iters=10
+    iters=13
     return iters
 
 # 计算每一次迭代的隐私预算
 def eacheps(iters,epslion,mineps):
     #d=(2/(iters-1))*((epslion/iters)-mineps)
     d=(2*epslion-2*mineps*iters)/(iters*(iters-1))
-    eps=np.zeros(iters)
-    for n in range(iters):
-        e=mineps+n*d
-        eps[n]=e
+    eps = np.zeros(iters)
+    if d<0:
+        for n in range(iters):
+            e=epslion/iters
+            eps[n]=e
+    else:
+        for n in range(iters):
+            e=mineps+n*d
+            eps[n]=e
     each=eps[::-1]
     # if d<0:
     #     each=eps[::-1]
@@ -125,42 +131,55 @@ def DPkmeans(data,k,epslion=6):
             noise1=laplacenoise(sensitivity,epsofrounds,1)
             sum1_noise=sum1+noise1[0].astype('float64')
             x1=sum1_noise/num_noise
-            # if x1 < 0:
-            #     x1 = 0
-            # elif x1 > 1:
-            #     x1 = 1
 
             sum2=np.sum(temp_res[:,1])
             noise2 = laplacenoise(sensitivity,epsofrounds, 1)
             sum2_noise = sum2 + noise2[0].astype('float64')
             x2=sum2_noise/num_noise
-            # if x2 < 0:
-            #     x2 = 0
-            # elif x2 > 1:
-            #     x2 = 1
 
             sum3 = np.sum(temp_res[:, 2])
             noise3 = laplacenoise(sensitivity,epsofrounds, 1)
             sum3_noise = sum3 + noise3[0].astype('float64')
             x3 = sum3_noise / num_noise
-            # # if x3 < 0:
-            # #     x3 = 0
-            # # elif x3 > 1:
-            # #     x3 = 1
-            #
-            # sum4 = np.sum(temp_res[:, 3])
-            # noise4 = laplacenoise(sensitivity,epsofrounds, 1)
-            # sum4_noise = sum4 + noise4[0].astype('float64')
-            # #print(sum4, '+', noise4, '=', sum4_noise)
-            # #if sum4 == 0: print('sum4:warning\n')
-            # x4 = sum4_noise / num_noise
-            # # if x4 < 0:
-            # #     x4 = 0
-            # # elif x4 > 1:
-            # #     x4 = 1
 
-           # center_array_noise[j,:]=[x1,x2,x3,x4]
-            center_array_noise[j,:]=[x1,x2,x3]
+            sum4 = np.sum(temp_res[:, 3])
+            noise4 = laplacenoise(sensitivity,epsofrounds, 1)
+            sum4_noise = sum4 + noise4[0].astype('float64')
+            x4 = sum4_noise / num_noise
+
+
+            sum5 = np.sum(temp_res[:, 4])
+            noise5 = laplacenoise(sensitivity, epslion, 1)
+            sum5_noise = sum5 + noise5[0].astype('float64')
+            x5 = sum5_noise / num_noise
+
+            sum6 = np.sum(temp_res[:, 5])
+            noise6 = laplacenoise(sensitivity, epslion, 1)
+            sum6_noise = sum6 + noise6[0].astype('float64')
+            x6 = sum6_noise / num_noise
+
+            sum7 = np.sum(temp_res[:, 6])
+            noise7 = laplacenoise(sensitivity, epslion, 1)
+            sum7_noise = sum7 + noise7[0].astype('float64')
+            x7 = sum7_noise / num_noise
+
+            sum8 = np.sum(temp_res[:, 7])
+            noise8 = laplacenoise(sensitivity, epslion, 1)
+            sum8_noise = sum8 + noise8[0].astype('float64')
+            x8 = sum8_noise / num_noise
+
+            sum9 = np.sum(temp_res[:, 8])
+            noise9 = laplacenoise(sensitivity, epslion, 1)
+            sum9_noise = sum9 + noise9[0].astype('float64')
+            x9 = sum9_noise / num_noise
+
+            sum10 = np.sum(temp_res[:, 9])
+            noise10 = laplacenoise(sensitivity, epslion, 1)
+            sum10_noise = sum10 + noise10[0].astype('float64')
+            x10 = sum10_noise / num_noise
+
+            center_array_noise[j,:]=[x1,x2,x3,x4,x5,x6,x7,x8,x9,x10]
+           # center_array_noise[j,:]=[x1,x2,x3]
             print('第'+str(N)+'次迭代第'+str(j)+'簇的中心：',center_array_noise[j])
 
 
@@ -174,14 +193,14 @@ def DPkmeans(data,k,epslion=6):
             sse=sse+se2
         print('SSE:',sse)
         print(minsse-sse)
-        if (minsse - sse) > 0.1:
+        if abs(minsse - sse) > 0.1:
             clusterchanged = True
             minsse = sse
         N = N + 1
         print('============================================================================')
     km=np.c_[data,temp] # 将原数据和标签结合
-    filename = 'D:\Git\DifferentialPrivacywork\experiment2/output/h8/h8myDP' + str(epslion) + '_' + str(N-1) + 'iters' + '.csv'
-    return km ,filename,temp # temp是ndarray标签,km是原数据+标签
+    filename = 'D:\Git\DifferentialPrivacywork\experiment2/output/ad/admyDP' + str(epslion) + '_' + str(N-1) + 'iters' + '.csv'
+    return km ,filename,temp,sse # temp是ndarray标签,km是原数据+标签
 
 # # 获取当前日期作为文件名
 # def name_time():
@@ -194,31 +213,33 @@ def measure(y_true,y_pred):
     # 混淆矩阵
     confmat=confusion_matrix(y_true,y_pred)
     print(confmat)
-    # #plt.matshow(confmat, cmap=plt.cm.gray)
-    # #plt.show()
-    #
-    # fig,ax = plt.subplots(figsize=(7,7))
-    # cax=ax.matshow(confmat,cmap=plt.cm.Blues,alpha=1)
-    # #fig.colorbar(cax)
-    # for i in range(confmat.shape[0]):
-    #     for j in range(confmat.shape[1]):
-    #         ax.text(x=j,y=i,s=confmat[i,j],va='center',ha='center')
-    # plt.xlabel('predicted label')
-    # plt.ylabel('true label')
-    # plt.title('confusion matrix')
-    # plt.show()
     measurelist=classification_report(y_true=y_true, y_pred=y_pred)
     print(measurelist)
+    return measurelist
+
+def to_table(report):
+    report = report.splitlines()
+    res = []
+    res.append(['']+report[0].split())
+    for row in report[2:-2]:
+       res.append(row.split())
+    lr = report[-1].split()
+    res.append([' '.join(lr[:3])]+lr[3:])
+    return np.array(res)
 
 '''
 =======================================================================================
 '''
 
-
-
-tp,filename,label=DPkmeans(dataset,k=3,epslion=2)
 # load对照数据
-kmeansdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output\h8\h8result_normal.csv',header=None)
+kmeansdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output/ls/lsresult_normal.csv',header=None)
+index=kmeansdata.shape[1]
+kmeans=np.array(kmeansdata[index-1])
+
+'''''
+tp,filename,label=DPkmeans(dataset,k=5,epslion=4)
+# load对照数据
+kmeansdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output/ad/adresult_normal.csv',header=None)
 index=kmeansdata.shape[1]
 kmeans=np.array(kmeansdata[index-1])
 savefile = pd.DataFrame(tp)
@@ -231,9 +252,28 @@ if putin=='y':
     savefile.to_csv(filename,header=False,index=False)
 elif putin=='n':
     sys.exit()
+'''''
 
+# 这里是循环10次运行的程序
+sselist=[]
+f1list=[]
+for i in range(10):
+    print('第',i,'次执行：\n')
+    # allocation :0 是级数分配；1是二分法
+    tp, filename, label, sse = DPkmeans(dataset, k=3, epslion=5)
+    print(sse)
+    sselist.append(sse)
+    report = measure(kmeans, label)
+    f1=to_table(report)
+    print(f1[-1,3])
+    f1list.append(f1[-1,3])
 
-
+print('SSE:',sselist)
+print('f1:',f1list)
+savesse=pd.DataFrame(sselist)
+savef1=pd.DataFrame(f1list)
+savesse.to_csv('D:\Git\DifferentialPrivacywork\experiment2\output/ls/sse.csv',header=False,index=False)
+savef1.to_csv('D:\Git\DifferentialPrivacywork\experiment2\output/ls/f1.csv',header=False,index=False)
 
 
 

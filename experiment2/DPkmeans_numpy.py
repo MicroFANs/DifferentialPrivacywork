@@ -12,14 +12,9 @@ import sys
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
 # 数据
-data=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset\h8_normal.csv',header=None)
-#data=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset/testSet.csv',header=None)
-# print(data.shape)
-# print(data[1])
+data=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset/ls_normal.csv',header=None)
 dataset=[]
 dataset=np.array(data)
-#print(dataset)
-
 
 # 欧氏距离
 def distance(x1,x2):
@@ -59,13 +54,13 @@ def laplacenoise_array(sensitivity,epslion,len,num):  #  产生laplace噪声数�
     return Laplacian_noise
 
 # kmeans iters为最大迭代次数，默认为10次迭代
-def DPkmeans(data,k,iters=10,epslion=6,allocation=0 or 1):
+def DPkmeans(data,k,iters=10,totalepslion=6,allocation=0 or 1):
     sensitivity=dataset.shape[1]+1 # 数据维数为d，敏感度为d+1
-    eps=epslion
-    if allocation==0:
-        allocat='avg' # 用于文件名
-        epslion=epslion/iters # 平均分隐私预算
-        print('avgepslion:',epslion)
+    epslion=totalepslion
+    # if allocation==0:
+    #     allocat='avg' # 用于文件名
+    #     epslion=epslion/iters # 平均分隐私预算
+    #     print('avgepslion:',epslion)
     center_array=center(data,k)
     center_array_noise=center_array #　初始点不能加噪
     print('初始点:',center_array_noise,'\n')
@@ -79,6 +74,15 @@ def DPkmeans(data,k,iters=10,epslion=6,allocation=0 or 1):
     while (clusterchanged and N<iters+1):
         clusterchanged=False
         print(N)
+        # 级数分配
+        if allocation == 0:
+            allocat = 'avg'  # 用于文件名
+            epslion = totalepslion / ((N+2)*(N+1))
+            print('avgepslion:', epslion)
+        if allocation == 1:
+            allocat = 'div2'  # 用于文件名
+            epslion = epslion / 2  # 二分法分配隐私预算
+            print('epslion:', epslion)
         for i in range(data.shape[0]):
             dis=[distance(data[i,:],center_array_noise[j,:]) for j in range(k)]
             index=np.argmin(dis)  #  取使dis最小时的i
@@ -112,19 +116,51 @@ def DPkmeans(data,k,iters=10,epslion=6,allocation=0 or 1):
             # # elif x3 > 1:
             # #     x3 = 1
             #
-            # sum4 = np.sum(temp_res[:, 3])
-            # noise4 = laplacenoise(sensitivity, epslion, 1)
-            # sum4_noise = sum4 + noise4[0].astype('float64')
-            # #print(sum4, '+', noise4, '=', sum4_noise)
-            # #if sum4 == 0: print('sum4:warning\n')
-            # x4 = sum4_noise / num_noise
+            sum4 = np.sum(temp_res[:, 3])
+            noise4 = laplacenoise(sensitivity, epslion, 1)
+            sum4_noise = sum4 + noise4[0].astype('float64')
+            #print(sum4, '+', noise4, '=', sum4_noise)
+            #if sum4 == 0: print('sum4:warning\n')
+            x4 = sum4_noise / num_noise
             # # if x4 < 0:
             # #     x4 = 0
             # # elif x4 > 1:
             # #     x4 = 1
 
+            sum5 = np.sum(temp_res[:, 4])
+            noise5 = laplacenoise(sensitivity, epslion, 1)
+            sum5_noise = sum5 + noise5[0].astype('float64')
+            x5 = sum5_noise / num_noise
+
+            sum6 = np.sum(temp_res[:, 5])
+            noise6 = laplacenoise(sensitivity, epslion, 1)
+            sum6_noise = sum6 + noise6[0].astype('float64')
+            x6 = sum6_noise / num_noise
+
+            sum7 = np.sum(temp_res[:, 6])
+            noise7 = laplacenoise(sensitivity, epslion, 1)
+            sum7_noise = sum7 + noise7[0].astype('float64')
+            x7 = sum7_noise / num_noise
+
+            sum8 = np.sum(temp_res[:, 7])
+            noise8 = laplacenoise(sensitivity, epslion, 1)
+            sum8_noise = sum8 + noise8[0].astype('float64')
+            x8 = sum8_noise / num_noise
+
+            sum9 = np.sum(temp_res[:, 8])
+            noise9 = laplacenoise(sensitivity, epslion, 1)
+            sum9_noise = sum9 + noise9[0].astype('float64')
+            x9 = sum9_noise / num_noise
+
+            sum10 = np.sum(temp_res[:, 9])
+            noise10 = laplacenoise(sensitivity, epslion, 1)
+            sum10_noise = sum10 + noise10[0].astype('float64')
+            x10 = sum10_noise / num_noise
+
+            center_array_noise[j, :] = [x1, x2, x3, x4, x5, x6,x7,x8,x9,x10]
             #center_array_noise[j,:]=[x1,x2,x3,x4]
-            center_array_noise[j,:]=[x1,x2,x3]
+            #center_array_noise[j,:]=[x1,x2,x3]
+
             print('第'+str(N)+'次迭代第'+str(j)+'簇的中心：',center_array_noise[j])
         # 收敛条件 SSE<0.1
         sse=0
@@ -134,22 +170,19 @@ def DPkmeans(data,k,iters=10,epslion=6,allocation=0 or 1):
             se=distance(temp_res,cen)
             se2=np.square(se)
             sse=sse+se2
-        print('SSE:',sse)
-        #if np.abs(minsse - sse) > 0.1:
-        print(minsse-sse)
-        if abs(minsse - sse) > 0.8:
+        #print('SSE:',sse)
+
+        #print(minsse-sse)
+        if abs(minsse - sse) > 1:
             clusterchanged = True
             minsse = sse
         N=N+1
-        if allocation==1:
-            allocat = 'div2'  # 用于文件名
-            epslion=epslion/2 # 二分法分配隐私预算
-            print('1/2epslion:',epslion)
+
         print('============================================================================')
     km=np.c_[data,temp] # 将原数据和标签结合
 
-    filename='D:\Git\DifferentialPrivacywork\experiment2/output/h8/h8'+allocat+'DP'+str(eps)+'_'+str(N-1)+'iters'+'.csv'
-    return km,filename,temp # temp是ndarray标签,km是原数据+标签
+    filename='D:\Git\DifferentialPrivacywork\experiment2/output/h8/h8'+allocat+'DP'+str(totalepslion)+'_'+str(N-1)+'iters'+'.csv'
+    return km,filename,temp,sse # temp是ndarray标签,km是原数据+标签
 
 # # 获取当前日期作为文件名
 # def name_time():
@@ -162,41 +195,63 @@ def measure(y_true,y_pred):
     # 混淆矩阵
     confmat=confusion_matrix(y_true,y_pred)
     print(confmat)
-    # #plt.matshow(confmat, cmap=plt.cm.gray)
-    # #plt.show()
-    #
-    # fig,ax = plt.subplots(figsize=(7,7))
-    # cax=ax.matshow(confmat,cmap=plt.cm.Blues,alpha=1)
-    # #fig.colorbar(cax)
-    # for i in range(confmat.shape[0]):
-    #     for j in range(confmat.shape[1]):
-    #         ax.text(x=j,y=i,s=confmat[i,j],va='center',ha='center')
-    # plt.xlabel('predicted label')
-    # plt.ylabel('true label')
-    # plt.title('confusion matrix')
-    # plt.show()
     measurelist=classification_report(y_true=y_true, y_pred=y_pred)
     print(measurelist)
+    return measurelist
 
 '''
 =======================================================================================
 '''
 
-
-# allocation :0 是均匀分配；1是二分法
-tp,filename,label=DPkmeans(dataset,k=3,iters=10,epslion=2,allocation=1)
+def to_table(report):
+    report = report.splitlines()
+    res = []
+    res.append(['']+report[0].split())
+    for row in report[2:-2]:
+       res.append(row.split())
+    lr = report[-1].split()
+    res.append([' '.join(lr[:3])]+lr[3:])
+    return np.array(res)
 
 # load对照数据
-kmeansdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output\h8\h8result_normal.csv',header=None)
+kmeansdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output/ls/lsresult_normal.csv',header=None)
 index=kmeansdata.shape[1]
 kmeans=np.array(kmeansdata[index-1])
+
+''''
+这是正常的每一次运行的程序
+# allocation :0 是级数分配；1是二分法
+tp,filename,label,sse=DPkmeans(dataset,k=5,iters=8,totalepslion=4,allocation=0)
 savefile = pd.DataFrame(tp)
-print(tp)
 print('=================指标===================')
-measure(kmeans,label)
+print(sse)
+report=measure(kmeans,label)
+print(report)
 print('y：保存，n：退出')
 putin=input()
 if putin=='y':
     savefile.to_csv(filename,header=False,index=False)
 elif putin=='n':
     sys.exit()
+'''''
+
+# 这里是循环10次运行的程序
+sselist=[]
+f1list=[]
+for i in range(10):
+    print('第',i,'次执行：\n')
+    # allocation :0 是级数分配；1是二分法
+    tp, filename, label, sse = DPkmeans(dataset, k=3, iters=7, totalepslion=1.25, allocation=1)
+    print(sse)
+    sselist.append(sse)
+    report = measure(kmeans, label)
+    f1=to_table(report)
+    print(f1[-1,3])
+    f1list.append(f1[-1,3])
+
+print('SSE:',sselist)
+print('f1:',f1list)
+savesse=pd.DataFrame(sselist)
+savef1=pd.DataFrame(f1list)
+savesse.to_csv('D:\Git\DifferentialPrivacywork\experiment2\output/ls/sse.csv',header=False,index=False)
+savef1.to_csv('D:\Git\DifferentialPrivacywork\experiment2\output/ls/f1.csv',header=False,index=False)
