@@ -11,4 +11,4 @@ def mineps(k,N,d):
     result=round(minepslion,3)
     return result
 
-print(mineps(k=2,N=19021,d=10))
+print(mineps(k=2,N=4000,d=2))

@@ -106,7 +106,7 @@ def DPkmeans(data,k,iters=10,totalepslion=6,allocation=0 or 1):
             #     x2 = 0
             # elif x2 > 1:
             #     x2 = 1
-
+            ''''
             sum3 = np.sum(temp_res[:, 2])
             noise3 = laplacenoise(sensitivity, epslion, 1)
             sum3_noise = sum3 + noise3[0].astype('float64')
@@ -157,9 +157,10 @@ def DPkmeans(data,k,iters=10,totalepslion=6,allocation=0 or 1):
             sum10_noise = sum10 + noise10[0].astype('float64')
             x10 = sum10_noise / num_noise
 
-            center_array_noise[j, :] = [x1, x2, x3, x4, x5, x6,x7,x8,x9,x10]
+            #center_array_noise[j, :] = [x1, x2, x3, x4, x5, x6,x7,x8,x9,x10]
             #center_array_noise[j,:]=[x1,x2,x3,x4]
-            #center_array_noise[j,:]=[x1,x2,x3]
+            '''
+            center_array_noise[j,:]=[x1,x2]
 
             print('第'+str(N)+'次迭代第'+str(j)+'簇的中心：',center_array_noise[j])
         # 收敛条件 SSE<0.1
@@ -241,7 +242,7 @@ f1list=[]
 for i in range(10):
     print('第',i,'次执行：\n')
     # allocation :0 是级数分配；1是二分法
-    tp, filename, label, sse = DPkmeans(dataset, k=3, iters=7, totalepslion=1.25, allocation=1)
+    tp, filename, label, sse = DPkmeans(dataset, k=15, iters=5, totalepslion=1, allocation=1)
     print(sse)
     sselist.append(sse)
     report = measure(kmeans, label)

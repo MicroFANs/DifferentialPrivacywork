@@ -12,7 +12,7 @@ import sys
 from sklearn.metrics import confusion_matrix
 from sklearn.metrics import classification_report
 # 数据
-data=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset/ls_normal.csv',header=None)
+data=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset/h8_normal.csv',header=None)
 dataset=[]
 dataset=np.array(data)
 
@@ -73,7 +73,7 @@ def rounds(mineps,epslion):
     # if N>=7:
     #     iters=7
     # else:iters=N
-    iters=13
+    iters=8
     return iters
 
 # 计算每一次迭代的隐私预算
@@ -126,22 +126,26 @@ def DPkmeans(data,k,epslion=6):
             num = temp_res.shape[0]
             noise0=laplacenoise(sensitivity,epsofrounds,1)
             num_noise=num+noise0[0]
+            print('num:',num_noise,'+',num,'+',noise0[0])
 
             sum1=np.sum(temp_res[:,0]) # sum的格式为float64
             noise1=laplacenoise(sensitivity,epsofrounds,1)
             sum1_noise=sum1+noise1[0].astype('float64')
+            print('sum1:',sum1_noise,'+',sum1,'+',noise1[0].astype('float64'))
             x1=sum1_noise/num_noise
 
             sum2=np.sum(temp_res[:,1])
             noise2 = laplacenoise(sensitivity,epsofrounds, 1)
             sum2_noise = sum2 + noise2[0].astype('float64')
+            print('sum2:',sum2_noise, '+', sum2, '+', noise2[0].astype('float64'))
             x2=sum2_noise/num_noise
 
             sum3 = np.sum(temp_res[:, 2])
             noise3 = laplacenoise(sensitivity,epsofrounds, 1)
             sum3_noise = sum3 + noise3[0].astype('float64')
+            print('sum3:',sum3_noise, '+', sum3, '+', noise3[0].astype('float64'))
             x3 = sum3_noise / num_noise
-
+            '''
             sum4 = np.sum(temp_res[:, 3])
             noise4 = laplacenoise(sensitivity,epsofrounds, 1)
             sum4_noise = sum4 + noise4[0].astype('float64')
@@ -179,7 +183,8 @@ def DPkmeans(data,k,epslion=6):
             x10 = sum10_noise / num_noise
 
             center_array_noise[j,:]=[x1,x2,x3,x4,x5,x6,x7,x8,x9,x10]
-           # center_array_noise[j,:]=[x1,x2,x3]
+            '''
+            center_array_noise[j,:]=[x1,x2,x3]
             print('第'+str(N)+'次迭代第'+str(j)+'簇的中心：',center_array_noise[j])
 
 
@@ -231,15 +236,15 @@ def to_table(report):
 =======================================================================================
 '''
 
-# load对照数据
-kmeansdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output/ls/lsresult_normal.csv',header=None)
-index=kmeansdata.shape[1]
-kmeans=np.array(kmeansdata[index-1])
+# # load对照数据
+# kmeansdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output/h8/h8result_normal.csv',header=None)
+# index=kmeansdata.shape[1]
+# kmeans=np.array(kmeansdata[index-1])
 
-'''''
-tp,filename,label=DPkmeans(dataset,k=5,epslion=4)
+
+tp,filename,label,sse=DPkmeans(dataset,k=3,epslion=0.8)
 # load对照数据
-kmeansdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output/ad/adresult_normal.csv',header=None)
+kmeansdata=pd.read_csv('D:\Git\DifferentialPrivacywork\experiment2\output/h8/h8result_normal.csv',header=None)
 index=kmeansdata.shape[1]
 kmeans=np.array(kmeansdata[index-1])
 savefile = pd.DataFrame(tp)
@@ -252,29 +257,31 @@ if putin=='y':
     savefile.to_csv(filename,header=False,index=False)
 elif putin=='n':
     sys.exit()
-'''''
-
-# 这里是循环10次运行的程序
-sselist=[]
-f1list=[]
-for i in range(10):
-    print('第',i,'次执行：\n')
-    # allocation :0 是级数分配；1是二分法
-    tp, filename, label, sse = DPkmeans(dataset, k=3, epslion=5)
-    print(sse)
-    sselist.append(sse)
-    report = measure(kmeans, label)
-    f1=to_table(report)
-    print(f1[-1,3])
-    f1list.append(f1[-1,3])
-
-print('SSE:',sselist)
-print('f1:',f1list)
-savesse=pd.DataFrame(sselist)
-savef1=pd.DataFrame(f1list)
-savesse.to_csv('D:\Git\DifferentialPrivacywork\experiment2\output/ls/sse.csv',header=False,index=False)
-savef1.to_csv('D:\Git\DifferentialPrivacywork\experiment2\output/ls/f1.csv',header=False,index=False)
 
 
+# # 这里是循环10次运行的程序
+# sselist=[]
+# f1list=[]
+# for i in range(10):
+#     print('第',i,'次执行：\n')
+#     tp, filename, label, sse = DPkmeans(dataset, k=15, epslion=1)
+#     print(sse)
+#     sselist.append(sse)
+#     report = measure(kmeans, label)
+#     f1=to_table(report)
+#     print(f1[-1,3])
+#     f1list.append(f1[-1,3])
+#
+# print('SSE:',sselist)
+# print('f1:',f1list)
+# savesse=pd.DataFrame(sselist)
+# savef1=pd.DataFrame(f1list)
+# savesse.to_csv('D:\Git\DifferentialPrivacywork\experiment2\output/s1/sse.csv',header=False,index=False)
+# savef1.to_csv('D:\Git\DifferentialPrivacywork\experiment2\output/s1/f1.csv',header=False,index=False)
+
+# x=mineps(3,34112,3)
+# print(x)
+# y=eacheps(8,0.8,x)
+# print(y)
 
 

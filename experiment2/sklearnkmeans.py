@@ -10,11 +10,11 @@ import random
 import pandas as pd
 
 # 数据
-data=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset/ls_normal.csv',header=None)
+data=pd.read_csv('D:\Git\DifferentialPrivacywork\dataset/s1_normal.csv',header=None)
 dataset=[]
 dataset=np.array(data)
 
-kmeans=KMeans(n_clusters=3,init='random')
+kmeans=KMeans(n_clusters=15,init='random')
 kmeans.fit(dataset)
 sse=kmeans.inertia_
 temp=kmeans.labels_
