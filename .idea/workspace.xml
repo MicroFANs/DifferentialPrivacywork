@@ -45,23 +45,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="svd.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/image/svd.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="609">
-              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-              <folding>
-                <element signature="e#77#95#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hangban.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="hangban.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hangban.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+            <state relative-caret-position="377">
+              <caret line="16" selection-start-line="16" selection-end-line="16" />
               <folding>
                 <element signature="e#83#117#0" expanded="true" />
               </folding>
@@ -69,20 +57,80 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="kmeans_numpy.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/experiment2/kmeans_numpy.py">
+      <file leaf-file-name="Laplaciannoise.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/experiment1/Laplaciannoise.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2291">
-              <caret line="82" column="38" selection-start-line="82" selection-start-column="38" selection-end-line="82" selection-end-column="38" />
+            <state relative-caret-position="174">
+              <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sklearnkmeans.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/experiment2/sklearnkmeans.py">
+      <file leaf-file-name="myDPkmeans.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/experiment2/myDPkmeans.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="174">
-              <caret line="6" column="5" selection-start-line="6" selection-end-line="24" selection-end-column="112" />
+            <state relative-caret-position="1195">
+              <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adult.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dataset/adult.csv">
+          <provider selected="true" editor-type-id="csv-text-editor">
+            <state>
+              <caret column="10" selection-start-column="10" selection-end-column="10" />
+            </state>
+          </provider>
+          <provider editor-type-id="csv-table-editor">
+            <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ad_normal.csv" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dataset/ad_normal.csv">
+          <provider selected="true" editor-type-id="csv-text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="DPkmeans_numpy.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/experiment2/DPkmeans_numpy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="205">
+              <caret line="254" column="29" lean-forward="true" selection-start-line="254" selection-start-column="29" selection-end-line="254" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="adultnew.data.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/experiment1/adultnew.data.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="29">
+              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="epslion.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/experiment1/epslion.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-85" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="exponential.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/experiment1/exponential.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="meansquareerror.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/experiment1/meansquareerror.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="319">
+              <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -122,10 +170,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="69" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="-1374" />
+    <option name="y" value="137" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -142,6 +190,16 @@
             <path>
               <item name="DifferentialPrivacywork" type="b2602c69:ProjectViewProjectNode" />
               <item name="DifferentialPrivacywork" type="462c0819:PsiDirectoryNode" />
+              <item name="dataset" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DifferentialPrivacywork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DifferentialPrivacywork" type="462c0819:PsiDirectoryNode" />
+              <item name="experiment1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DifferentialPrivacywork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DifferentialPrivacywork" type="462c0819:PsiDirectoryNode" />
               <item name="experiment2" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -152,7 +210,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="D:/pyworkplace/earthquakedata" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
@@ -172,7 +230,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.hangban">
+  <component name="RunManager" selected="Python.DPkmeans_numpy">
     <configuration name="DPkmeans_numpy" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DifferentialPrivacywork" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -191,7 +249,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="F-meansure" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Laplaciannoise" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DifferentialPrivacywork" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -199,11 +257,29 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiment2" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiment1" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiment2/F-meansure.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiment1/Laplaciannoise.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="exponential" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="DifferentialPrivacywork" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiment1" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiment1/exponential.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -227,7 +303,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="myDPkmeans" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="meansquareerror" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DifferentialPrivacywork" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -235,48 +311,30 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiment2" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiment1" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiment2/myDPkmeans.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="svd" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="DifferentialPrivacywork" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/image" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/image/svd.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiment1/meansquareerror.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.DPkmeans_numpy" />
-      <item itemvalue="Python.myDPkmeans" />
-      <item itemvalue="Python.svd" />
-      <item itemvalue="Python.F-meansure" />
       <item itemvalue="Python.hangban" />
+      <item itemvalue="Python.Laplaciannoise" />
+      <item itemvalue="Python.meansquareerror" />
+      <item itemvalue="Python.exponential" />
+      <item itemvalue="Python.DPkmeans_numpy" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.hangban" />
-        <item itemvalue="Python.svd" />
-        <item itemvalue="Python.myDPkmeans" />
-        <item itemvalue="Python.F-meansure" />
         <item itemvalue="Python.DPkmeans_numpy" />
+        <item itemvalue="Python.exponential" />
+        <item itemvalue="Python.Laplaciannoise" />
+        <item itemvalue="Python.meansquareerror" />
+        <item itemvalue="Python.hangban" />
       </list>
     </recent_temporary>
   </component>
@@ -302,13 +360,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="57" y="-8" width="1871" height="1096" extended-state="7" />
+    <frame x="-1374" y="137" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49893618" visible="true" weight="0.18876159" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49893618" visible="true" weight="0.28290468" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="R Packages" order="3" />
+      <window_info anchor="right" id="R Graphics" order="3" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.46782988" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.27933884" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" sideWeight="0.5010638" side_tool="true" weight="0.1265625" />
@@ -316,10 +376,10 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.45785123" />
       <window_info id="Favorites" order="2" side_tool="true" weight="0.32982087" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3293348" />
     </layout>
@@ -337,72 +397,46 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/experiment2/output/S1/S1div2DP6_8iters.csv" />
-    <entry file="file://$PROJECT_DIR$/experiment2/output/S1/S1myDP5_3iters.csv" />
-    <entry file="file://$PROJECT_DIR$/dataset/h8_normal1.csv" />
-    <entry file="file://$PROJECT_DIR$/dataset/housec8.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="-988783" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiment2/output/ad/adresult_normal.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
-    <entry file="file://C:/ProgramData/Anaconda3/Lib/site-packages/sklearn/cluster/k_means_.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3119">
-          <caret line="823" column="43" lean-forward="true" selection-start-line="823" selection-start-column="43" selection-end-line="823" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/ad_normal.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="-16791" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/experiment2/output/h8/h8myDP6_9iters.csv" />
     <entry file="file://$PROJECT_DIR$/experiment2/output/2019-03-11-16_25_38DPkmeans_out.csv" />
     <entry file="file://$PROJECT_DIR$/dataset/Iris_label.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="261">
           <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiment2/output/ad/sse.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment2/output/ad/sse.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="29">
           <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiment2/output/ad/f1.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment2/output/ad/f1.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state>
           <caret column="1" lean-forward="true" selection-end-line="9" selection-end-column="4" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/Lifesci.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/Lifesci.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="87">
           <caret line="3" column="77" selection-start-line="3" selection-start-column="77" selection-end-line="3" selection-end-column="77" />
         </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/experiment2/output/x.csv" />
@@ -412,48 +446,48 @@
     <entry file="file://$PROJECT_DIR$/experiment2/output/z1.csv" />
     <entry file="file://$PROJECT_DIR$/experiment2/output/at/z1result_normal.csv" />
     <entry file="file://$PROJECT_DIR$/dataset/S1.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="319">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/s1_normal.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/s1_normal.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="19343">
           <caret line="667" column="21" selection-start-line="667" selection-start-column="21" selection-end-line="667" selection-end-column="21" />
         </state>
       </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/dataset/at1.csv" />
     <entry file="file://$PROJECT_DIR$/dataset/at.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
-      <provider selected="true" editor-type-id="csv-text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/experiment2/output/at/atresult_normal.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="-28938">
           <caret line="4997" column="25" lean-forward="true" selection-start-line="4997" selection-start-column="25" selection-end-line="4997" selection-end-column="25" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/at_normal.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/at_normal.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="-4785" />
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/experiment2/creatdataset.py">
@@ -526,28 +560,14 @@
     <entry file="file://$PROJECT_DIR$/imagedata/faces/an2i/an2i_left_angry_open.pgm">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/experiment2/DPkmeans_numpy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="173" column="26" selection-start-line="173" selection-start-column="26" selection-end-line="173" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiment2/myDPkmeans.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="151">
-          <caret line="145" column="24" selection-start-line="145" selection-start-column="24" selection-end-line="145" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dataset/h8_normal.csv">
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="29">
           <caret line="117" column="32" selection-start-line="117" selection-start-column="32" selection-end-line="117" selection-end-column="32" />
         </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/experiment2/F-meansure.py">
@@ -583,11 +603,71 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/hangban.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="14" column="10" lean-forward="true" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+        <state relative-caret-position="377">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
           <folding>
             <element signature="e#83#117#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment1/meansquareerror.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment1/epslion.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment1/Laplaciannoise.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment1/adultnew.data.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="29">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment1/exponential.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/ad_normal.csv">
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/adult.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state>
+          <caret column="10" selection-start-column="10" selection-end-column="10" />
+        </state>
+      </provider>
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment2/myDPkmeans.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1195">
+          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/experiment2/DPkmeans_numpy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="254" column="29" lean-forward="true" selection-start-line="254" selection-start-column="29" selection-end-line="254" selection-end-column="29" />
         </state>
       </provider>
     </entry>
