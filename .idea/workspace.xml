@@ -44,7 +44,68 @@
     <favorites_list name="DifferentialPrivacywork" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LDP/basicDP/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="basic_DP.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LDP/basicDP/basic_DP.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2261">
+              <caret line="122" column="73" selection-start-line="122" selection-start-column="73" selection-end-line="122" selection-end-column="73" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mybasic.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LDP/basicDP/mybasic.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="228">
+              <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sampling_SH.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LDP/LDPMiner/sampling_SH.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="10" selection-start-line="10" selection-end-line="18" />
+              <folding>
+                <element signature="e#65#83#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SH.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/LDP/LDPMiner/SH.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="475">
+              <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+              <folding>
+                <element signature="e#56#74#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SHbasic.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LDP/basicDP/SHbasic.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="361">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -55,6 +116,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/LDP/basicDP/mybasic.py" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -76,15 +140,21 @@
         <option value="$PROJECT_DIR$/experiment2/myDPkmeans.py" />
         <option value="$PROJECT_DIR$/hangban.py" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/LDP/basicDP/__init__.py" />
+        <option value="$PROJECT_DIR$/LDP/basicDP/basic_DP.py" />
+        <option value="$PROJECT_DIR$/LDP/basicDP/mybasic.py" />
+        <option value="$PROJECT_DIR$/LDP/LDPMiner/sampling_SH.py" />
+        <option value="$PROJECT_DIR$/LDP/LDPMiner/SH.py" />
+        <option value="$PROJECT_DIR$/LDP/basicDP/SHbasic.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="953" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -98,6 +168,28 @@
               <item name="DifferentialPrivacywork" type="b2602c69:ProjectViewProjectNode" />
               <item name="DifferentialPrivacywork" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="DifferentialPrivacywork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DifferentialPrivacywork" type="462c0819:PsiDirectoryNode" />
+              <item name="dataset" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DifferentialPrivacywork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DifferentialPrivacywork" type="462c0819:PsiDirectoryNode" />
+              <item name="LDP" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DifferentialPrivacywork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DifferentialPrivacywork" type="462c0819:PsiDirectoryNode" />
+              <item name="LDP" type="462c0819:PsiDirectoryNode" />
+              <item name="basicDP" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="DifferentialPrivacywork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="DifferentialPrivacywork" type="462c0819:PsiDirectoryNode" />
+              <item name="LDP" type="462c0819:PsiDirectoryNode" />
+              <item name="LDPMiner" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -105,10 +197,13 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="D:/develop/Git/git-bash.exe" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../SSS" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Workplace\pyworkplace\DifferentialPrivacywork\dataset\APDPkmeans" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Git\DifferentialPrivacywork\dataset" />
     </key>
@@ -125,7 +220,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.DPkmeans_numpy">
+  <component name="RunManager" selected="Python.SHbasic">
     <configuration name="DPkmeans_numpy" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DifferentialPrivacywork" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -144,7 +239,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="Laplaciannoise" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="SH" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DifferentialPrivacywork" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -152,11 +247,29 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiment1" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LDP/LDPMiner" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiment1/Laplaciannoise.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LDP/LDPMiner/SH.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <configuration name="SHbasic" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="DifferentialPrivacywork" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LDP/basicDP" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LDP/basicDP/SHbasic.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -180,7 +293,7 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
-    <configuration name="hangban" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="sampling_SH" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DifferentialPrivacywork" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -188,48 +301,30 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LDP/LDPMiner" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/hangban.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-    </configuration>
-    <configuration name="meansquareerror" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="DifferentialPrivacywork" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/experiment1" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/experiment1/meansquareerror.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LDP/LDPMiner/sampling_SH.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
     <list>
-      <item itemvalue="Python.hangban" />
-      <item itemvalue="Python.Laplaciannoise" />
-      <item itemvalue="Python.meansquareerror" />
       <item itemvalue="Python.exponential" />
       <item itemvalue="Python.DPkmeans_numpy" />
+      <item itemvalue="Python.sampling_SH" />
+      <item itemvalue="Python.SH" />
+      <item itemvalue="Python.SHbasic" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.SHbasic" />
+        <item itemvalue="Python.SH" />
+        <item itemvalue="Python.sampling_SH" />
         <item itemvalue="Python.DPkmeans_numpy" />
         <item itemvalue="Python.exponential" />
-        <item itemvalue="Python.Laplaciannoise" />
-        <item itemvalue="Python.meansquareerror" />
-        <item itemvalue="Python.hangban" />
       </list>
     </recent_temporary>
   </component>
@@ -255,33 +350,37 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49893618" visible="true" weight="0.27974948" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.27896994" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.27933884" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49893618" visible="true" weight="0.20255864" />
-      <window_info anchor="right" id="R Packages" order="3" />
-      <window_info anchor="right" id="R Graphics" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3293348" />
       <window_info id="Structure" order="1" sideWeight="0.5010638" side_tool="true" weight="0.1265625" />
-      <window_info id="Favorites" order="2" side_tool="true" weight="0.32982087" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.45785123" />
+      <window_info id="Favorites" order="2" side_tool="true" weight="0.32982087" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" id="R Graphics" order="3" />
+      <window_info anchor="right" id="R Packages" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3293348" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
     <MESSAGE value="添加experiment2" />
     <option name="LAST_COMMIT_MESSAGE" value="添加experiment2" />
   </component>
@@ -291,98 +390,12 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/experiment2/output/2019-03-11-16_25_38DPkmeans_out.csv" />
-    <entry file="file://$PROJECT_DIR$/dataset/Iris_label.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="261">
-          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/APDPk-means/output/ad/sse.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="29">
-          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="10" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/APDPk-means/output/ad/f1.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state>
-          <caret column="1" lean-forward="true" selection-end-line="9" selection-end-column="4" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/Lifesci.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="87">
-          <caret line="3" column="77" selection-start-line="3" selection-start-column="77" selection-end-line="3" selection-end-column="77" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/experiment2/output/x.csv" />
-    <entry file="file://$PROJECT_DIR$/experiment2/output/y.csv" />
-    <entry file="file://$PROJECT_DIR$/experiment2/output/z.csv" />
-    <entry file="file://$PROJECT_DIR$/dataset/Artificial.csv" />
-    <entry file="file://$PROJECT_DIR$/experiment2/output/z1.csv" />
-    <entry file="file://$PROJECT_DIR$/experiment2/output/at/z1result_normal.csv" />
-    <entry file="file://$PROJECT_DIR$/dataset/S1.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="319">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/s1_normal.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="19343">
-          <caret line="667" column="21" selection-start-line="667" selection-start-column="21" selection-end-line="667" selection-end-column="21" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/APDPkmeans/S1.csv" />
+    <entry file="file://$PROJECT_DIR$/dataset/APDPkmeans/S1_normal.csv" />
     <entry file="file://$PROJECT_DIR$/dataset/at1.csv" />
-    <entry file="file://$PROJECT_DIR$/dataset/at.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/APDPk-means/output/at/atresult_normal.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="-28938">
-          <caret line="4997" column="25" lean-forward="true" selection-start-line="4997" selection-start-column="25" selection-end-line="4997" selection-end-column="25" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/at_normal.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="-4785" />
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/APDPkmeans/at.csv" />
+    <entry file="file://$PROJECT_DIR$/APDPk-means/output/at/atresult_normal.csv" />
+    <entry file="file://$PROJECT_DIR$/dataset/APDPkmeans/at_normal.csv" />
     <entry file="file://$PROJECT_DIR$/APDPk-means/creatdataset.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1827">
@@ -404,65 +417,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/ls_normal.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="58">
-          <caret line="2" column="103" selection-start-line="2" selection-start-column="103" selection-end-line="2" selection-end-column="103" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imagedata/faces_4/an2i/an2i_left_happy_sunglasses_4.pgm">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imagedata/faces_4/an2i/an2i_left_neutral_open_4.pgm">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imagedata/faces_4/an2i/an2i_left_happy_open_4.pgm">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imagedata/faces_4/an2i/an2i_left_angry_sunglasses_4.pgm">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imagedata/faces_4/an2i/an2i_left_angry_open_4.pgm">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imagedata/faces_4/an2i/an2i_right_angry_open_4.pgm">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imagedata/faces/an2i/an2i_left_angry_open_2.pgm">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imagedata/faces/an2i/an2i_left_angry_sunglasses.pgm">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imagedata/faces/an2i/an2i_left_happy_open_2.pgm">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imagedata/faces/an2i/an2i_left_happy_open_4.pgm">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imagedata/faces/an2i/an2i_left_happy_open.pgm">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imagedata/faces/an2i/an2i_left_angry_sunglasses_4.pgm">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imagedata/faces/an2i/an2i_left_angry_sunglasses_2.pgm">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imagedata/faces/an2i/an2i_left_angry_open.pgm">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/h8_normal.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state relative-caret-position="29">
-          <caret line="117" column="32" selection-start-line="117" selection-start-column="32" selection-end-line="117" selection-end-column="32" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/APDPkmeans/ls_normal.csv" />
+    <entry file="file://$PROJECT_DIR$/imagedata/faces_4/an2i/an2i_left_happy_sunglasses_4.pgm" />
+    <entry file="file://$PROJECT_DIR$/imagedata/faces_4/an2i/an2i_left_neutral_open_4.pgm" />
+    <entry file="file://$PROJECT_DIR$/imagedata/faces_4/an2i/an2i_left_happy_open_4.pgm" />
+    <entry file="file://$PROJECT_DIR$/imagedata/faces_4/an2i/an2i_left_angry_sunglasses_4.pgm" />
+    <entry file="file://$PROJECT_DIR$/imagedata/faces_4/an2i/an2i_left_angry_open_4.pgm" />
+    <entry file="file://$PROJECT_DIR$/imagedata/faces_4/an2i/an2i_right_angry_open_4.pgm" />
+    <entry file="file://$PROJECT_DIR$/imagedata/faces/an2i/an2i_left_angry_open_2.pgm" />
+    <entry file="file://$PROJECT_DIR$/imagedata/faces/an2i/an2i_left_angry_sunglasses.pgm" />
+    <entry file="file://$PROJECT_DIR$/imagedata/faces/an2i/an2i_left_happy_open_2.pgm" />
+    <entry file="file://$PROJECT_DIR$/imagedata/faces/an2i/an2i_left_happy_open_4.pgm" />
+    <entry file="file://$PROJECT_DIR$/imagedata/faces/an2i/an2i_left_happy_open.pgm" />
+    <entry file="file://$PROJECT_DIR$/imagedata/faces/an2i/an2i_left_angry_sunglasses_4.pgm" />
+    <entry file="file://$PROJECT_DIR$/imagedata/faces/an2i/an2i_left_angry_sunglasses_2.pgm" />
+    <entry file="file://$PROJECT_DIR$/imagedata/faces/an2i/an2i_left_angry_open.pgm" />
+    <entry file="file://$PROJECT_DIR$/dataset/APDPkmeans/h8_normal.csv" />
     <entry file="file://$PROJECT_DIR$/APDPk-means/F-meansure.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="497">
@@ -470,13 +440,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/image/svd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="609">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/image/svd.py" />
     <entry file="file://$PROJECT_DIR$/APDPk-means/kmeans_numpy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2291">
@@ -491,16 +455,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hangban.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="17" column="42" lean-forward="true" selection-start-line="17" selection-start-column="42" selection-end-line="17" selection-end-column="42" />
-          <folding>
-            <element signature="e#83#117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/hangban.py" />
     <entry file="file://$PROJECT_DIR$/DP/Laplaciannoise.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
@@ -515,19 +470,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/adult.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
-        </state>
-      </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/dataset/ad_normal.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/APDPkmeans/adult.csv" />
+    <entry file="file://$PROJECT_DIR$/dataset/APDPkmeans/ad_normal.csv" />
     <entry file="file://$PROJECT_DIR$/APDPk-means/DPkmeans_numpy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="606">
@@ -566,6 +510,75 @@
             <caret line="10" column="6" lean-forward="true" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/retail/retail.dat.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-171" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/Kosarak/kosarak25k.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/Kosarak/kosarak10k.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" lean-forward="true" selection-start-column="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dataset/Kosarak/kosarak.dat">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://D:/Download/Local-Differential-Privacy-master/Local-Differential-Privacy-master/local_DP.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LDP/basicDP/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LDP/basicDP/basic_DP.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2261">
+          <caret line="122" column="73" selection-start-line="122" selection-start-column="73" selection-end-line="122" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LDP/basicDP/mybasic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LDP/LDPMiner/sampling_SH.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" selection-start-line="10" selection-end-line="18" />
+          <folding>
+            <element signature="e#65#83#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LDP/LDPMiner/SH.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="8" lean-forward="true" selection-start-line="25" selection-start-column="8" selection-end-line="25" selection-end-column="8" />
+          <folding>
+            <element signature="e#56#74#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LDP/basicDP/SHbasic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
