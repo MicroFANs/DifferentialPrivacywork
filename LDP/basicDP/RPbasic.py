@@ -8,12 +8,21 @@ import numpy as np
 
 def gen_probability(epsilon, n=2):
     """
-    根据epsilon生成概率，默认是二元的n=2
+    根据epsilon生成概率p，默认是二元的n=2,以p的概率不变，1-p的概率翻转
     :param epsilon: 预算
     :param n: n元的
     :return: 概率值(e^eps)/(e^eps+1)
     """
     return np.e ** epsilon / (np.e ** epsilon + n - 1)
+
+def gen_f(epsilon):
+    """
+    根据epsilon生成PRR中的参数f，PRR中是以1-0.5f概率保持不变，以0.5f翻转
+    :param epsilon:
+    :return:
+    """
+    f=2/(1+np.e**epsilon)
+    return f
 
 
 def perturbation(bit, p):

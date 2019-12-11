@@ -6,6 +6,7 @@
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import OneHotEncoder
+import matplotlib.pyplot as plt
 
 
 def readcsv(path):
@@ -50,3 +51,6 @@ def one_hot_1D(np_data):
     list_data=np_data.tolist()
     onehot_data=onehot.transform(list_data).toarray()
     return onehot_data
+
+
+
