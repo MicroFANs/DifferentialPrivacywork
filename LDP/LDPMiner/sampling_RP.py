@@ -5,7 +5,7 @@
 """
 import numpy as np
 import pandas as pd
-import LDP.basicFunction as bf
+import LDP.basicFunction.basicfunc as bf
 import LDP.basicDP.RPbasic as rpb
 
 '''
@@ -18,7 +18,7 @@ f_j：第j项的频率
 '''
 
 # 读取数据
-path='../LDPMiner/dataset/SH/kosarak_10k_singlevalue.csv'
+path='../LDPMiner/dataset/kosarak/kosarak_10k_singlevalue.csv'
 user_data=bf.readcsv(path)
 print('data:\n',user_data)
 max = np.max(user_data) # 一维数据中的最大值

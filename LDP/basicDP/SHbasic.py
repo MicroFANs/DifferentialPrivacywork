@@ -110,7 +110,7 @@ def genProj(m,d):
 # #     random_proj=genProj(m,d)
 # #     return random_proj,m
 
-def comput_parameter(d,n,epsilon,beta=0.05):
+def comput_parameter(d, n, epsilon, beta=0.05):
     """
     根据d和n计算r和m参数的值以便生成投影矩阵
     :param d: 用户数据维度d

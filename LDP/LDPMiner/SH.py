@@ -22,7 +22,7 @@ f_j：第j项的频率
 
 
 # 读取数据
-path='../LDPMiner/dataset/SH/kosarak_10k_singlevalue.csv'
+path='../LDPMiner/dataset/kosarak/kosarak_10k_singlevalue.csv'
 user_data=bf.readcsv(path)
 print('data:\n',user_data)
 max = np.max(user_data) # 一维数据中的最大值
@@ -42,9 +42,9 @@ print('数据obehot编码:\n',onehot_data)
 
 
 # 参数设置
-#epsilon=np.log(3) # eps=ln(3)
-epsilon=1
-r,m=shb.comput_parameter(d=d,n=n,epsilon=epsilon,beta=0.05)
+epsilon=np.log(3) # eps=ln(3)
+
+r,m=shb.comput_parameter(d=100000,n=1000,epsilon=epsilon,beta=0.000000001)
 print('n=',n,'\nd=',d,'\nr=',r,'\nm=',m)
 
 
@@ -61,9 +61,10 @@ for i in range(n):
     z=shb.Basic_Randomizer(x,epsilon)
     z_total=z_total+z
 z_mean=z_total/n
+print(z_mean)
 
 # 选择计算某个v的频率估计
-v=8
+v=11
 e_v=onehot_data[v]
 f_est=shb.Frequency_Estimator_Based_on_FO(rnd_proj,z_mean,e_v)
 print('v=',v,'\nf_estmiate=',f_est)
