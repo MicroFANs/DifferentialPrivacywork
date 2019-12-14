@@ -8,6 +8,7 @@ import numpy as np
 from sklearn.preprocessing import OneHotEncoder
 import matplotlib.pyplot as plt
 import random as rnd
+import itertools
 
 
 def create_0_1(row, col):
@@ -63,15 +64,26 @@ def readtxt(path):
     f.close()
     return data_list
 
-def gen_iterm_set(data_list,n,l):
+
+def combine_lists(lists):
+    """
+    将元素为list的list进行合并，成为一个列表
+    :param lists: 元素为list的list，如[[1,2],[3,4],[5],[1,2,3,4,5]]
+    :return: 合并后的列表[1,2,3,4,5,1,2,3,4,5]
+    """
+    res_list=list(itertools.chain.from_iterable(lists))
+    return res_list
+
+
+def gen_iterm_set(data_list,l):
     """
     生成每个用户的项集，长度为l，对于原项集长度大于l的从中随机选择l个，原项集小于l的，打乱原顺序再补0
     :param data_list: 用户原始数据list
-    :param n: 用户数
     :param l: 项集v长度
     :return: n*l的总项集，每一行为一个用户的项集，长度为l，格式为list
     """
     v_list = []
+    n=len(data_list)
     for i in range(n):
         x = data_list[i]
         length=len(x)
@@ -104,6 +116,27 @@ def one_hot_1D(np_data):
     list_data = np_data.tolist()
     onehot_data = onehot.transform(list_data).toarray()
     return onehot_data
+
+def one_hot(np_data,label):
+    """
+    onehot编码，这个函数的好处是，可以根据输入的label进行编码。上面那个函数只能由1到n编码（即，leable默认为1-n的数组）
+    :param np_data: 输入数据，二维数组，格式为n*1或者n*k
+    :param label: 编码的标签，就是所有候选值的数组，用来对应相应的位置
+    :return: onehot编码，np二维数组
+    """
+    d=len(label)
+    n=len(np_data)
+    code=np.zeros((n,d+1))
+    for i in range(n):
+        if np_data[i][0]==0:
+            index=0
+        else:
+            index_arr=np.argwhere(label==np_data[i][0])
+            index=index_arr[0][0]+1
+        code[i][index]=1
+    onehotcode=code[:,1:d+1]
+    return onehotcode
+
 
 
 def Relative_Error(actual, estimate):
@@ -183,6 +216,6 @@ if __name__ == '__main__':
     path = '../LDPMiner/dataset/kosarak/kosarak_10k.txt'
     data_list1=readtxt(path)
     v_list1=gen_iterm_set(data_list1,12,6)
-    print(v_list1)
+    print(len(v_list1))
 
 

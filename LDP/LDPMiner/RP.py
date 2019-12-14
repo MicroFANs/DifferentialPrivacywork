@@ -15,9 +15,9 @@ np.set_printoptions(suppress=True)
 复现RAPPOR中的方法，针对单值问题，即每个用户拥有一个值
 """
 
-path = '../LDPMiner/dataset/SH/kosarak_10k_singlevalue.csv'
+path = '../LDPMiner/dataset/kosarak/kosarak_10k_singlevalue.csv'
 user_data = bf.readcsv(path)
-#print('data:\n', user_data)
+print('data:\n', user_data)
 
 max = np.max(user_data)  # 一维数据中的最大值
 min = np.min(user_data)  # 一维数据中的最小值
@@ -25,13 +25,16 @@ n = len(user_data)  # 用户i的数量n
 d = max - min + 1  # 用户数据域的维度d
 print('n=',n,'\nd=',d)
 label=np.unique(user_data)
-x_list=label.tolist()
+
 
 
 # onehot编码
 onehot_data = bf.one_hot_1D(user_data)
 # np.savetxt('../LDPMiner/dataset/SH/kosarak_10k_singlevalue_onehot.txt',onehot_data,fmt='%d')
 #print('数据obehot编码:\n', onehot_data)
+
+
+# 计算每个项的真实频数用于画图
 origin=np.zeros(d)
 for i in range(n):
     origin=origin+onehot_data[i]
