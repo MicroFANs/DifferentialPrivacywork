@@ -44,7 +44,7 @@ print('数据obehot编码:\n',onehot_data)
 # 参数设置
 epsilon=np.log(3) # eps=ln(3)
 
-r,m=shb.comput_parameter(d=100000,n=1000,epsilon=epsilon,beta=0.000000001)
+r,m=shb.comput_parameter(d=100000,n=10,epsilon=epsilon,beta=0.000000001)
 print('n=',n,'\nd=',d,'\nr=',r,'\nm=',m)
 
 

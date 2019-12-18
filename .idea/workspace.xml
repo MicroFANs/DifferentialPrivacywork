@@ -40,80 +40,28 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="RP.py" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/LDP/LDPMiner/RP.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="220">
-                    <caret line="27" selection-start-line="27" selection-end-line="27" />
-                    <folding>
-                      <element signature="e#55#73#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="basicfunc.py" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/LDP/basicFunction/basicfunc.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="567">
-                    <caret line="137" column="17" selection-start-line="137" selection-start-column="17" selection-end-line="137" selection-end-column="17" />
-                    <folding>
-                      <element signature="e#61#80#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-  </component>
   <component name="FavoritesManager">
     <favorites_list name="DifferentialPrivacywork" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SHbasic.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LDP/basicDP/SHbasic.py">
+      <file leaf-file-name="RP.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/LDP/LDPMiner/RP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2109">
-              <caret line="112" column="45" selection-start-line="112" selection-start-column="21" selection-end-line="112" selection-end-column="45" />
+            <state relative-caret-position="213">
+              <caret line="29" selection-start-line="29" selection-end-line="29" />
               <folding>
-                <element signature="e#60#78#0" expanded="true" />
+                <element signature="e#55#73#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RPbasic.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LDP/basicDP/RPbasic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="893">
-              <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mybasic.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LDP/basicDP/mybasic.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sampling_RP.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sampling_RP.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LDP/LDPMiner/sampling_RP.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="621">
-              <caret line="71" column="44" lean-forward="true" selection-start-line="71" selection-start-column="44" selection-end-line="71" selection-end-column="44" />
+            <state relative-caret-position="840">
+              <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
               <folding>
                 <element signature="e#88#101#0" expanded="true" />
               </folding>
@@ -121,29 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sampling_SH.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LDP/LDPMiner/sampling_SH.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="27" selection-start-line="27" selection-end-line="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="basic_DP.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/LDP/basicDP/basic_DP.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2318">
-              <caret line="122" column="73" selection-start-line="122" selection-start-column="73" selection-end-line="122" selection-end-column="73" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SH.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LDP/LDPMiner/SH.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="24" column="61" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="61" />
+            <state relative-caret-position="874">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
             </state>
           </provider>
         </entry>
@@ -191,18 +121,18 @@
         <option value="$PROJECT_DIR$/LDP/LDPMiner/sampling_SH.py" />
         <option value="$PROJECT_DIR$/LDP/basicDP/RPbasic.py" />
         <option value="$PROJECT_DIR$/LDP/basicDP/SHbasic.py" />
-        <option value="$PROJECT_DIR$/LDP/LDPMiner/SH.py" />
         <option value="$PROJECT_DIR$/LDP/DataProcess/createdata.py" />
         <option value="$PROJECT_DIR$/LDP/basicFunction/basicfunc.py" />
+        <option value="$PROJECT_DIR$/LDP/LDPMiner/SH.py" />
         <option value="$PROJECT_DIR$/LDP/LDPMiner/RP.py" />
         <option value="$PROJECT_DIR$/LDP/LDPMiner/sampling_RP.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="953" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1428" />
+    <option name="width" value="1461" />
+    <option name="height" value="1572" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -210,6 +140,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -264,12 +195,11 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.selected.configurable" value="fileTemplates" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -440,12 +370,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <frame x="-7" y="-7" width="1721" height="1041" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4974705" visible="true" weight="0.27348644" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4974705" visible="true" weight="0.076157" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.35944206" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.36422414" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info id="Structure" order="1" sideWeight="0.5025295" side_tool="true" weight="0.16283925" />
@@ -618,30 +548,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LDP/basicDP/basic_DP.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2318">
-          <caret line="122" column="73" selection-start-line="122" selection-start-column="73" selection-end-line="122" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LDP/LDPMiner/dataset/kosarak/kosarak.txt">
       <provider selected="true" editor-type-id="LargeFileEditor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/LDP/basicDP/SHbasic.py">
+    <entry file="file://$PROJECT_DIR$/LDP/DataProcess/createdata.py" />
+    <entry file="file://$PROJECT_DIR$/LDP/basicFunction/basicfunc.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2109">
-          <caret line="112" column="45" selection-start-line="112" selection-start-column="21" selection-end-line="112" selection-end-column="45" />
-          <folding>
-            <element signature="e#60#78#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2508">
+          <caret line="137" column="17" selection-start-line="137" selection-start-column="17" selection-end-line="137" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LDP/basicDP/RPbasic.py">
+    <entry file="file://$PROJECT_DIR$/LDP/basicDP/SHbasic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="893">
-          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+        <state relative-caret-position="515">
+          <caret line="112" column="45" selection-start-line="112" selection-start-column="21" selection-end-line="112" selection-end-column="45" />
         </state>
       </provider>
     </entry>
@@ -652,7 +573,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LDP/DataProcess/createdata.py" />
     <entry file="file://$PROJECT_DIR$/LDP/LDPMiner/sampling_SH.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="475">
@@ -660,39 +580,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LDP/LDPMiner/SH.py">
+    <entry file="file://$PROJECT_DIR$/LDP/basicDP/basic_DP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="24" column="61" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="61" />
+        <state relative-caret-position="838">
+          <caret line="122" column="73" selection-start-line="122" selection-start-column="73" selection-end-line="122" selection-end-column="73" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LDP/basicFunction/basicfunc.py">
+    <entry file="file://$PROJECT_DIR$/LDP/basicDP/RPbasic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="137" column="17" selection-start-line="137" selection-start-column="17" selection-end-line="137" selection-end-column="17" />
+        <state relative-caret-position="893">
+          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LDP/LDPMiner/SH.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="874">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LDP/LDPMiner/sampling_RP.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="70" column="18" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
           <folding>
-            <element signature="e#61#80#0" expanded="true" />
+            <element signature="e#88#101#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LDP/LDPMiner/RP.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        <state relative-caret-position="213">
+          <caret line="29" selection-start-line="29" selection-end-line="29" />
           <folding>
             <element signature="e#55#73#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LDP/LDPMiner/sampling_RP.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="621">
-          <caret line="71" column="44" lean-forward="true" selection-start-line="71" selection-start-column="44" selection-end-line="71" selection-end-column="44" />
-          <folding>
-            <element signature="e#88#101#0" expanded="true" />
           </folding>
         </state>
       </provider>

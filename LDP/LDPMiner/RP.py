@@ -25,6 +25,7 @@ n = len(user_data)  # 用户i的数量n
 d = max - min + 1  # 用户数据域的维度d
 print('n=',n,'\nd=',d)
 label=np.unique(user_data)
+x_list=label.tolist()
 
 
 

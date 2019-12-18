@@ -74,6 +74,5 @@ print('estimate:\n',est)
 
 
 # 画图
-#plt.bar(x_list,+origin)
 plt.bar(x_list,est)
 plt.show()
