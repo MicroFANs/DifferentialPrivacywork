@@ -200,6 +200,19 @@ def IDCG(d, k):
     return idcg
 
 
+
+# hash函数，是布隆滤波器的实现中的
+def hash(data,seed):
+    hash=0
+    length=len(data)
+    if length>0:
+        for i in range(length):
+            hash=i*hash+data[i]
+    hash=hash*seed%16 # size的值
+    return abs(hash)
+
+
+
 if __name__ == '__main__':
     # true = np.array([2, 3, 4, 5, 6, 7, 8, 9, 10,11])
     #
@@ -213,9 +226,21 @@ if __name__ == '__main__':
 
 
 
-    path = '../LDPMiner/dataset/kosarak/kosarak_10k.txt'
-    data_list1=readtxt(path)
-    v_list1=gen_iterm_set(data_list1,12,6)
-    print(len(v_list1))
+    # path = '../LDPMiner/dataset/kosarak/kosarak_10k.txt'
+    # data_list1=readtxt(path)
+    # v_list1=gen_iterm_set(data_list1,12,6)
+    # print(len(v_list1))
+
+
+
+    # 测试hash
+    x=np.array([1,2,3])
+    size=16
+    seeds=[ 2, 3, 5, 7]
+    indexs=[]
+    index=0
+    for i in range(len(seeds)):
+        index=hash(x,seeds[i])
+        print(index)
 
 

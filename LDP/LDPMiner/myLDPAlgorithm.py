@@ -20,19 +20,17 @@ user_data=bf.readtxt(path)
 # all_iterm是存放所有出现过的项的数组，用来查找项对于的index，以便进行编码
 iterm_list=bf.combine_lists(user_data)
 label=np.unique(np.array(iterm_list))
-x_list=label.tolist()
+x_list=label.tolist() # 数据标签
 print(x_list)
 
 
 
-# d=len(label) # 数据纬度为1～41270
-# n=len(user_data) # 用户数为990002
+# d=len(label) # 获取数据纬度
+# n=len(user_data) # 获取用户数
 
 #kosarak.txt数据集的参数
 d=41270
 n=990002
-
-
 
 
 

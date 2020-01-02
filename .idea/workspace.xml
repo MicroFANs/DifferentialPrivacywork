@@ -82,7 +82,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -92,7 +92,7 @@
       <recent name="D:\Git\DifferentialPrivacywork\dataset" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.myLDPAlgorithm">
+  <component name="RunManager" selected="Python.basicfunc">
     <configuration name="Laplace_Mechanism_Problem_4" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DifferentialPrivacywork" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -159,6 +159,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="basicfunc" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="DifferentialPrivacywork" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LDP/basicFunction" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LDP/basicFunction/basicfunc.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="myLDPAlgorithm" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DifferentialPrivacywork" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -173,28 +195,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LDP/LDPMiner/myLDPAlgorithm.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="sampling_RP" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="DifferentialPrivacywork" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LDP/LDPMiner" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LDP/LDPMiner/sampling_RP.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -228,18 +228,18 @@
     <list>
       <item itemvalue="Python.SH" />
       <item itemvalue="Python.RP" />
-      <item itemvalue="Python.sampling_RP" />
       <item itemvalue="Python.test" />
       <item itemvalue="Python.Laplace_Mechanism_Problem_4" />
       <item itemvalue="Python.myLDPAlgorithm" />
+      <item itemvalue="Python.basicfunc" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.basicfunc" />
         <item itemvalue="Python.myLDPAlgorithm" />
         <item itemvalue="Python.Laplace_Mechanism_Problem_4" />
         <item itemvalue="Python.RP" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.sampling_RP" />
       </list>
     </recent_temporary>
   </component>
@@ -275,6 +275,8 @@
       <workItem from="1577437743575" duration="1407000" />
       <workItem from="1577693148924" duration="2677000" />
       <workItem from="1577703455999" duration="2818000" />
+      <workItem from="1577755403163" duration="3405000" />
+      <workItem from="1577966773919" duration="2133000" />
     </task>
     <task id="LOCAL-00001" summary="添加experiment2">
       <created>1551254580680</created>
@@ -297,44 +299,49 @@
     <option name="LAST_COMMIT_MESSAGE" value="添加experiment2" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1868" height="322" key="GridCell.Tab.0.bottom" timestamp="1577714518285">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state width="882" height="222" key="GridCell.Tab.0.bottom" timestamp="1577971383636">
+      <screen x="52" y="23" width="1868" height="1057" />
     </state>
     <state width="1878" height="140" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1576761391697" />
     <state width="1638" height="338" key="GridCell.Tab.0.bottom/0.23.1680.869@0.23.1680.869" timestamp="1577066034354" />
-    <state width="1868" height="322" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1577714518285" />
+    <state width="1868" height="322" key="GridCell.Tab.0.bottom/0.23.1920.1057@0.23.1920.1057" timestamp="1577785712523" />
     <state width="1870" height="331" key="GridCell.Tab.0.bottom/0.23.1920.993@0.23.1920.993" timestamp="1577069195180" />
     <state width="1868" height="301" key="GridCell.Tab.0.bottom/0.23.1920.999@0.23.1920.999" timestamp="1577441793738" />
-    <state width="1868" height="322" key="GridCell.Tab.0.center" timestamp="1577714518284">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state width="882" height="222" key="GridCell.Tab.0.bottom/52.23.1868.1057@52.23.1868.1057" timestamp="1577971383636" />
+    <state width="882" height="222" key="GridCell.Tab.0.center" timestamp="1577971383636">
+      <screen x="52" y="23" width="1868" height="1057" />
     </state>
     <state width="1878" height="140" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1576761391697" />
     <state width="1638" height="338" key="GridCell.Tab.0.center/0.23.1680.869@0.23.1680.869" timestamp="1577066034353" />
-    <state width="1868" height="322" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1577714518284" />
+    <state width="1868" height="322" key="GridCell.Tab.0.center/0.23.1920.1057@0.23.1920.1057" timestamp="1577785712523" />
     <state width="1870" height="331" key="GridCell.Tab.0.center/0.23.1920.993@0.23.1920.993" timestamp="1577069195179" />
     <state width="1868" height="301" key="GridCell.Tab.0.center/0.23.1920.999@0.23.1920.999" timestamp="1577441793738" />
-    <state width="1868" height="322" key="GridCell.Tab.0.left" timestamp="1577714518284">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state width="882" height="222" key="GridCell.Tab.0.center/52.23.1868.1057@52.23.1868.1057" timestamp="1577971383636" />
+    <state width="882" height="222" key="GridCell.Tab.0.left" timestamp="1577971383635">
+      <screen x="52" y="23" width="1868" height="1057" />
     </state>
     <state width="1878" height="140" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1576761391697" />
     <state width="1638" height="338" key="GridCell.Tab.0.left/0.23.1680.869@0.23.1680.869" timestamp="1577066034352" />
-    <state width="1868" height="322" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1577714518284" />
+    <state width="1868" height="322" key="GridCell.Tab.0.left/0.23.1920.1057@0.23.1920.1057" timestamp="1577785712523" />
     <state width="1870" height="331" key="GridCell.Tab.0.left/0.23.1920.993@0.23.1920.993" timestamp="1577069195179" />
     <state width="1868" height="301" key="GridCell.Tab.0.left/0.23.1920.999@0.23.1920.999" timestamp="1577441793738" />
-    <state width="1868" height="322" key="GridCell.Tab.0.right" timestamp="1577714518284">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state width="882" height="222" key="GridCell.Tab.0.left/52.23.1868.1057@52.23.1868.1057" timestamp="1577971383635" />
+    <state width="882" height="222" key="GridCell.Tab.0.right" timestamp="1577971383636">
+      <screen x="52" y="23" width="1868" height="1057" />
     </state>
     <state width="1878" height="140" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1576761391697" />
     <state width="1638" height="338" key="GridCell.Tab.0.right/0.23.1680.869@0.23.1680.869" timestamp="1577066034353" />
-    <state width="1868" height="322" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1577714518284" />
+    <state width="1868" height="322" key="GridCell.Tab.0.right/0.23.1920.1057@0.23.1920.1057" timestamp="1577785712523" />
     <state width="1870" height="331" key="GridCell.Tab.0.right/0.23.1920.993@0.23.1920.993" timestamp="1577069195180" />
     <state width="1868" height="301" key="GridCell.Tab.0.right/0.23.1920.999@0.23.1920.999" timestamp="1577441793738" />
-    <state x="607" y="93" key="SettingsEditor" timestamp="1577069097363">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state width="882" height="222" key="GridCell.Tab.0.right/52.23.1868.1057@52.23.1868.1057" timestamp="1577971383636" />
+    <state x="643" y="114" key="SettingsEditor" timestamp="1577967601337">
+      <screen x="52" y="23" width="1868" height="1057" />
     </state>
     <state x="607" y="93" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1577069097363" />
     <state x="531" y="98" key="SettingsEditor/0.23.1680.869@0.23.1680.869" timestamp="1577065701649" />
     <state x="469" y="161" key="SettingsEditor/0.23.1920.999@0.23.1920.999" timestamp="1576659439310" />
+    <state x="643" y="114" key="SettingsEditor/52.23.1868.1057@52.23.1868.1057" timestamp="1577967601337" />
     <state x="1193" y="255" width="1600" height="968" key="dock-window-1" timestamp="1577696157484">
       <screen x="0" y="23" width="1920" height="999" />
     </state>
@@ -349,7 +356,8 @@
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$Laplace_Mechanism_Problem_4.coverage" NAME="Laplace_Mechanism_Problem_4 Coverage Results" MODIFIED="1577441051285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../../pyworkplace/github/differential_priivacy-master" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$RP.coverage" NAME="RP Coverage Results" MODIFIED="1577066034347" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$SH.coverage" NAME="SH Coverage Results" MODIFIED="1577263465912" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$myLDPAlgorithm.coverage" NAME="myLDPAlgorithm Coverage Results" MODIFIED="1577714101622" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$myLDPAlgorithm.coverage" NAME="myLDPAlgorithm Coverage Results" MODIFIED="1577757386555" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$test.coverage" NAME="test Coverage Results" MODIFIED="1577064688855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$basicfunc.coverage" NAME="basicfunc Coverage Results" MODIFIED="1577970719472" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/basicFunction" />
   </component>
 </project>
