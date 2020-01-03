@@ -46,7 +46,7 @@ def get_c_epsilon(epsilon):
 def Basic_Randomizer(input,epsilon):
     """
     SHist论文中 Algorithm 1
-    :param input: 长度为m的np数组，元素为{0，1}
+    :param input: 长度为m的np数组
     :param epsilon: 隐私预算
     :return: 向量z
     """
@@ -76,6 +76,37 @@ def Basic_Randomizer(input,epsilon):
     z[j]=z_j
     #print(z)
     return z
+
+def Basic_Randomizer_1(m,x,epsilon,rand_proj):
+    """
+    上面Basic_Randomizer的另一个版本，输入的是一个值，而不是一个向量，其实是一样的
+    :param m:
+    :param value:
+    :param epsilon:
+    :return:
+    """
+    # 随机选择一个序号j，j在区间[0,m)中
+    j=choice(range(m))
+    #print(j)
+
+    # 计算c_epsilon
+    c_eps=get_c_epsilon(epsilon)
+
+    # 扰动
+
+    p=p_values(epsilon) # 扰动概率p
+    if x==0: # 如果x为0，即为虚拟项
+        z_j=choice([-1*c_eps*np.sqrt(m),c_eps*np.sqrt(m)]) # 从二者任选一个
+    else: # x不是虚拟项，则以概率p变换
+        rand=np.random.random() # 生成取值范围为[0,1)范围的随机浮点数
+        if rand<p:z_j=c_eps*m*rand_proj[j,int(x-1)]
+        else:z_j=-1*c_eps*m*rand_proj[j,int(x-1)]
+    # 输出
+    z=np.zeros(m)
+    z[j]=z_j
+    #print(z)
+    return z
+
 
 
 
@@ -152,6 +183,9 @@ def Frequency_Estimator_Based_on_FO(random_proj,z_means,e_v):
     f_v_estimate=np.dot(temp,z_means)
     return f_v_estimate
 
+def FO(random_proj,z_means,v):
+    f_v_estimate=np.dot(random_proj[:,v-1],z_means)
+    return f_v_estimate
 
 
 # 编码 将v的值由{1,2...}映射成{-1/sqrt(m),1/sqrt(m)}^m

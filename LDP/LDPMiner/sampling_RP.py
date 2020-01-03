@@ -4,6 +4,8 @@
 @time:2019/12/11 15:40
 """
 # -*- coding: utf-8 -*-
+import matplotlib
+matplotlib.use('TkAgg')
 import random
 import numpy as np
 import pandas as pd
