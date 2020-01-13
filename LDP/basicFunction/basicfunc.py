@@ -9,6 +9,7 @@ from sklearn.preprocessing import OneHotEncoder
 import matplotlib.pyplot as plt
 import random as rnd
 import itertools
+import math
 
 
 def create_0_1(row, col):
@@ -211,15 +212,42 @@ def IDCG(d, k):
 
 
 # hash函数，是布隆滤波器的实现中的
-def hash(data,seed):
+# def hash(data,seed):
+#     hash=0
+#     length=len(data)
+#     if length>0:
+#         for i in range(length):
+#             hash=i*hash+data[i]
+#     hash=hash*seed%16 # size的值
+#     return abs(hash)
+
+def hash(value,size,seed):
+    # 将整数当作字符串来处理
     hash=0
-    length=len(data)
-    if length>0:
-        for i in range(length):
-            hash=i*hash+data[i]
-    hash=hash*seed%16 # size的值
+
+    s=str(value)
+    l=len(s)
+    for i in range(l):
+        hash=i*hash+int(s[i])
+    hash=hash*seed%size
     return abs(hash)
 
+
+def hash_1(value,size,seed):
+    hash=0
+    s=str(value)
+    l=len(s)
+    for i in range(l):
+        hash=seed*hash+int(s[i])
+    return (size-1)&hash
+
+# public int hash(String value) {
+#     int result = 0;
+# int len = value.length();
+# for (int i = 0; i < len; i++) {
+#     result = seed * result + value.charAt(i);
+# }
+# return (cap - 1) & result;
 
 
 if __name__ == '__main__':
@@ -243,13 +271,8 @@ if __name__ == '__main__':
 
 
     # 测试hash
-    x=np.array([1,2,3])
+    x=81
     size=16
-    seeds=[ 2, 3, 5, 7]
-    indexs=[]
-    index=0
-    for i in range(len(seeds)):
-        index=hash(x,seeds[i])
-        print(index)
-
+    seed=1
+    print(hash(x,6,seed))
 
