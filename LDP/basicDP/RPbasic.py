@@ -16,6 +16,8 @@ def gen_probability(epsilon, n=2):
     return np.e ** epsilon / (np.e ** epsilon + n - 1)
 
 
+
+
 def gen_f(epsilon):
     """
     根据epsilon生成PRR中的参数f，PRR中是以1-0.5f概率保持不变，以0.5f翻转

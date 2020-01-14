@@ -212,16 +212,8 @@ def IDCG(d, k):
 
 
 # hash函数，是布隆滤波器的实现中的
-# def hash(data,seed):
-#     hash=0
-#     length=len(data)
-#     if length>0:
-#         for i in range(length):
-#             hash=i*hash+data[i]
-#     hash=hash*seed%16 # size的值
-#     return abs(hash)
 
-def hash(value,size,seed):
+def hash_1(value,size,seed):
     # 将整数当作字符串来处理
     hash=0
 
@@ -233,13 +225,44 @@ def hash(value,size,seed):
     return abs(hash)
 
 
-def hash_1(value,size,seed):
+def hash_2(value,size,seed):
     hash=0
     s=str(value)
     l=len(s)
     for i in range(l):
         hash=seed*hash+int(s[i])
     return (size-1)&hash
+
+def hash_3(value,size,seed):
+    hash=0
+    c=[2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97]
+    hash=value%5
+    return hash
+
+
+def hash_4(value,size,seed):
+    hash=0
+    np.random.seed(seed)
+    c=np.random.randint(100,2000)
+
+    hash=(value*c)%5
+    return hash
+
+
+def hash(value,size,seed):
+    """
+    hash函数
+    :param value: 需要hash的值
+    :param size: 哈希域的大小
+    :param seed: 种子
+    :return:
+    """
+    np.random.seed(value+seed)
+    hash=np.random.randint(0,size)
+    return hash
+
+
+
 
 # public int hash(String value) {
 #     int result = 0;
@@ -270,9 +293,9 @@ if __name__ == '__main__':
 
 
 
-    # 测试hash
-    x=81
-    size=16
-    seed=1
-    print(hash(x,6,seed))
+
+    for i in range(1000):
+        print(hash(i,6,1),hash(i,6,2),hash(i,6,3))
+
+
 
