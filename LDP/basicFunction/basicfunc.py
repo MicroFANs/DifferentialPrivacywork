@@ -35,6 +35,14 @@ def readcsv(path, N=None):
     np_data = np.array(df_data)
     return np_data
 
+def csvtolist(path,N=None):
+    df_data = pd.read_csv(path, header=-1, nrows=N)
+
+    list = df_data.values.tolist()
+    list_data = []  # 存储的是要提取的数据
+    for i in range(len(list)):
+        list_data.append(list[i][0])
+    return list_data
 
 def savecsv(nparry, path, header=False, index=False):
     """
@@ -47,6 +55,7 @@ def savecsv(nparry, path, header=False, index=False):
     """
     df = pd.DataFrame(nparry)
     df.to_csv(path, header=header, index=index)
+
 
 
 def readtxt(path):

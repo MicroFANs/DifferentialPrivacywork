@@ -9,6 +9,7 @@ matplotlib.use('TkAgg')
 import LDP.basicDP.RPbasic as rpb
 import LDP.basicFunction.basicfunc as bf
 import matplotlib.pyplot as plt
+import pandas as pd
 
 
 # 关闭科学计数法显示
@@ -40,13 +41,15 @@ onehot_data = bf.one_hot_1D(user_data)
 origin = np.zeros(d)
 for i in range(n):
     origin = origin + onehot_data[i]
-print('origin:\n', origin)
+#print('origin:\n', origin)
+count_true=origin.tolist()
+print(count_true)
 
 """
 Basic One-time RAPPOR 
 数据已经编码完成，并且只进行一次PRR
 """
-epsilon = np.log(3)  # eps越大，数据可用性越好，隐私保护水平越低
+epsilon = 2  # eps越大，数据可用性越好，隐私保护水平越低
 f = rpb.gen_f(epsilon)
 
 z_totle = np.zeros(d)
@@ -59,8 +62,13 @@ est = np.zeros(d)
 for j in range(d):
     est[j] = rpb.decoder_PRR(z_totle[j], n, f)
 print('estimate:\n', est)
+count_estimate=est.tolist()
 
-# 画图
-plt.bar(x_list, +origin)
-plt.bar(x_list, -est)
-plt.show()
+# # 画图
+# plt.bar(x_list, +origin)
+# plt.bar(x_list, -est)
+# plt.show()
+
+result={"RAPPOR":count_estimate,"true":count_true,"value":x_list}
+df_res=pd.DataFrame(result)
+#df_res.to_csv("../LDPMiner/dataset/kosarak/result/10k_sv_RP.csv",index=False)

@@ -42,9 +42,9 @@ print('数据obehot编码:\n',onehot_data)
 
 
 # 参数设置
-epsilon=np.log(3) # eps=ln(3)
+epsilon=2 # eps=ln(3)
 
-r,m=shb.comput_parameter(d=100000,n=10,epsilon=epsilon,beta=0.000000001)
+r,m=shb.comput_parameter(d=d,n=100,epsilon=epsilon,beta=0.01)
 print('n=',n,'\nd=',d,'\nr=',r,'\nm=',m)
 
 
@@ -63,14 +63,36 @@ for i in range(n):
 z_mean=z_total/n
 print(z_mean)
 
-# 选择计算某个v的频率估计
-v=11
-e_v=onehot_data[v]
-f_est=shb.Frequency_Estimator_Based_on_FO(rnd_proj,z_mean,e_v)
-print('v=',v,'\nf_estmiate=',f_est)
+# # 选择计算某个v的频率估计
+# v=11
+# e_v=onehot_data[v]
+# f_est=shb.Frequency_Estimator_Based_on_FO(rnd_proj,z_mean,e_v)
+# print('v=',v,'\nf_estmiate=',f_est)
+#
+#
+#
+# count=sum(user_data==v)
+# print('f_true=',count[0])
 
-count=sum(user_data==v)
-print('f_true=',count[0]/n)
+count_true=[] #真实计数结果
+count_estimate=[] # 估计计数结果
+
+for i in range(d):
+    v=i+1
+    e_v=onehot_data[v]
+    f_est=shb.Frequency_Estimator_Based_on_FO(rnd_proj,z_mean,e_v)
+    count_estimate.append(f_est*n)
+
+    count=sum(user_data==v)
+    count_true.append(count[0])
 
 
 
+print(count_true) #真实的计数结果
+print(count_estimate) # 估计的计数结果
+"""
+保存结果
+"""
+result={"SH":count_estimate,"true":count_true}
+df_res=pd.DataFrame(result)
+df_res.to_csv("../LDPMiner/dataset/kosarak/result/10k_sv_SH.csv",index=False)

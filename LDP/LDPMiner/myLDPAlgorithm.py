@@ -52,7 +52,7 @@ v_list=bf.gen_iterm_set(user_data,l)
 sampling_data=np.zeros(n)
 for i in range(n):
     sampling_data[i]=random.choice(v_list[i])
-print(len(sampling_data))
+print(type(sampling_data))
 
 # 释放内存
 del v_list
