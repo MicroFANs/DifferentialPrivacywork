@@ -64,10 +64,10 @@ for j in range(d):
 print('estimate:\n', est)
 count_estimate=est.tolist()
 
-# # 画图
-# plt.bar(x_list, +origin)
-# plt.bar(x_list, -est)
-# plt.show()
+# 画图
+plt.bar(x_list, +origin)
+plt.bar(x_list, -est)
+plt.show()
 
 result={"RAPPOR":count_estimate,"true":count_true,"value":x_list}
 df_res=pd.DataFrame(result)
