@@ -8,6 +8,17 @@ import LDP.basicFunction.basicfunc as bf
 import numpy as np
 
 
+def normlization(data):
+    """
+    归一化到[-1,1]
+    :param data:
+    :return:
+    """
+    max=np.max(data)
+    min=np.min(data)
+    lenth=max-min
+    return -1+2*(data-min)/lenth
+
 """
 def KV(path):
 
@@ -40,6 +51,13 @@ def KV(path):
     """
 
     data = bf.readcsv(path)
+    v_ary=data[:,2]
+    v_ary=normlization(v_ary)
+    # 对value值进行归一化
+    data[:,2]=v_ary
+
+
+
     n = 7120  # 总共有7120个用户
 
     # 创建嵌套表，每个list里有n个list，即对应每个用户的不定长的数据
@@ -67,9 +85,10 @@ def KV(path):
 
 
     print(index[1])
-    print(len(k[1]))
-    print(len(v[1]))
-
+    print(k[0])
+    print(v[0])
+    bf.savetxt(k,'/Workplace\pyworkplace\DifferentialPrivacywork\dataset\KV\KV_k.txt')
+    bf.savetxt(v, '/Workplace\pyworkplace\DifferentialPrivacywork\dataset\KV\KV_v.txt')
 
 
 if __name__ == '__main__':

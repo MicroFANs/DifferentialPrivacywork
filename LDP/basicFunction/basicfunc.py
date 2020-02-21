@@ -273,13 +273,7 @@ def hash(value,size,seed):
 
 
 
-# public int hash(String value) {
-#     int result = 0;
-# int len = value.length();
-# for (int i = 0; i < len; i++) {
-#     result = seed * result + value.charAt(i);
-# }
-# return (cap - 1) & result;
+
 
 
 if __name__ == '__main__':

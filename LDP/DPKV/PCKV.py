@@ -19,7 +19,7 @@ import time
 # 关闭科学计数法显示
 np.set_printoptions(suppress=True)
 
-path='/Workplace\pyworkplace\DifferentialPrivacywork\dataset\KV\KV1.csv'
 
+x=bf.readtxt('/Workplace\pyworkplace\DifferentialPrivacywork\dataset\KV\KV_v.txt')
 
 
