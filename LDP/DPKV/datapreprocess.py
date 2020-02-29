@@ -8,6 +8,7 @@ import LDP.basicFunction.basicfunc as bf
 import numpy as np
 
 
+
 def normlization(data):
     """
     归一化到[-1,1]
@@ -17,7 +18,8 @@ def normlization(data):
     max=np.max(data)
     min=np.min(data)
     lenth=max-min
-    return -1+2*(data-min)/lenth
+    norm=-1+2*(data-min)/lenth
+    return np.around(norm,2)
 
 """
 def KV(path):
@@ -55,6 +57,7 @@ def KV(path):
     v_ary=normlization(v_ary)
     # 对value值进行归一化
     data[:,2]=v_ary
+
 
 
 

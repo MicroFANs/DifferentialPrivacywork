@@ -20,6 +20,21 @@ import time
 np.set_printoptions(suppress=True)
 
 
-x=bf.readtxt('/Workplace\pyworkplace\DifferentialPrivacywork\dataset\KV\KV_v.txt')
+data_k=bf.readtxt('/Workplace\pyworkplace\DifferentialPrivacywork\dataset\KV\KV_k.txt')
+data_v=bf.readtxt('/Workplace\pyworkplace\DifferentialPrivacywork\dataset\KV\KV_v.txt')
+#print(data_k[0],'\n',data_v[0])
+
+
+def example(k,v):
+    return k+1,v+1
+
+# 这样写生成的是元素为元组的list
+kvp=[example(data_k[i][0],data_v[i][0]) for i in range(len(data_k))]
+print(len(kvp))
+
+
+# 构建以元组元素的list
+kv=zip(data_k[0],data_v[0])
+print(list(kv))
 
 
