@@ -4,7 +4,6 @@
 @time:2020/2/21 16:42
 """
 import numpy as np
-import random
 import LDP.basicFunction.basicfunc as bf
 
 
