@@ -130,6 +130,74 @@ def PCKV_GRR(all_kv,d,l,a,p):
 
 
 
+def AEC_UE(kv_p,d,l,a,p,b):
+    """
+
+    :param kv_p: UE的输入kv_p是一个嵌套表，表中的元素是二元编码list
+    :param d:
+    :param l:
+    :param a:
+    :param p:
+    :param b:
+    :return:
+    """
+    pos=0
+    neg=0
+    n=len(kv_p)
+    n1=[]
+    n2=[]
+    for k in range(d):
+        for kv in kv_p:
+            if kv[k]==1:
+                pos+=1
+            elif kv[k]==-1:
+                neg+=1
+        n1.append(pos)
+        n2.append(neg)
+    f_k=list(l*(-b+(np.array(n1)+np.array(n2))/n)/(a-b))
+    if f_k<(1/n):
+        f_k=1/n
+    elif f_k>1:
+        f_k=1
+
+    A=np.zeros((2,2))
+    A[0][0]=A[1][1]=a*p-b/2
+    A[0][1]=A[1][0]=a*(1-p)-b/2
+    B=np.zeros((2,1))
+    B[0,0]=n1-n*b/2
+    B[1,0]=n2-n*b/2
+    S=(A.I)*B
+    n1_=S[0,0]
+    n2_=S[1,0]
+
+    if n1_<0:
+        n1_=0
+    elif n1_>n*f_k/l:
+        n1_=n*f_k/l
+
+    if n2_<0:
+        n2_=0
+    elif n2_>n*f_k/l:
+        n2_=n*f_k/l
+
+    m_k=l*(n1_-n2_)/(n*f_k)
+
+    return f_k,m_k
+
+
+
+
+
+
+
+def AEC_GRR(kv_p,d,l,a,p,b):
+    total=0
+    pos=0
+    neg=0
+
+
+
+
 
 if __name__ == '__main__':
     # np.random.seed(10)
