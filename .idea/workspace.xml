@@ -62,8 +62,8 @@
       <file leaf-file-name="PCKV.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/LDP/DPKV/PCKV.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="37" column="15" lean-forward="true" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+            <state relative-caret-position="703">
+              <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -90,8 +90,8 @@
       <file leaf-file-name="PCKVbasic.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/LDP/basicDP/PCKVbasic.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1729">
-              <caret line="184" column="18" selection-start-line="184" selection-start-column="18" selection-end-line="184" selection-end-column="18" />
+            <state relative-caret-position="-3">
+              <caret line="212" column="39" selection-start-line="212" selection-start-column="39" selection-end-line="212" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -164,48 +164,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="DifferentialPrivacywork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DifferentialPrivacywork" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DifferentialPrivacywork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DifferentialPrivacywork" type="462c0819:PsiDirectoryNode" />
-              <item name="dataset" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DifferentialPrivacywork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DifferentialPrivacywork" type="462c0819:PsiDirectoryNode" />
-              <item name="dataset" type="462c0819:PsiDirectoryNode" />
-              <item name="KV" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DifferentialPrivacywork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DifferentialPrivacywork" type="462c0819:PsiDirectoryNode" />
-              <item name="LDP" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DifferentialPrivacywork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DifferentialPrivacywork" type="462c0819:PsiDirectoryNode" />
-              <item name="LDP" type="462c0819:PsiDirectoryNode" />
-              <item name="basicDP" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="DifferentialPrivacywork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="DifferentialPrivacywork" type="462c0819:PsiDirectoryNode" />
-              <item name="LDP" type="462c0819:PsiDirectoryNode" />
-              <item name="DPKV" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -426,6 +385,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="725" y="0" width="744" height="881" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.44569817" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32978722" />
@@ -836,8 +796,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/LDP/DPKV/PCKV.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="37" column="15" lean-forward="true" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
+        <state relative-caret-position="703">
+          <caret line="37" column="15" selection-start-line="37" selection-start-column="15" selection-end-line="37" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -845,16 +805,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1273">
           <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-          <folding>
-            <element signature="e#63#81#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/LDP/basicDP/PCKVbasic.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1729">
-          <caret line="184" column="18" selection-start-line="184" selection-start-column="18" selection-end-line="184" selection-end-column="18" />
+        <state relative-caret-position="-3">
+          <caret line="212" column="39" selection-start-line="212" selection-start-column="39" selection-end-line="212" selection-end-column="39" />
         </state>
       </provider>
     </entry>
