@@ -20,7 +20,7 @@ def olh_hash(value, size, seed):
     :param value:输入的值
     :param size: 哈希域的大小,就是g
     :param seed: 种子,原文作者将用户的编号作为种子，即第一个用户为0，下一个为1
-    :return: 哈希得到的值，在（0，g）之间
+    :return: 哈希得到的值，在[0，g）之间
     """
 
     h=(xxhash.xxh32(str(value), seed=seed).intdigest() % size)
@@ -72,7 +72,7 @@ def support(v, report, g, n):
 
 def olh_support(v, report, g, n):
     """
-    这个support函数是和我自己写的bf下的hash相匹配
+    这个support函数是和作者的olh_hash相匹配
     :param v:
     :param report:
     :param g:

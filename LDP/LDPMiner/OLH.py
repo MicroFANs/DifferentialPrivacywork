@@ -26,14 +26,14 @@ np.set_printoptions(suppress=True)
 
 
 path = '../LDPMiner/dataset/kosarak/kosarak_10k_singlevalue.csv'
-user_data = bf.readcsv(path)
-# print(user_data)
-n = len(user_data)
+#user_data = bf.readcsv(path)
+#print(user_data)
+#n = len(user_data)
 # print(n)
 
 
-epsilon = 2
-g = int(np.exp(epsilon) + 1)
+epsilon = 10
+g = int(np.exp(epsilon)) + 1
 # print(g)
 
 # 程序运行起始时间
@@ -44,19 +44,21 @@ starttime=time.clock()
 原始数据，用来计算误差
 """
 list_true = bf.csvtolist(path)  # list_true是真实的数据list
-# print(list_true)
+#print(list_true)
+n=len(list_true)
 
-label = np.unique(user_data)
+label = np.unique(list_true)
 x_list = label.tolist()
 
 """
 encoding
 """
 encode = np.zeros((n, g))
-x = []  # 这里面存的是
+x = []  # 这里面存的是每个用户的数据hash后的在[0，g）的index
 # print(encode)
 for i in range(n):
-    value = user_data[i][0]
+    #value = user_data[i][0]
+    value=list_true[i]
 
     # 自己写的hash函数
     #index = bf.hash(value, g, i)
@@ -80,12 +82,12 @@ p = rpb.gen_probability(epsilon, n=g)
 q = p / np.e ** epsilon
 # print(p,q)
 
-y = []
+y = []# 这里面存的是每个用户的数据扰动后的在[0，g）的index
 for i in range(n):
 
     # 自己实现的grr
     #y.append(lhb.grr(p, x[i], g))
-    # 成作者源码实现方式olh_grr，但是作者实现的grr结果都一样，不会变，不知道为什么。答案是我自己的hash函数结果不会变，是因为用了系统时间种子
+     """换成作者源码实现方式olh_grr，但是作者实现的grr结果都一样，不会变，不知道为什么。答案是我自己的hash函数结果不会变，是因为用了系统时间种子"""
      y.append(lhb.olh_grr(p, x[i], g))
 
 # print(y)

@@ -16,7 +16,8 @@ def p_values(epsilon, n=2):
     p = np.e ** epsilon / (np.e ** epsilon + n - 1)
     return p
 
-def PS(k,v,d,l):
+
+def PS(k:list, v:list, d:int, l:int):
     """
     PCKV论文中的Algorithm1 Padding and Sampling
     以高概率b从用户的项集S中采样，挑选一个kv对
@@ -28,33 +29,32 @@ def PS(k,v,d,l):
     :param l:虚拟项的长度
     :return:
     """
-    S=len(k)
-    b=S/(max(S,l))
-    rnd=np.random.random()
-    k_ps=0 #ps之后的k值
-    v_ps=0 #ps之后的v值
-    if rnd<b: # 从用户项集S中随机选择一个kv对，从[0,S)中随机选择一个数作为序号
-        j=np.random.randint(0,S) # 前闭后开区间
-        k_ps=j+1 # 序号+1才是真正的k值
-        v_ps=v[j]
+    S = len(k)
+    b = S / (max(S, l))
+    rnd = np.random.random()
+    k_ps = 0  # ps之后的k值
+    v_ps = 0  # ps之后的v值
+    if rnd < b:  # 从用户项集S中随机选择一个kv对，从[0,S)中随机选择一个数作为序号
+        j = np.random.randint(0, S)  # 前闭后开区间
+        k_ps = j + 1  # 序号+1才是真正的k值
+        v_ps = v[j]
     else:
-        v_ps=0
-        j=np.random.randint(0,l)+d # 从{d+1,d+2,...,d'}中随机选择一个作为序号
-        k_ps=j+1 # 序号+1才是真正的k值
+        v_ps = 0
+        j = np.random.randint(0, l) + d  # 从{d+1,d+2,...,d'}中随机选择一个作为序号
+        k_ps = j + 1  # 序号+1才是真正的k值
 
     # 离散v_ps值
-    p=(1+v_ps)/2
-    rnd=np.random.random()
-    if rnd<p:
-        v_ps=1
+    p = (1 + v_ps) / 2
+    rnd = np.random.random()
+    if rnd < p:
+        v_ps = 1
     else:
-        v_ps=-1
+        v_ps = -1
 
-    return k_ps,v_ps
+    return k_ps, v_ps
 
 
-
-def mpp(candidate, p):
+def mpp(candidate:list, p:list):
     """
     多概率扰动函数 mutil_prob_perturbation
     以不同的概率选择不同的元素,如以0.2的概率选择1，以0.3的概率选择-1，以0.5的概率选择0
@@ -66,7 +66,8 @@ def mpp(candidate, p):
     v = np.random.choice(candidate, p=p)
     return v
 
-def P_UE(k_v,d,l,a,p,b):
+
+def P_UE(k_v, d, l, a, p, b):
     """
     PCKV_UE算法中的扰动部分
     :param k_v: k_v是元组,(k,v),如(3,0.4)
@@ -77,14 +78,14 @@ def P_UE(k_v,d,l,a,p,b):
     :param b:
     :return:
     """
-    y=[mpp([1,-1,0],[b/2,b/2,(1-b)]) for i in range(d+l)]
-    k=k_v[0]
-    v=k_v[1]
-    y[k-1]=mpp([v,-v,0],[a*p,a*(1-p),(1-a)])
+    y = [mpp([1, -1, 0], [b / 2, b / 2, (1 - b)]) for i in range(d + l)]
+    k = k_v[0]
+    v = k_v[1]
+    y[k - 1] = mpp([v, -v, 0], [a * p, a * (1 - p), (1 - a)])
     return y
 
 
-def PCKV_UE(all_kv,d,l,a,p,b):
+def PCKV_UE(all_kv, d, l, a, p, b):
     """
     PCKV论文中的Algorithm2 PCKV-UE
     :param all_kv:元素为元组的list 如[(2,.5),(3,.3),(4,.1),(5,-0.4)]
@@ -95,13 +96,68 @@ def PCKV_UE(all_kv,d,l,a,p,b):
     :param b: b in (0,0.5]
     :return:元素为UE的嵌套表
     """
-    Y=[P_UE(data,d,l,a,p,b) for data in all_kv]
+    Y = [P_UE(data, d, l, a, p, b) for data in all_kv]
     return Y
 
-
-def P_GRR(k_v,d,l,a,p):
+def AEC_UE(kv_p, d, l, a, p, b):
     """
+    :param kv_p: UE的输入kv_p是一个嵌套表，表中的元素是二元编码list
+    :param d:
+    :param l:
+    :param a:
+    :param p:
+    :param b:
+    :return:
+    """
+    pos = 0
+    neg = 0
+    n = len(kv_p)
+    n1 = []
+    n2 = []
+    for k in range(d):
+        for kv in kv_p:
+            if kv[k] == 1:
+                pos += 1
+            elif kv[k] == -1:
+                neg += 1
+        n1.append(pos)
+        n2.append(neg)
+    f_k = list(l * (-b + (np.array(n1) + np.array(n2)) / n) / (a - b))
+    if f_k < (1 / n):
+        f_k = 1 / n
+    elif f_k > 1:
+        f_k = 1
 
+    A = np.zeros((2, 2))
+    A[0][0] = A[1][1] = a * p - b / 2
+    A[0][1] = A[1][0] = a * (1 - p) - b / 2
+    B = np.zeros((2, 1))
+    B[0, 0] = n1 - n * b / 2
+    B[1, 0] = n2 - n * b / 2
+    S = (A.I) * B
+    n1_ = S[0, 0]
+    n2_ = S[1, 0]
+
+    if n1_ < 0:
+        n1_ = 0
+    elif n1_ > n * f_k / l:
+        n1_ = n * f_k / l
+
+    if n2_ < 0:
+        n2_ = 0
+    elif n2_ > n * f_k / l:
+        n2_ = n * f_k / l
+
+    m_k = l * (n1_ - n2_) / (n * f_k)
+
+    return f_k, m_k
+
+
+"""-------------------------------------------"""
+
+
+def P_GRR(k_v, d, l, a, p):
+    """
     :param k_v: k_v是元组,(k,v),如(3,0.4)
     :param d:
     :param l:
@@ -112,85 +168,25 @@ def P_GRR(k_v,d,l,a,p):
     k = k_v[0]
     v = k_v[1]
 
-    b = (1 - p) / ((d+l) - 1)
+    b = (1 - p) / ((d + l) - 1)
     rnd = np.random.random_sample()
     if rnd > a - b:
-        k_p = np.random.randint(0, (d+l))
-        v_p=mpp([v,-v],[p,(1-p)])
+        k_p = np.random.randint(0, (d + l))
+        v_p = mpp([v, -v], [p, (1 - p)])
     else:
         k_p = k
-        v_p=mpp([1,-1],(0.5,0.5))
-    return k_p,v_p
+        v_p = mpp([1, -1], (0.5, 0.5))
+    return k_p, v_p
 
 
-
-def PCKV_GRR(all_kv,d,l,a,p):
-    y=[P_GRR(data,d,l,a,p) for data in all_kv]
+def PCKV_GRR(all_kv, d, l, a, p):
+    y = [P_GRR(data, d, l, a, p) for data in all_kv]
     return y
 
 
 
-def AEC_UE(kv_p,d,l,a,p,b):
-    """
 
-    :param kv_p: UE的输入kv_p是一个嵌套表，表中的元素是二元编码list
-    :param d:
-    :param l:
-    :param a:
-    :param p:
-    :param b:
-    :return:
-    """
-    pos=0
-    neg=0
-    n=len(kv_p)
-    n1=[]
-    n2=[]
-    for k in range(d):
-        for kv in kv_p:
-            if kv[k]==1:
-                pos+=1
-            elif kv[k]==-1:
-                neg+=1
-        n1.append(pos)
-        n2.append(neg)
-    f_k=list(l*(-b+(np.array(n1)+np.array(n2))/n)/(a-b))
-    if f_k<(1/n):
-        f_k=1/n
-    elif f_k>1:
-        f_k=1
-
-    A=np.zeros((2,2))
-    A[0][0]=A[1][1]=a*p-b/2
-    A[0][1]=A[1][0]=a*(1-p)-b/2
-    B=np.zeros((2,1))
-    B[0,0]=n1-n*b/2
-    B[1,0]=n2-n*b/2
-    S=(A.I)*B
-    n1_=S[0,0]
-    n2_=S[1,0]
-
-    if n1_<0:
-        n1_=0
-    elif n1_>n*f_k/l:
-        n1_=n*f_k/l
-
-    if n2_<0:
-        n2_=0
-    elif n2_>n*f_k/l:
-        n2_=n*f_k/l
-
-    m_k=l*(n1_-n2_)/(n*f_k)
-
-    return f_k,m_k
-
-
-
-
-
-
-
-def AEC_GRR(kv_p,d,l,a,p,b):
+def AEC_GRR(kv_p, d, l, a, p, b):
     """
 
     :param kv_p: GRR的输入是嵌套表，形如[(1,1),(2,-1),(3,0),(4,1)]
@@ -208,9 +204,9 @@ def AEC_GRR(kv_p,d,l,a,p,b):
     n2 = []
     for k in range(d):
         for kv in kv_p:
-            if (kv[0] == k)&(kv[1]==1):
+            if (kv[0] == k) & (kv[1] == 1):
                 pos += 1
-            elif (kv[0] == k)&(kv[1]==-1):
+            elif (kv[0] == k) & (kv[1] == -1):
                 neg += 1
         n1.append(pos)
         n2.append(neg)
@@ -254,26 +250,23 @@ if __name__ == '__main__':
     # kk,vv=PS(k,v,d,l)
     # print(kk,vv)
 
-
-
     # d=10
     # l=2
     # b=0.4
     # y = [mpp([1, -1, 0], [b / 2, b / 2, (1 - b)]) for i in range(d + l)]
     # print(y)
 
-    d=10
-    l=2
-    a=0.6
-    p=0.6
-    b=0.4
-    k_v=[(1,-0.2),(2,.5),(3,.3),(4,.1),(5,-0.4),(6,-0.8),(7,0.3),(8,-0.6),(9,0.1)]
+    d = 10
+    l = 2
+    a = 0.6
+    p = 0.6
+    b = 0.4
+    k_v = [(1, -0.2), (2, .5), (3, .3), (4, .1), (5, -0.4), (6, -0.8), (7, 0.3), (8, -0.6), (9, 0.1)]
 
-    Y=PCKV_UE(k_v,d,l,a,p,b)
+    Y = PCKV_UE(k_v, d, l, a, p, b)
     print(Y)
 
-    y=PCKV_GRR(k_v,d,l,a,p)
+    y = PCKV_GRR(k_v, d, l, a, p)
     print(y)
-
 
 # 都缺少PS那一步，所以要在主函数中填上PS那一步

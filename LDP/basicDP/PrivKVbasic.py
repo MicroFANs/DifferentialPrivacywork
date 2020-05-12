@@ -100,7 +100,7 @@ def PrivKV(k, v, epsilon1, epsilon2):
     n = len(k)
     all_kvp = [LPP(k[i], v[i], epsilon1, epsilon2) for i in range(n)]
 
-    total=0
+    total = 0
     have = 0
     pos = 0
     neg = 0
@@ -108,7 +108,7 @@ def PrivKV(k, v, epsilon1, epsilon2):
     for kv in all_kvp:
         if kv[0] == 1:
             have += 1
-        total+=1 # 这里的total不是全部用户的数量，而是每个k（j）的总数
+        total += 1  # 这里的total不是全部用户的数量，而是每个k（j）的总数
         if kv[1] == 1:
             pos += 1
         if kv[1] == -1:
@@ -122,38 +122,38 @@ def PrivKV(k, v, epsilon1, epsilon2):
     n1 = (p2 - 1) / (2 * p2 - 1) * n + pos / (2 * p2 - 1)
     n2 = (p2 - 1) / (2 * p2 - 1) * n + neg / (2 * p2 - 1)
 
-    if n1<0:
-        n1=0
-    elif n1>N:
-        n1=N
+    if n1 < 0:
+        n1 = 0
+    elif n1 > N:
+        n1 = N
 
-    if n2<0:
-        n2=0
-    elif n2>N:
-        n2=N
+    if n2 < 0:
+        n2 = 0
+    elif n2 > N:
+        n2 = N
 
-    m=(n1-n2)/N
-    return f,m
+    m = (n1 - n2) / N
+    return f, m
 
 
-def gettrue(k,v):
+def gettrue(k, v):
     """
     计算真实的f和m值
     :param k:
     :param v:
     :return:
     """
-    total=0
-    have=0
-    value=0
+    total = 0
+    have = 0
+    value = 0
 
-    k_v=list(zip(k,v))
+    k_v = list(zip(k, v))
     for d in k_v:
-        if d[0]==1:
-            have+=1
-            value+=d[1]
-        total+=1
-    f_true=have/total
-    m_true=value/have
+        if d[0] == 1:
+            have += 1
+            value += d[1]
+        total += 1
+    f_true = have / total
+    m_true = value / have
 
-    return f_true,m_true
+    return f_true, m_true
