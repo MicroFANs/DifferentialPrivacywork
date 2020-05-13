@@ -8,18 +8,18 @@ import LDP.basicFunction.basicfunc as bf
 import numpy as np
 
 
-
 def normlization(data):
     """
     归一化到[-1,1]
     :param data:
     :return:
     """
-    max=np.max(data)
-    min=np.min(data)
-    lenth=max-min
-    norm=-1+2*(data-min)/lenth
-    return np.around(norm,2)
+    max = np.max(data)
+    min = np.min(data)
+    lenth = max - min
+    norm = -1 + 2 * (data - min) / lenth
+    return np.around(norm, 2)
+
 
 """
 def KV(path):
@@ -45,6 +45,7 @@ def KV(path):
     print(v)
 """
 
+
 def KV(path):
     """
     自己造的数据集KV,n=7120
@@ -53,20 +54,16 @@ def KV(path):
     """
 
     data = bf.readcsv(path)
-    v_ary=data[:,2]
-    v_ary=normlization(v_ary)
+    v_ary = data[:, 2]
+    v_ary = normlization(v_ary)
     # 对value值进行归一化
-    data[:,2]=v_ary
-
-
-
+    data[:, 2] = v_ary
 
     n = 7120  # 总共有7120个用户
 
     # 创建嵌套表，每个list里有n个list，即对应每个用户的不定长的数据
-    k = [[] for i in range(n)] # 装key值
-    v = [[] for i in range(n)] # 装value值
-
+    k = [[] for i in range(n)]  # 装key值
+    v = [[] for i in range(n)]  # 装value值
 
     # index用来存放每个用户id的数据的索引，之后用这个索引来填k[]和v[]，
     # 也是个嵌套表，只不过k[]v[]装的是数据，index[]装的是索引
@@ -77,24 +74,20 @@ def KV(path):
         t = (temp.flatten()).tolist()
         index.append(t)
 
-
     for id in range(n):
-        l = index[id] # l是每个第id个用户拥有的数据行索引的list
+        l = index[id]  # l是每个第id个用户拥有的数据行索引的list
         for i in range(len(l)):
-            tp = l[i] # tp是行号
+            tp = l[i]  # tp是行号
             k[id].append(data[tp][1])
             v[id].append(data[tp][2])
-
-
 
     print(index[1])
     print(k[0])
     print(v[0])
-    bf.savetxt(k,'/Workplace\pyworkplace\DifferentialPrivacywork\dataset\KV\KV_k.txt')
+    bf.savetxt(k, '/Workplace\pyworkplace\DifferentialPrivacywork\dataset\KV\KV_k.txt')
     bf.savetxt(v, '/Workplace\pyworkplace\DifferentialPrivacywork\dataset\KV\KV_v.txt')
 
 
 if __name__ == '__main__':
-
     path = '/Workplace\pyworkplace\DifferentialPrivacywork\dataset\KV\KV.csv'
     KV(path)

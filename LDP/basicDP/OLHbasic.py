@@ -7,9 +7,21 @@
 import numpy as np
 import random
 import LDP.basicFunction.basicfunc as bf
+import LDP.basicDP.PCKVbasic as pckv
 
 # 这里需要导入xxhash这个包
 import xxhash
+
+
+def p_values(epsilon, n=2):
+    """
+    计算概率p的值
+    :param epsilon: 隐私预算
+    :param n: 默认n=2是二元的，也可以是多元的
+    :return:概率p的值
+    """
+    p = np.e ** epsilon / (np.e ** epsilon + n - 1)
+    return p
 
 
 def olh_hash(value, size, seed):
@@ -23,7 +35,7 @@ def olh_hash(value, size, seed):
     :return: 哈希得到的值，在[0，g）之间
     """
 
-    h=(xxhash.xxh32(str(value), seed=seed).intdigest() % size)
+    h = (xxhash.xxh32(str(value), seed=seed).intdigest() % size)
     return h
 
 
@@ -70,6 +82,7 @@ def support(v, report, g, n):
             c = c + 1
     return c
 
+
 def olh_support(v, report, g, n):
     """
     这个support函数是和作者的olh_hash相匹配
@@ -85,6 +98,7 @@ def olh_support(v, report, g, n):
             c = c + 1
     return c
 
+
 def aggregation(c, n, g, p):
     """
     估计频率函数
@@ -96,3 +110,50 @@ def aggregation(c, n, g, p):
     """
     est = (c - n / g) / (p - 1 / g)
     return est
+
+def aggregator(item:int,y:list,g:int,n:int,p:int):
+    """
+    将olh_support和aggregation封装在一起
+    @param item: 要求的item的编号 item in[1,maxitem]
+    @param y: 扰动后的结果y
+    @param g: hash域的大小
+    @param n: 用户数
+    @param p: 反转概率
+    @return: 估计值list
+    """
+    c=olh_support(item,y,g,n)
+    estimate = (c - n / g) / (p - 1 / g)
+    return estimate
+
+
+# 封装成OLH
+def OLH(epsilon: int, valuelist: list):
+    """
+    封装后对OLH
+    @param valuelist: 用户上传的list，从每个用户那里采样1个项
+    @param epsilon: 隐私预算epsilon
+    @return:频率估计结果
+    """
+
+    n = len(valuelist)  # 用户数量n
+    g = int(np.exp(epsilon)) + 1  # 参数g
+    p = p_values(epsilon, n=g)  # 参数p
+    q = p / np.e ** epsilon
+    maxitem=max(valuelist) # 所有项的域[1,maxitem]
+
+
+    """
+    Perturbing
+    哈希：x存放的是valuelist的值hash之后的结果，在区间[0,g)中
+    扰动：y存放的是x的值扰动之后的结果，在区间[0,g)中
+    """
+    x = [olh_hash(valuelist[i], g, i) for i in range(n)]  # 这种写法速度快
+    y = [olh_grr(p, x[i], g) for i in range(n)]
+
+    """
+    Aggregation
+    
+    """
+    estimat=[aggregator(i+1,y,g,n,p) for i in range(maxitem)]
+
+    return estimat

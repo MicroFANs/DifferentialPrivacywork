@@ -94,7 +94,7 @@ def combine_lists(lists):
     return res_list
 
 
-def gen_iterm_set(data_list,l):
+def gen_iterm_set(data_list:list,l:int):
     """
     生成每个用户的项集，长度为l，对于原项集长度大于l的从中随机选择l个，原项集小于l的，打乱原顺序再补0
     :param data_list: 用户原始数据list

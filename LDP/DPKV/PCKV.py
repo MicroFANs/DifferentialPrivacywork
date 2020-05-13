@@ -23,7 +23,7 @@ data_k = bf.readtxt('../LDPdataset/KV/KV_k.txt')
 data_v = bf.readtxt('../LDPdataset/KV/KV_v.txt')
 
 
-# print(data_k[0],'\n',data_v[0])
+#print(data_k[0],'\n',data_v[0])
 
 
 def example(k, v):
@@ -32,8 +32,8 @@ def example(k, v):
 
 # 这样写生成的是元素为元组的list
 kvp = [example(data_k[i][0], data_v[i][0]) for i in range(len(data_k))]
-print(len(kvp))
+print(kvp)
 
 # 构建以元组元素的list
 kv = zip(data_k[0], data_v[0])
-print(list(kv))
+#print(list(kv))
