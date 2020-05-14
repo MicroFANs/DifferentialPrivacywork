@@ -36,25 +36,28 @@ epsilon = 10
 g = int(np.exp(epsilon)) + 1
 # print(g)
 
-# 程序运行起始时间
-starttime=time.clock()
+
 
 
 """
 原始数据，用来计算误差
 """
 list_true = bf.csvtolist(path)  # list_true是真实的数据list
-print(list_true)
+#print(list_true)
 n=len(list_true)
 
 label = np.unique(list_true)
 x_list = label.tolist()
-print('x_list:',x_list)
+#print('x_list:',x_list)
 
+
+
+# 程序运行起始时间
+starttime=time.clock()
 """
 encoding
 """
-encode = np.zeros((n, g))
+
 x = []  # 这里面存的是每个用户的数据hash后的在[0，g）的index
 # print(encode)
 for i in range(n):
@@ -68,7 +71,6 @@ for i in range(n):
     """替换hash函数时一定别忘记更换下面匹配的olh_support函数，一共要改3处，hash，support，grr"""
     index = lhb.olh_hash(value, g, i)
 
-    # encode[i][index]=1
     x.append(index)
 
 # print(encode)
@@ -128,13 +130,24 @@ print(count_true)  # 真实的计数结果
 print(count_estimate)  # 估计的计数结果
 print("运行时间：%s s"%(endtime-starttime))
 
-
-est=lhb.OLH(epsilon,list_true)
+stime=time.clock()
+est=lhb.OLH(epsilon,list_true,n,x_list)
+etime=time.clock()
 print(est)
+print("运行时间：%s s"%(etime-stime))
+
+
+
+
 
 """
 保存结果
 """
+bf.savetxt(count_estimate,'../LDPMiner/dataset/OLHtest1.txt')
+bf.savetxt(est,"../LDPMiner/dataset/OLHtest2.txt")
+
+
+
 #result = {"OLH": count_estimate, "true": count_true, "value": x_list}
 #df_res = pd.DataFrame(result)
 #df_res.to_csv("../LDPMiner/dataset/kosarak/result/10k_sv_OLH.csv", index=False)

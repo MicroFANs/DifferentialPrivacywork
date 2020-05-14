@@ -12,16 +12,21 @@ import LDP.basicDP.OLHbasic as lhb
 import LDP.basicFunction.basicfunc as bf
 import numpy as np
 import random
+import time
 
-
+"""数据处理"""
 # 关闭科学计数法显示
 np.set_printoptions(suppress=True)
 
-data_k = bf.readtxt('../LDPdataset/KV/KV_k.txt')
-data_v = bf.readtxt('../LDPdataset/KV/KV_v.txt')
+k_path='../LDPdataset/E_Commerce/data/E_Commerce_k.txt'
+v_path='../LDPdataset/E_Commerce/data/E_Commerce_v.txt'
+
+data_k = bf.readtxt(k_path)
+data_v = bf.readtxt(v_path)
 
 #用户数量
 n=len(data_k)
+epsilon=10
 
 #构建kv对元组列表，每一行代表一个用户的kv对list
 kv=[]
@@ -36,12 +41,32 @@ for i in range(n):
     tmp=random.sample(kv[i],1)
     upkv.append(tmp[0])
 print(upkv)
+upkv_unzip=list(zip(*upkv))
+upk=upkv_unzip[0]
+upv=upkv_unzip[1]
+upk=list(map(int,upk))
 
+label=[]
+
+
+"""用OLH查找候选集"""
+
+# 程序运行起始时间
+starttime=time.clock()
+print("开始执行OLH...")
 
 #调用OLH
+est=lhb.OLH(epsilon,upk,n)
+print(est)
 
 
 
+# 程序运行结束时间
+endtime=time.clock()
+print('运行时间:',endtime-starttime)
+
+savepath='../LDPdataset/result/candidate.txt'
+bf.savetxt(est,savepath)
 
 
 

@@ -20,6 +20,7 @@ def gen_l_set(l):
     #sampling过程，构造私有项集
     savepath='../LDPMiner/dataset/kosarak/l_set.txt'
     v_list=bf.gen_iterm_set(user_data,l)
+    #print(type(v_list))
     bf.savetxt(v_list,savepath)
 
 

@@ -74,7 +74,7 @@ def readtxt(path):
     f.close()
     return data_list
 
-def savetxt(data,path):
+def savetxt(data:list,path):
     file = open(path,'a')
     for i in range(len(data)):
         s = str(data[i]).replace('[','').replace(']','')#去除[],这两行按数据不同，可以选择

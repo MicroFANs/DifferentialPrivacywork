@@ -111,36 +111,69 @@ def aggregation(c, n, g, p):
     est = (c - n / g) / (p - 1 / g)
     return est
 
-def aggregator(item:int,y:list,g:int,n:int,p:int):
+
+def aggregator(item: int, y: list, g: int, n: int, p: int):
     """
     将olh_support和aggregation封装在一起
-    @param item: 要求的item的编号 item in[1,maxitem]
+    @param item: 需要求的item的编号 即item in label
     @param y: 扰动后的结果y
     @param g: hash域的大小
     @param n: 用户数
     @param p: 反转概率
     @return: 估计值list
     """
-    c=olh_support(item,y,g,n)
+    c = olh_support(item, y, g, n)
     estimate = (c - n / g) / (p - 1 / g)
+    #estimate = float('{:.3f}'.format(estimate))
+    estimate=float('%.3f' %estimate)# 结果保留3位小数
     return estimate
 
 
+# # 封装成OLH
+# def OLH(epsilon: int, valuelist: list, n: int):
+#     """
+#     封装后的OLH
+#     @param n: 用户数量
+#     @param valuelist: 用户上传的list，从每个用户那里采样1个项
+#     @param epsilon: 隐私预算epsilon
+#     @return:频率估计结果
+#     """
+#
+#     g = int(np.exp(epsilon)) + 1  # 参数g
+#     p = p_values(epsilon, n=g)  # 参数p
+#     q = p / np.e ** epsilon
+#     maxitem = max(valuelist)  # 所有项的域[1,maxitem]
+#
+#     """
+#     Perturbing
+#     哈希：x存放的是valuelist的值hash之后的结果，在区间[0,g)中
+#     扰动：y存放的是x的值扰动之后的结果，在区间[0,g)中
+#     """
+#     x = [olh_hash(valuelist[i], g, i) for i in range(n)]  # 这种写法速度快
+#     y = [olh_grr(p, x[i], g) for i in range(n)]
+#
+#     """
+#     Aggregation
+#
+#     """
+#     estimat = [aggregator(i + 1, y, g, n, p) for i in range(maxitem)]
+#
+#     return estimat
+
+
 # 封装成OLH
-def OLH(epsilon: int, valuelist: list):
+def OLH(epsilon: int, valuelist: list, n: int,label:list):
     """
-    封装后对OLH
+    封装后的OLH
+    @param label: 标签list，其实就所有在valuelist中出现过的项组成的list
+    @param n: 用户数量
     @param valuelist: 用户上传的list，从每个用户那里采样1个项
     @param epsilon: 隐私预算epsilon
     @return:频率估计结果
     """
 
-    n = len(valuelist)  # 用户数量n
     g = int(np.exp(epsilon)) + 1  # 参数g
     p = p_values(epsilon, n=g)  # 参数p
-    q = p / np.e ** epsilon
-    maxitem=max(valuelist) # 所有项的域[1,maxitem]
-
 
     """
     Perturbing
@@ -154,6 +187,6 @@ def OLH(epsilon: int, valuelist: list):
     Aggregation
     
     """
-    estimat=[aggregator(i+1,y,g,n,p) for i in range(maxitem)]
+    estimat = [aggregator(label[i], y, g, n, p) for i in range(len(label))]
 
     return estimat

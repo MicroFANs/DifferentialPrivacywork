@@ -46,9 +46,8 @@ def KV(path):
 """
 
 
-def KV(path):
+def KV(path,n:int):
     """
-    自己造的数据集KV,n=7120
     :param path:
     :return:
     """
@@ -59,7 +58,6 @@ def KV(path):
     # 对value值进行归一化
     data[:, 2] = v_ary
 
-    n = 7120  # 总共有7120个用户
 
     # 创建嵌套表，每个list里有n个list，即对应每个用户的不定长的数据
     k = [[] for i in range(n)]  # 装key值
@@ -79,15 +77,15 @@ def KV(path):
         for i in range(len(l)):
             tp = l[i]  # tp是行号
             k[id].append(data[tp][1])
-            v[id].append(data[tp][2])
+            v[id].append(float('{:.3f}'.format(data[tp][2])))
 
-    print(index[1])
-    print(k[0])
-    print(v[0])
-    bf.savetxt(k, '/Workplace\pyworkplace\DifferentialPrivacywork\dataset\KV\KV_k.txt')
-    bf.savetxt(v, '/Workplace\pyworkplace\DifferentialPrivacywork\dataset\KV\KV_v.txt')
+    # print(index[1])
+    # print(k[0])
+    # print(v[0])
+    bf.savetxt(k, '../LDPdataset/Movie/data/Movie_k.txt')
+    bf.savetxt(v, '../LDPdataset/Movie/data/Movie_v.txt')
 
 
 if __name__ == '__main__':
-    path = '/Workplace\pyworkplace\DifferentialPrivacywork\dataset\KV\KV.csv'
-    KV(path)
+    path = '../LDPdataset/Movie/data/Movie.csv'
+    KV(path,n=138493)
