@@ -18,55 +18,52 @@ import time
 # 关闭科学计数法显示
 np.set_printoptions(suppress=True)
 
-k_path='../LDPdataset/E_Commerce/data/E_Commerce_k.txt'
-v_path='../LDPdataset/E_Commerce/data/E_Commerce_v.txt'
+k_path = '../LDPdataset/Clothing/data/Clothing_k.txt'
+v_path = '../LDPdataset/Clothing/data/Clothing_v.txt'
+lable_path = '../LDPdataset/Clothing/data/Clothing_lable.txt'
 
 data_k = bf.readtxt(k_path)
 data_v = bf.readtxt(v_path)
+data_l = bf.readtxt(lable_path)
 
-#用户数量
-n=len(data_k)
-epsilon=10
+n = len(data_k)  # 用户数量
+l = len(data_l)  # key域的长度
+epsilon = 10
 
-#构建kv对元组列表，每一行代表一个用户的kv对list
-kv=[]
+# 构建kv对元组列表，每一行代表一个用户的kv对list
+kv = []
 for i in range(n):
-    tmp=zip(data_k[i],data_v[i])
+    tmp = zip(data_k[i], data_v[i])
     kv.append(list(tmp))
 
 
-#通过采样（每个用户随机抽取一个kv对），构建上传upkvlist，长度为用户数目n，表示每个用户上传对kv对
-upkv=[]
+"""采样"""
+# 通过采样（每个用户随机抽取一个kv对），构建上传upkvlist，长度为用户数目n，表示每个用户上传对kv对
+upkv = []
 for i in range(n):
-    tmp=random.sample(kv[i],1)
+    tmp = random.sample(kv[i], 1)
     upkv.append(tmp[0])
 print(upkv)
-upkv_unzip=list(zip(*upkv))
-upk=upkv_unzip[0]
-upv=upkv_unzip[1]
-upk=list(map(int,upk))
+upkv_unzip = list(zip(*upkv))
+upk = upkv_unzip[0]
+upv = upkv_unzip[1]
+upk = list(map(int, upk))
 
-label=[]
+label = data_l[0] # 查找数据用的label
 
 
 """用OLH查找候选集"""
-
 # 程序运行起始时间
-starttime=time.clock()
+starttime = time.clock()
 print("开始执行OLH...")
 
-#调用OLH
-est=lhb.OLH(epsilon,upk,n)
+# 调用OLH
+est = lhb.OLH(epsilon, upk, n,label)
 print(est)
 
-
-
 # 程序运行结束时间
-endtime=time.clock()
-print('运行时间:',endtime-starttime)
+endtime = time.clock()
+print('运行时间:', endtime - starttime)
 
-savepath='../LDPdataset/result/candidate.txt'
-bf.savetxt(est,savepath)
-
-
-
+# savepath = '../LDPdataset/result/candidate.txt'
+# bf.savetxt(est, savepath)

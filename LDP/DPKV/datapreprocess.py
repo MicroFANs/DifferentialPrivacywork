@@ -87,5 +87,9 @@ def KV(path,n:int):
 
 
 if __name__ == '__main__':
-    path = '../LDPdataset/Movie/data/Movie.csv'
-    KV(path,n=138493)
+    # path = '../LDPdataset/Movie/data/Movie.csv'
+    # KV(path,n=138493)
+
+    path='../LDPdataset/Movie/data/Movie_lable.txt'
+    data=bf.readtxt(path,'int')
+    print(len(data[0]))

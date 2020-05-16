@@ -10,6 +10,7 @@ import matplotlib.pyplot as plt
 import random as rnd
 import itertools
 import math
+import re
 
 
 def create_0_1(row, col):
@@ -58,19 +59,26 @@ def savecsv(nparry, path, header=False, index=False):
 
 
 
-def readtxt(path):
+def readtxt(path,numtype='float'):
     """
     按行读取数据，放进list中，list的元素又是一个list，表示原txt中每行的数据，例如[[1,2],[2,3,4,5,1],[1,4,3],[1,2,4]]
-    :param path:路径
-    :return:返回值是list
+    @param path: 路径
+    @param numtype: 数据格式，默认是'flost'，或者'int'
+    @return: 返回值是嵌套list
     """
     f = open(path)
     line = f.readline()
     data_list = []
-    while line:
-        num = list(map(float, line.split()))
-        data_list.append(num)
-        line = f.readline()
+    if numtype=='float':
+        while line:
+            num = list(map(float, re.split(r'[,\s;|]+',line.strip())))
+            data_list.append(num)
+            line = f.readline()
+    elif numtype=='int':
+        while line:
+            num = list(map(int, re.split(r'[,\s;|]+',line.strip())))
+            data_list.append(num)
+            line = f.readline()
     f.close()
     return data_list
 
