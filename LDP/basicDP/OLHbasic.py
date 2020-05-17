@@ -187,6 +187,6 @@ def OLH(epsilon, valuelist: list, n: int, label: list):
     Aggregation
     
     """
-    estimat = [aggregator(label[i], y, g, n, p) for i in range(len(label))]
+    estimat = [(label[i],aggregator(label[i], y, g, n, p)) for i in range(len(label))]
 
     return estimat
