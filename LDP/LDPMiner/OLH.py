@@ -32,7 +32,7 @@ path = '../LDPMiner/dataset/kosarak/kosarak_10k_singlevalue.csv'
 # print(n)
 
 
-epsilon = 10
+epsilon = 5
 g = int(np.exp(epsilon)) + 1
 # print(g)
 
@@ -43,12 +43,13 @@ g = int(np.exp(epsilon)) + 1
 原始数据，用来计算误差
 """
 list_true = bf.csvtolist(path)  # list_true是真实的数据list
-#print(list_true)
+print(list_true)
 n=len(list_true)
+print(n)
 
 label = np.unique(list_true)
 x_list = label.tolist()
-#print('x_list:',x_list)
+print('x_list:',x_list)
 
 
 
@@ -59,7 +60,6 @@ encoding
 """
 
 x = []  # 这里面存的是每个用户的数据hash后的在[0，g）的index
-# print(encode)
 for i in range(n):
     #value = user_data[i][0]
     value=list_true[i]
@@ -73,9 +73,8 @@ for i in range(n):
 
     x.append(index)
 
-# print(encode)
 # print(x)
-# bf.savecsv(encode,'../LDPMiner/dataset/kosarak/encode.csv')
+
 
 
 """
@@ -143,8 +142,8 @@ print("运行时间：%s s"%(etime-stime))
 """
 保存结果
 """
-bf.savetxt(count_estimate,'../LDPMiner/dataset/OLHtest1.txt')
-bf.savetxt(est,"../LDPMiner/dataset/OLHtest2.txt")
+# bf.savetxt(count_estimate,'../LDPMiner/dataset/OLHtest1.txt')
+# bf.savetxt(est,"../LDPMiner/dataset/OLHtest2.txt")
 
 
 

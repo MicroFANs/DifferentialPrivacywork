@@ -35,7 +35,7 @@ def olh_hash(value, size, seed):
     :return: 哈希得到的值，在[0，g）之间
     """
 
-    h = (xxhash.xxh32(str(value), seed=seed).intdigest() % size)
+    h = (xxhash.xxh32(str(value), seed=seed).intdigest()) % size
     return h
 
 
@@ -83,19 +83,19 @@ def support(v, report, g, n):
     return c
 
 
-def olh_support(v, report, g, n):
+def olh_support(v, y, g, n):
     """
     这个support函数是和作者的olh_hash相匹配
-    :param v:
-    :param report:
-    :param g:
-    :param n:
-    :return:
+    @param v: 要查询的项
+    @param y: 报告向量y
+    @param g:
+    @param n: 用户数量
+    @return:
     """
     c = 0
-    for j in range(n):
-        if olh_hash(v, g, j) == report[j]:
-            c = c + 1
+    for i in range(n):
+        if olh_hash(v, g, i) == y[i]:
+            c += 1
     return c
 
 
@@ -112,7 +112,7 @@ def aggregation(c, n, g, p):
     return est
 
 
-def aggregator(item: int, y: list, g: int, n: int, p: int):
+def aggregator(item, y: list, g: int, n: int, p: int):
     """
     将olh_support和aggregation封装在一起
     @param item: 需要求的item的编号 即item in label
@@ -124,8 +124,8 @@ def aggregator(item: int, y: list, g: int, n: int, p: int):
     """
     c = olh_support(item, y, g, n)
     estimate = (c - n / g) / (p - 1 / g)
-    #estimate = float('{:.3f}'.format(estimate))
-    estimate=float('%.3f' %estimate)# 结果保留3位小数
+    # estimate = float('{:.3f}'.format(estimate))
+    estimate = float('%.3f' % estimate)  # 结果保留3位小数
     return estimate
 
 
@@ -162,14 +162,14 @@ def aggregator(item: int, y: list, g: int, n: int, p: int):
 
 
 # 封装成OLH
-def OLH(epsilon: int, valuelist: list, n: int,label:list):
+def OLH(epsilon, valuelist: list, n: int, label: list):
     """
     封装后的OLH
     @param label: 标签list，其实就所有在valuelist中出现过的项组成的list
     @param n: 用户数量
     @param valuelist: 用户上传的list，从每个用户那里采样1个项
     @param epsilon: 隐私预算epsilon
-    @return:频率估计结果
+    @return:频率估计结果list
     """
 
     g = int(np.exp(epsilon)) + 1  # 参数g
