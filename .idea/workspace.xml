@@ -79,6 +79,8 @@
   <component name="JupyterTrust" id="61adf35f-fdee-4939-9ea4-699a853dbd3d">
     <option name="files">
       <option value="LDP/LDPdataset/Clothing/LDP_clothing.ipynb" />
+      <option value="LDP/LDPdataset/Clothing/changelable.ipynb" />
+      <option value="LDP/LDPdataset/Movie/changelable.ipynb" />
     </option>
   </component>
   <component name="ProjectId" id="1V9JYTJP50RiHMWRZutXq5uDkZW" />
@@ -90,7 +92,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/LDP/LDPdataset/Movie" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RecentsManager">
@@ -316,6 +318,11 @@
       <workItem from="1589788789956" duration="18000" />
       <workItem from="1589788810248" duration="28000" />
       <workItem from="1589788839749" duration="11103000" />
+      <workItem from="1589870773798" duration="884000" />
+      <workItem from="1589871779444" duration="771000" />
+      <workItem from="1589873330632" duration="4425000" />
+      <workItem from="1589887835737" duration="5970000" />
+      <workItem from="1589896870879" duration="460000" />
     </task>
     <task id="LOCAL-00001" summary="添加experiment2">
       <created>1551254580680</created>
@@ -354,22 +361,22 @@
       <screen x="0" y="23" width="1920" height="1006" />
     </state>
     <state x="635" y="224" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.1006@0.23.1920.1006" timestamp="1589459934855" />
-    <state width="1868" height="210" key="GridCell.Tab.0.bottom" timestamp="1589804202293">
+    <state width="1868" height="276" key="GridCell.Tab.0.bottom" timestamp="1589897343565">
       <screen x="0" y="23" width="1920" height="1006" />
     </state>
-    <state width="1868" height="210" key="GridCell.Tab.0.bottom/0.23.1920.1006@0.23.1920.1006" timestamp="1589804202293" />
-    <state width="1868" height="210" key="GridCell.Tab.0.center" timestamp="1589804202293">
+    <state width="1868" height="276" key="GridCell.Tab.0.bottom/0.23.1920.1006@0.23.1920.1006" timestamp="1589897343565" />
+    <state width="1868" height="276" key="GridCell.Tab.0.center" timestamp="1589897343564">
       <screen x="0" y="23" width="1920" height="1006" />
     </state>
-    <state width="1868" height="210" key="GridCell.Tab.0.center/0.23.1920.1006@0.23.1920.1006" timestamp="1589804202293" />
-    <state width="1868" height="210" key="GridCell.Tab.0.left" timestamp="1589804202292">
+    <state width="1868" height="276" key="GridCell.Tab.0.center/0.23.1920.1006@0.23.1920.1006" timestamp="1589897343564" />
+    <state width="1868" height="276" key="GridCell.Tab.0.left" timestamp="1589897343564">
       <screen x="0" y="23" width="1920" height="1006" />
     </state>
-    <state width="1868" height="210" key="GridCell.Tab.0.left/0.23.1920.1006@0.23.1920.1006" timestamp="1589804202292" />
-    <state width="1868" height="210" key="GridCell.Tab.0.right" timestamp="1589804202293">
+    <state width="1868" height="276" key="GridCell.Tab.0.left/0.23.1920.1006@0.23.1920.1006" timestamp="1589897343564" />
+    <state width="1868" height="276" key="GridCell.Tab.0.right" timestamp="1589897343564">
       <screen x="0" y="23" width="1920" height="1006" />
     </state>
-    <state width="1868" height="210" key="GridCell.Tab.0.right/0.23.1920.1006@0.23.1920.1006" timestamp="1589804202293" />
+    <state width="1868" height="276" key="GridCell.Tab.0.right/0.23.1920.1006@0.23.1920.1006" timestamp="1589897343564" />
     <state x="554" y="120" width="1149" height="897" key="SettingsEditor" timestamp="1589789749308">
       <screen x="0" y="23" width="1920" height="1006" />
     </state>
@@ -386,10 +393,10 @@
       <screen x="0" y="23" width="1920" height="1006" />
     </state>
     <state x="960" y="23" width="960" height="1006" key="dock-window-1/0.23.1920.1006@0.23.1920.1006" timestamp="1589704052145" />
-    <state x="541" y="23" width="838" height="1032" key="search.everywhere.popup" timestamp="1589797653276">
+    <state x="541" y="23" width="838" height="1032" key="search.everywhere.popup" timestamp="1589895373566">
       <screen x="0" y="23" width="1920" height="1006" />
     </state>
-    <state x="541" y="23" width="838" height="1032" key="search.everywhere.popup/0.23.1920.1006@0.23.1920.1006" timestamp="1589797653276" />
+    <state x="541" y="23" width="838" height="1032" key="search.everywhere.popup/0.23.1920.1006@0.23.1920.1006" timestamp="1589895373566" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$Laplace_Mechanism_Problem_4.coverage" NAME="Laplace_Mechanism_Problem_4 Coverage Results" MODIFIED="1577441051285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../github/differential_priivacy-master" />
@@ -409,7 +416,7 @@
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$myLDPAlgorithm.coverage" NAME="myLDPAlgorithm Coverage Results" MODIFIED="1579183916825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$test.coverage" NAME="test Coverage Results" MODIFIED="1577064688855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$PCKV.coverage" NAME="PCKV Coverage Results" MODIFIED="1589369318415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/DPKV" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$OLH.coverage" NAME="OLH Coverage Results" MODIFIED="1589804198583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$OLH.coverage" NAME="OLH Coverage Results" MODIFIED="1589895375101" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$datapreprocess.coverage" NAME="datapreprocess Coverage Results" MODIFIED="1589616669016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/DPKV" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$loadjson.coverage" NAME="loadjson Coverage Results" MODIFIED="1589508918989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/DPKV" />
   </component>
