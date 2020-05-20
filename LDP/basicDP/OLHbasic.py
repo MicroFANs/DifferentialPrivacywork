@@ -129,42 +129,43 @@ def aggregator(item, y: list, g: int, n: int, p: int):
     return estimate
 
 
-# # 封装成OLH
-# def OLH(epsilon: int, valuelist: list, n: int):
-#     """
-#     封装后的OLH
-#     @param n: 用户数量
-#     @param valuelist: 用户上传的list，从每个用户那里采样1个项
-#     @param epsilon: 隐私预算epsilon
-#     @return:频率估计结果
-#     """
-#
-#     g = int(np.exp(epsilon)) + 1  # 参数g
-#     p = p_values(epsilon, n=g)  # 参数p
-#     q = p / np.e ** epsilon
-#     maxitem = max(valuelist)  # 所有项的域[1,maxitem]
-#
-#     """
-#     Perturbing
-#     哈希：x存放的是valuelist的值hash之后的结果，在区间[0,g)中
-#     扰动：y存放的是x的值扰动之后的结果，在区间[0,g)中
-#     """
-#     x = [olh_hash(valuelist[i], g, i) for i in range(n)]  # 这种写法速度快
-#     y = [olh_grr(p, x[i], g) for i in range(n)]
-#
-#     """
-#     Aggregation
-#
-#     """
-#     estimat = [aggregator(i + 1, y, g, n, p) for i in range(maxitem)]
-#
-#     return estimat
+# 封装成OLH
+def OLH_1(epsilon: int, valuelist: list, n: int,l):
+    """
+    标签标准化成[1,l]之后就可以用这个函数
+    @param l: l是key的维度
+    @param n: 用户数量
+    @param valuelist: 用户上传的list，从每个用户那里采样1个项
+    @param epsilon: 隐私预算epsilon
+    @return:频率估计结果
+    """
+
+    g = int(np.exp(epsilon)) + 1  # 参数g
+    p = p_values(epsilon, n=g)  # 参数p
+
+    """
+    Perturbing
+    哈希：x存放的是valuelist的值hash之后的结果，在区间[0,g)中
+    扰动：y存放的是x的值扰动之后的结果，在区间[0,g)中
+    """
+    # x = [olh_hash(valuelist[i], g, i) for i in range(n)]  # 这种写法速度快
+    # y = [olh_grr(p, x[i], g) for i in range(n)]
+
+    y = [olh_grr(p, olh_hash(valuelist[i],g,i), g) for i in range(n)]
+
+    """
+    Aggregation
+
+    """
+    estimat = [(i+1,aggregator(i + 1, y, g, n, p)) for i in range(l)]
+
+    return estimat
 
 
 # 封装成OLH
 def OLH(epsilon, valuelist: list, n: int, label: list):
     """
-    封装后的OLH
+    封装后的OLH,label没有规范化的用这个函数
     @param label: 标签list，其实就所有在valuelist中出现过的项组成的list
     @param n: 用户数量
     @param valuelist: 用户上传的list，从每个用户那里采样1个项

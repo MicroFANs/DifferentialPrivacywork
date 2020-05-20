@@ -82,8 +82,8 @@ def KV(path,n:int):
     # print(index[1])
     # print(k[0])
     # print(v[0])
-    bf.savetxt(k, '../LDPdataset/Movie/data/Movie_k.txt')
-    bf.savetxt(v, '../LDPdataset/Movie/data/Movie_v.txt')
+    # bf.savetxt(k, '../LDPdataset/Movie/data/Movie_k.txt')
+    # bf.savetxt(v, '../LDPdataset/Movie/data/Movie_v.txt')
 
 
 if __name__ == '__main__':

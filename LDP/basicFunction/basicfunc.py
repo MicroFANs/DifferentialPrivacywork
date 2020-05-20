@@ -71,12 +71,12 @@ def readtxt(path,numtype='float'):
     data_list = []
     if numtype=='float':
         while line:
-            num = list(map(float, re.split(r'[,\s;|]+',line.strip())))
+            num = list(map(float, re.split(r'[,\s;| ]+',line.strip())))
             data_list.append(num)
             line = f.readline()
     elif numtype=='int':
         while line:
-            num = list(map(int, re.split(r'[,\s;|]+',line.strip())))
+            num = list(map(int, re.split(r'[,\s;| ]+',line.strip())))
             data_list.append(num)
             line = f.readline()
     f.close()
