@@ -4,6 +4,7 @@
 @time:2020/2/29 18:33
 """
 import numpy as np
+import random
 
 
 def p_values(epsilon, n=2):
@@ -17,31 +18,27 @@ def p_values(epsilon, n=2):
     return p
 
 
-def PS(k:list, v:list, d:int, l:int):
+def PS(k_v, d:int, l:int):
     """
     PCKV论文中的Algorithm1 Padding and Sampling
     以高概率b从用户的项集S中采样，挑选一个kv对
     以低概率（1-b）从扩充的虚拟项集l中挑选虚拟k值，并且v值值0
     此时总的k值的维度也从d变成了(d+l)
-    :param k:用户的k值list
-    :param v:用户的v值list
-    :param d:整个k值的值域的维度
-    :param l:虚拟项的长度
-    :return:
+    @param k_v: 用户kv值元组[(1,0.4),(2,-0.2),(3,0.5)]
+    @param d: key的维度
+    @param l: 填充长度L
+    @return: 采样元组
     """
     S = len(k)
     b = S / (max(S, l))
     rnd = np.random.random()
-    k_ps = 0  # ps之后的k值
-    v_ps = 0  # ps之后的v值
     if rnd < b:  # 从用户项集S中随机选择一个kv对，从[0,S)中随机选择一个数作为序号
-        j = np.random.randint(0, S)  # 前闭后开区间
-        k_ps = j + 1  # 序号+1才是真正的k值
-        v_ps = v[j]
+        tmp=random.sample(k_v,1)
+        k_ps =tmp[0][0]
+        v_ps = tmp[0][1]
     else:
         v_ps = 0
-        j = np.random.randint(0, l) + d  # 从{d+1,d+2,...,d'}中随机选择一个作为序号
-        k_ps = j + 1  # 序号+1才是真正的k值
+        k_ps = np.random.randint(d, d+l) + 1  # 从{d+1,d+2,...,d'}中随机选择一个作为序号
 
     # 离散v_ps值
     p = (1 + v_ps) / 2
@@ -52,6 +49,10 @@ def PS(k:list, v:list, d:int, l:int):
         v_ps = -1
 
     return k_ps, v_ps
+
+
+
+
 
 
 def mpp(candidate:list, p:list):
@@ -211,10 +212,11 @@ def AEC_GRR(kv_p, d, l, a, p, b):
         n1.append(pos)
         n2.append(neg)
     f_k = list(l * (-b + (np.array(n1) + np.array(n2)) / n) / (a - b))
-    if f_k < (1 / n):
-        f_k = 1 / n
-    elif f_k > 1:
-        f_k = 1
+    for x in f_k:
+        if x < (1 / n):
+            x = 1 / n
+        elif x > 1:
+            x = 1
 
     A = np.zeros((2, 2))
     A[0][0] = A[1][1] = a * p - b / 2
@@ -242,12 +244,13 @@ def AEC_GRR(kv_p, d, l, a, p, b):
 
 
 if __name__ == '__main__':
-    # np.random.seed(10)
+    #np.random.seed(10)
     # k=[1,2,3,4,5,6,7,8,9]
     # v=[0,.1,.3,.5,.7,.9,-0.2,-0.4,-0.8]
-    # d=12
+    # kv=list(zip(k,v))
+    # d=10
     # l=2
-    # kk,vv=PS(k,v,d,l)
+    # kk,vv=PS(kv,d,l)
     # print(kk,vv)
 
     # d=10
@@ -265,8 +268,13 @@ if __name__ == '__main__':
 
     Y = PCKV_UE(k_v, d, l, a, p, b)
     print(Y)
+    # res=[AEC_UE(i,d,l,a,p,b) for i in Y]
+    # print(res)
+
 
     y = PCKV_GRR(k_v, d, l, a, p)
     print(y)
+    res=AEC_GRR(y,d,l,a,p,b)
+    print(res)
 
 # 都缺少PS那一步，所以要在主函数中填上PS那一步
