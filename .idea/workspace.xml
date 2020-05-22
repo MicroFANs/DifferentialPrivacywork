@@ -58,8 +58,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Jupyter Notebook" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -333,6 +333,7 @@
       <workItem from="1590040462386" duration="490000" />
       <workItem from="1590041040891" duration="7465000" />
       <workItem from="1590068944723" duration="5000" />
+      <workItem from="1590111256494" duration="11876000" />
     </task>
     <task id="LOCAL-00001" summary="添加experiment2">
       <created>1551254580680</created>

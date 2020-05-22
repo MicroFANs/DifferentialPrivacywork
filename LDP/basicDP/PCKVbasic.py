@@ -29,7 +29,7 @@ def PS(k_v, d:int, l:int):
     @param l: 填充长度L
     @return: 采样元组
     """
-    S = len(k)
+    S = len(k_v)
     b = S / (max(S, l))
     rnd = np.random.random()
     if rnd < b:  # 从用户项集S中随机选择一个kv对，从[0,S)中随机选择一个数作为序号
@@ -160,6 +160,8 @@ def AEC_UE(kv_p, d, l, a, p, b):
 def P_GRR(k_v, d, l, a, p):
     """
     :param k_v: k_v是元组,(k,v),如(3,0.4)
+
+    要重写，这里都写错了
     :param d:
     :param l:
     :param a:
@@ -169,14 +171,15 @@ def P_GRR(k_v, d, l, a, p):
     k = k_v[0]
     v = k_v[1]
 
-    b = (1 - p) / ((d + l) - 1)
+    #b = (1 - p) / ((d + l) - 1) 这个b应该是写错了
+    b=(1-a)/(d+l-1)
     rnd = np.random.random_sample()
     if rnd > a - b:
         k_p = np.random.randint(0, (d + l))
         v_p = mpp([v, -v], [p, (1 - p)])
     else:
         k_p = k
-        v_p = mpp([1, -1], (0.5, 0.5))
+        v_p = mpp([1, -1], [0.5, 0.5])
     return k_p, v_p
 
 
