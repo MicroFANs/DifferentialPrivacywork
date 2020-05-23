@@ -231,10 +231,16 @@ def AEC_GRR(all_kv_p, d, l, n, a, p, b):
 
     # line2 计数
     # 这里是d了，不再是d+l了
+    pos = 0
+    neg = 0
     for k in range(d):
-        tmp = mat[:k]
-        n1.append(sum(tmp == 1))
-        n2.append(sum(tmp == -1))
+        for kv in all_kv_p:
+            if (kv[0] == k) & (kv[1] == 1):
+                pos += 1
+            elif (kv[0] == k) & (kv[1] == -1):
+                neg += 1
+        n1.append(pos)
+        n2.append(neg)
     n1 = np.array(n1)
     n2 = np.array(n2)
 
