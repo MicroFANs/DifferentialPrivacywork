@@ -64,6 +64,21 @@ def mpp(candidate: list, p: list):
     return v
 
 
+def correct(low, high, value):
+    """
+    矫正函数,value小于low，置为low，大于high置为high
+    @param low:
+    @param high:
+    @param value:
+    @return:
+    """
+    if value < low:
+        value = low
+    elif value > high:
+        value = high
+    return value
+
+
 def P_UE(k_v, d, l, label, a, p, b):
     """
     PCKV中相应算法的改进
@@ -94,13 +109,63 @@ def PCKV_UE(all_kv, d, l, label, a, p, b):
     @param a: 真实k保持不变的概率
     @param p: 真实v保持不变的概率
     @param b: 虚假k反转为1的概率
-    @return: 嵌套表list
+    @return: UE嵌套表list
     """
     Y = [P_UE(x, d, l, label, a, p, b) for x in all_kv]
     return Y
 
 
-# def AEC_UE(kv_p,d,l,label,a,p,b):
+def AEC_UE(all_kv_p, d, l, n, a, p, b):
+    """
+    重写了AEC_UE
+    @param all_kv_p: 输入的嵌套list，内容为UE
+    @param d: 这里是candidate的维度，就是2k
+    @param l: 填充长度L
+    @param n: 用户数量
+    @param a:
+    @param p:
+    @param b:
+    @return:频率list和均值list
+    """
+    # n1每一位1的个数，n2每一位是-1的个数
+    n1 = []
+    n2 = []
+    mat = np.array(all_kv_p)
+
+    # line2 计数
+    # 这里是d了，不再是d+l了
+    for k in range(d):
+        tmp = mat[:k]
+        n1.append(sum(tmp == 1))
+        n2.append(sum(tmp == -1))
+    n1 = np.array(n1)
+    n2 = np.array(n2)
+
+    # line3 计算频率并校正
+    f_k_arr = ((n1 + n2) / n - b) * l / (a - b)
+    f_k = [correct(1 / n, 1, i) for i in f_k_arr]
+
+    # line4 校正n1,n2
+    A = np.zeros((2, 2))
+    A[0][0] = A[1][1] = a * p - b / 2
+    A[0][1] = A[1][0] = a * (1 - p) - b / 2
+    AI = np.matrix(A).I
+    B1 = n1 - n * b / 2
+    B2 = n2 - n * b / 2
+    B = np.vstack((B1, B2))
+    S = np.array(AI * B)
+    n1_ = S[0]
+    n2_ = S[1]
+    for k in range(d):
+        high = n * f_k[k] / l
+        n1_[k] = correct(0, high, n1_[k])
+        n2_[k] = correct(0, high, n2_[k])
+
+    # line5 计算均值
+    m_k_arr = l * (n1_ - n2_) / (n * np.array(f_k))
+    m_k = list(m_k_arr)
+
+    return f_k, m_k
 
 
 #
@@ -146,3 +211,55 @@ def PCKV_GRR(all_kv, d, l, label, a, p):
     """
     Y = [PCKV_GRR(x, d, l, label, a, p) for x in all_kv]
     return Y
+
+def AEC_GRR(all_kv_p, d, l, n, a, p, b):
+    """
+    重写了AEC_GRR
+    @param all_kv_p: 输入的嵌套list，内容为kv对形如[(1,1),(2,-1),(3,0),(4,1)]
+    @param d: 这里是candidate的维度，就是2k
+    @param l: 填充长度L
+    @param n: 用户数量
+    @param a:
+    @param p:
+    @param b:
+    @return:频率list和均值list
+    """
+    # n1每一位1的个数，n2每一位是-1的个数
+    n1 = []
+    n2 = []
+    mat = np.array(all_kv_p)
+
+    # line2 计数
+    # 这里是d了，不再是d+l了
+    for k in range(d):
+        tmp = mat[:k]
+        n1.append(sum(tmp == 1))
+        n2.append(sum(tmp == -1))
+    n1 = np.array(n1)
+    n2 = np.array(n2)
+
+    # line3 计算频率并校正
+    f_k_arr = ((n1 + n2) / n - b) * l / (a - b)
+    f_k = [correct(1 / n, 1, i) for i in f_k_arr]
+
+    # line4 校正n1,n2
+    A = np.zeros((2, 2))
+    A[0][0] = A[1][1] = a * p - b / 2
+    A[0][1] = A[1][0] = a * (1 - p) - b / 2
+    AI = np.matrix(A).I
+    B1 = n1 - n * b / 2
+    B2 = n2 - n * b / 2
+    B = np.vstack((B1, B2))
+    S = np.array(AI * B)
+    n1_ = S[0]
+    n2_ = S[1]
+    for k in range(d):
+        high = n * f_k[k] / l
+        n1_[k] = correct(0, high, n1_[k])
+        n2_[k] = correct(0, high, n2_[k])
+
+    # line5 计算均值
+    m_k_arr = l * (n1_ - n2_) / (n * np.array(f_k))
+    m_k = list(m_k_arr)
+
+    return f_k, m_k
