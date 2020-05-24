@@ -91,9 +91,10 @@ def P_UE(k_v, d, l, label, a, p, b):
     @param b: 虚假k反转为1的概率
     @return:UE list[1,0,1,0,...,0]
     """
-    y = [mpp([1, -1, 0], [b / 2, b / 2, (1 - b)]) for i in range(d + l)]
     k = k_v[0]
     v = k_v[1]
+    y = [mpp([1, -1, 0], [b / 2, b / 2, (1 - b)]) for i in range(d + l)]
+
     indx = label.index(k)
     y[indx] = mpp([v, -v, 0], [a * p, a * (1 - p), (1 - a)])
     return y
@@ -105,7 +106,7 @@ def PCKV_UE(all_kv, d, l, label, a, p, b):
     @param all_kv: 元素为元组的list 如[(2,.5),(3,.3),(4,.1),(5,-0.4)]
     @param d: 这里的维度与PCKV论文中的不同，这里是candidate的维度，就是2k
     @param l: 填充项长度L
-    @param label: 就是candidate
+    @param label: 就是candidate+padlable(长度是d+l=2k+L)
     @param a: 真实k保持不变的概率
     @param p: 真实v保持不变的概率
     @param b: 虚假k反转为1的概率
@@ -135,9 +136,11 @@ def AEC_UE(all_kv_p, d, l, n, a, p, b):
     # line2 计数
     # 这里是d了，不再是d+l了
     for k in range(d):
-        tmp = mat[:k]
+        tmp = mat[:, k]
         n1.append(sum(tmp == 1))
         n2.append(sum(tmp == -1))
+    print(n1)
+    print(n2)
     n1 = np.array(n1)
     n2 = np.array(n2)
 
@@ -168,14 +171,13 @@ def AEC_UE(all_kv_p, d, l, n, a, p, b):
     return f_k, m_k
 
 
-#
-def P_GRR(k_v, d, l, label, a, p):
+def P_GRR(k_v, d, l, label, a, p, b):
     """
     PCKV中相应算法改进
     @param k_v:k_v对
     @param d:candidate的维度，就是2k
     @param l:填充长度L
-    @param label:就是candidate
+    @param label:就是candidate+padlable(长度是d+l=2k+L)
     @param a:
     @param p:
     @return:
@@ -198,23 +200,25 @@ def P_GRR(k_v, d, l, label, a, p):
     return k_p, v_p
 
 
-def PCKV_GRR(all_kv, d, l, label, a, p):
+def PCKV_GRR(all_kv, d, l, label, a, p, b):
     """
     PCKV中相应算法
     @param all_kv: 元素为元组的list 如[(2,.5),(3,.3),(4,.1),(5,-0.4)]
     @param d:candidate的维度，就是2k
     @param l:填充长度L
-    @param label:就是candidate
+    @param label:就是candidate+padlable(长度是d+l=2k+L)
     @param a:
     @param p:
     @return:
     """
-    Y = [PCKV_GRR(x, d, l, label, a, p) for x in all_kv]
+    Y = [P_GRR(x, d, l, label, a, p, b) for x in all_kv]
     return Y
 
-def AEC_GRR(all_kv_p, d, l, n, a, p, b):
+
+def AEC_GRR(all_kv_p, d, l, label, n, a, p, b):
     """
     重写了AEC_GRR
+    @param label: 就是candidate
     @param all_kv_p: 输入的嵌套list，内容为kv对形如[(1,1),(2,-1),(3,0),(4,1)]
     @param d: 这里是candidate的维度，就是2k
     @param l: 填充长度L
@@ -227,13 +231,12 @@ def AEC_GRR(all_kv_p, d, l, n, a, p, b):
     # n1每一位1的个数，n2每一位是-1的个数
     n1 = []
     n2 = []
-    mat = np.array(all_kv_p)
 
     # line2 计数
     # 这里是d了，不再是d+l了
     pos = 0
     neg = 0
-    for k in range(d):
+    for k in label[:d]:
         for kv in all_kv_p:
             if (kv[0] == k) & (kv[1] == 1):
                 pos += 1
@@ -269,3 +272,18 @@ def AEC_GRR(all_kv_p, d, l, n, a, p, b):
     m_k = list(m_k_arr)
 
     return f_k, m_k
+
+
+if __name__ == '__main__':
+    all_kv = [(1, 1), (2, -1), (3, -1), (3, 1), (70, 1), (12, 1), (71, -1), (70, 1), (40, -1), (40, 1)]
+    label = [1, 2, 3, 5, 7, 10, 12, 35, 39, 40, 70, 71]
+    d = 10
+    L = 2
+    a = 0.5
+    p = p_values(5)
+    b = 2 / (np.exp(5) + 1)
+    Y = PCKV_GRR(all_kv, d, L, label, a, p, b)
+    print(Y)
+    f, m = AEC_GRR(Y, d, L, label, 10, a, p, b)
+    print(f)
+    print(m)
