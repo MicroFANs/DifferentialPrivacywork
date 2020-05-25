@@ -85,7 +85,7 @@ def readtxt(path,numtype='float'):
 def savetxt(data:list,path):
     file = open(path,'a')
     for i in range(len(data)):
-        s = str(data[i]).replace('[','').replace(']','')#去除[],这两行按数据不同，可以选择
+        s = str(data[i]).replace('[','').replace(']','').replace('(','').replace(')','')#去除[],这两行按数据不同，可以选择
         s = s.replace("'",'').replace(',','') +'\n'  #去除单引号，逗号，每行末尾追加换行符
         file.write(s)
     file.close()
@@ -305,8 +305,10 @@ if __name__ == '__main__':
 
 
 
-    for i in range(1000):
-        print(hash(i,6,1),hash(i,6,2),hash(i,6,3))
+    x=[(1,2),(3,4),(4,5)]
+    savetxt(x,'../LDPdataset/test.txt')
+    s=readtxt('../LDPdataset/test.txt')
+    print(s)
 
 
 

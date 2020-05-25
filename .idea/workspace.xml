@@ -58,8 +58,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Jupyter Notebook" />
         <option value="Python Script" />
+        <option value="Jupyter Notebook" />
       </list>
     </option>
   </component>
@@ -80,6 +80,7 @@
     <option name="files">
       <option value="LDP/LDPdataset/Clothing/Clothingtool.ipynb" />
       <option value="LDP/LDPdataset/Clothing/LDP_clothing.ipynb" />
+      <option value="LDP/LDPdataset/Clothing/Perturbation_aggregation.ipynb" />
       <option value="LDP/LDPdataset/Movie/Movietool.ipynb" />
     </option>
   </component>
@@ -97,6 +98,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/LDP/LDPdataset/Clothing" />
       <recent name="$PROJECT_DIR$/LDP" />
       <recent name="D:\Workplace\pyworkplace\DifferentialPrivacywork\dataset\APDPkmeans" />
     </key>
@@ -105,7 +107,7 @@
       <recent name="D:\Git\DifferentialPrivacywork\dataset" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.LDPKVbasic">
+  <component name="RunManager" selected="Python.basicfunc">
     <configuration name="LDPKV" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="DifferentialPrivacywork" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -216,7 +218,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="tool (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="basicfunc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="DifferentialPrivacywork" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -224,12 +226,12 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LDP/LDPdataset/Clothing" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LDP/basicFunction" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LDP/LDPdataset/Clothing/tool.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LDP/basicFunction/basicfunc.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -241,18 +243,18 @@
     <list>
       <item itemvalue="Python.SH" />
       <item itemvalue="Python.OLH" />
-      <item itemvalue="Python.tool (1)" />
       <item itemvalue="Python.LDPKV" />
       <item itemvalue="Python.PCKVbasic" />
       <item itemvalue="Python.LDPKVbasic" />
+      <item itemvalue="Python.basicfunc" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.basicfunc" />
         <item itemvalue="Python.LDPKVbasic" />
         <item itemvalue="Python.PCKVbasic" />
         <item itemvalue="Python.OLH" />
         <item itemvalue="Python.LDPKV" />
-        <item itemvalue="Python.tool (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -337,6 +339,10 @@
       <workItem from="1590200404522" duration="10032000" />
       <workItem from="1590225191790" duration="488000" />
       <workItem from="1590303739125" duration="4546000" />
+      <workItem from="1590370598654" duration="3156000" />
+      <workItem from="1590378283988" duration="1243000" />
+      <workItem from="1590382295511" duration="4889000" />
+      <workItem from="1590388332233" duration="4016000" />
     </task>
     <task id="LOCAL-00001" summary="添加experiment2">
       <created>1551254580680</created>
@@ -379,22 +385,22 @@
       <screen x="0" y="23" width="1920" height="1006" />
     </state>
     <state x="635" y="224" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.1006@0.23.1920.1006" timestamp="1589459934855" />
-    <state width="1868" height="284" key="GridCell.Tab.0.bottom" timestamp="1590326188338">
+    <state width="1868" height="284" key="GridCell.Tab.0.bottom" timestamp="1590383786490">
       <screen x="0" y="23" width="1920" height="1006" />
     </state>
-    <state width="1868" height="284" key="GridCell.Tab.0.bottom/0.23.1920.1006@0.23.1920.1006" timestamp="1590326188338" />
-    <state width="1868" height="284" key="GridCell.Tab.0.center" timestamp="1590326188338">
+    <state width="1868" height="284" key="GridCell.Tab.0.bottom/0.23.1920.1006@0.23.1920.1006" timestamp="1590383786490" />
+    <state width="1868" height="284" key="GridCell.Tab.0.center" timestamp="1590383786490">
       <screen x="0" y="23" width="1920" height="1006" />
     </state>
-    <state width="1868" height="284" key="GridCell.Tab.0.center/0.23.1920.1006@0.23.1920.1006" timestamp="1590326188338" />
-    <state width="1868" height="284" key="GridCell.Tab.0.left" timestamp="1590326188338">
+    <state width="1868" height="284" key="GridCell.Tab.0.center/0.23.1920.1006@0.23.1920.1006" timestamp="1590383786490" />
+    <state width="1868" height="284" key="GridCell.Tab.0.left" timestamp="1590383786489">
       <screen x="0" y="23" width="1920" height="1006" />
     </state>
-    <state width="1868" height="284" key="GridCell.Tab.0.left/0.23.1920.1006@0.23.1920.1006" timestamp="1590326188338" />
-    <state width="1868" height="284" key="GridCell.Tab.0.right" timestamp="1590326188338">
+    <state width="1868" height="284" key="GridCell.Tab.0.left/0.23.1920.1006@0.23.1920.1006" timestamp="1590383786489" />
+    <state width="1868" height="284" key="GridCell.Tab.0.right" timestamp="1590383786490">
       <screen x="0" y="23" width="1920" height="1006" />
     </state>
-    <state width="1868" height="284" key="GridCell.Tab.0.right/0.23.1920.1006@0.23.1920.1006" timestamp="1590326188338" />
+    <state width="1868" height="284" key="GridCell.Tab.0.right/0.23.1920.1006@0.23.1920.1006" timestamp="1590383786490" />
     <state x="554" y="120" width="1149" height="897" key="SettingsEditor" timestamp="1589789749308">
       <screen x="0" y="23" width="1920" height="1006" />
     </state>
@@ -425,8 +431,8 @@
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$RP.coverage" NAME="RP Coverage Results" MODIFIED="1579183343621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$SH.coverage" NAME="SH Coverage Results" MODIFIED="1579186497771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$SH_rebuild.coverage" NAME="SH_rebuild Coverage Results" MODIFIED="1579186341313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$basicfunc.coverage" NAME="basicfunc Coverage Results" MODIFIED="1578990661753" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/basicFunction" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$loaddata.coverage" NAME="loaddata Coverage Results" MODIFIED="1589444499475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPdataset/ E_Commerce" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$basicfunc.coverage" NAME="basicfunc Coverage Results" MODIFIED="1590383783907" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/basicFunction" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$OLHbasic.coverage" NAME="OLHbasic Coverage Results" MODIFIED="1589185297888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/basicDP" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$tool__1_.coverage" NAME="tool (1) Coverage Results" MODIFIED="1589619384846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPdataset/Clothing" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$tool.coverage" NAME="tool Coverage Results" MODIFIED="1589463312931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPdataset/Movie" />
@@ -437,6 +443,6 @@
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$OLH.coverage" NAME="OLH Coverage Results" MODIFIED="1589935172790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$datapreprocess.coverage" NAME="datapreprocess Coverage Results" MODIFIED="1589616669016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/DPKV" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$loadjson.coverage" NAME="loadjson Coverage Results" MODIFIED="1589508918989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/DPKV" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$LDPKVbasic.coverage" NAME="LDPKVbasic Coverage Results" MODIFIED="1590323174181" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/basicDP" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$LDPKVbasic.coverage" NAME="LDPKVbasic Coverage Results" MODIFIED="1590372315417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/basicDP" />
   </component>
 </project>

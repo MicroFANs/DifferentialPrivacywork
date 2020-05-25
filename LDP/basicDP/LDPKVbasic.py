@@ -274,6 +274,21 @@ def AEC_GRR(all_kv_p, d, l, label, n, a, p, b):
     return f_k, m_k
 
 
+def MSE(est,true,d):
+    """
+    评估函数MSE
+    @param est: 估计值list
+    @param true: 真实值list
+    @param d: list长度
+    @return: MSE
+    """
+    tmp=0
+    for i in range(d):
+        tmp+=(est[i]-true[i])**2
+    mse=tmp/d
+    return mse
+
+
 if __name__ == '__main__':
     all_kv = [(1, 1), (2, -1), (3, -1), (3, 1), (70, 1), (12, 1), (71, -1), (70, 1), (40, -1), (40, 1)]
     label = [1, 2, 3, 5, 7, 10, 12, 35, 39, 40, 70, 71]
