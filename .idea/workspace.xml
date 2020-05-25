@@ -81,6 +81,7 @@
       <option value="LDP/LDPdataset/Clothing/Clothingtool.ipynb" />
       <option value="LDP/LDPdataset/Clothing/LDP_clothing.ipynb" />
       <option value="LDP/LDPdataset/Clothing/Perturbation_aggregation.ipynb" />
+      <option value="LDP/LDPdataset/Movie/LDP_movie.ipynb" />
       <option value="LDP/LDPdataset/Movie/Movietool.ipynb" />
     </option>
   </component>
@@ -343,6 +344,7 @@
       <workItem from="1590378283988" duration="1243000" />
       <workItem from="1590382295511" duration="4889000" />
       <workItem from="1590388332233" duration="4016000" />
+      <workItem from="1590412530634" duration="1022000" />
     </task>
     <task id="LOCAL-00001" summary="添加experiment2">
       <created>1551254580680</created>
