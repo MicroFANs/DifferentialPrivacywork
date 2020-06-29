@@ -78,6 +78,7 @@
   </component>
   <component name="JupyterTrust" id="b978b729-3454-420b-b21a-d8c05aade61b">
     <option name="files">
+      <option value="LDP\LDPdataset\Amazon\LDP_Amazon.ipynb" />
       <option value="LDP\LDPdataset\Clothing\LDP_clothing.ipynb" />
       <option value="LDP\LDPdataset\Movie\LDP_movie.ipynb" />
     </option>
@@ -95,15 +96,15 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Workplace\pyworkplace\DifferentialPrivacywork\LDP\LDPdataset\Amazon" />
-      <recent name="$PROJECT_DIR$/LDP/DPKV" />
-      <recent name="D:\Git\DifferentialPrivacywork\dataset" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/LDP/LDPdataset/Clothing" />
       <recent name="$PROJECT_DIR$/LDP" />
       <recent name="D:\Workplace\pyworkplace\DifferentialPrivacywork\dataset\APDPkmeans" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Workplace\pyworkplace\DifferentialPrivacywork\LDP\LDPdataset\Amazon" />
+      <recent name="$PROJECT_DIR$/LDP/DPKV" />
+      <recent name="D:\Git\DifferentialPrivacywork\dataset" />
     </key>
   </component>
   <component name="RunManager" selected="Python.SH">
@@ -356,6 +357,7 @@
       <workItem from="1593269576670" duration="700000" />
       <workItem from="1593270287539" duration="829000" />
       <workItem from="1593352611681" duration="4556000" />
+      <workItem from="1593438058731" duration="5049000" />
     </task>
     <task id="LOCAL-00001" summary="添加experiment2">
       <created>1551254580680</created>
@@ -435,9 +437,10 @@
       <screen x="0" y="23" width="1920" height="1006" />
     </state>
     <state x="960" y="23" width="960" height="1006" key="dock-window-1/0.23.1920.1006@0.23.1920.1006" timestamp="1589704052145" />
-    <state x="541" y="23" width="838" height="1032" key="search.everywhere.popup" timestamp="1590219226066">
-      <screen x="0" y="23" width="1920" height="1006" />
+    <state x="412" y="0" width="672" height="897" key="search.everywhere.popup" timestamp="1593438533968">
+      <screen x="0" y="0" width="1463" height="874" />
     </state>
+    <state x="412" y="0" width="672" height="897" key="search.everywhere.popup/0.0.1463.874@0.0.1463.874" timestamp="1593438533968" />
     <state x="541" y="23" width="838" height="1032" key="search.everywhere.popup/0.23.1920.1006@0.23.1920.1006" timestamp="1590219226066" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
