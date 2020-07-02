@@ -80,6 +80,7 @@
     <option name="files">
       <option value="LDP\LDPdataset\Amazon\LDP_Amazon.ipynb" />
       <option value="LDP\LDPdataset\Clothing\LDP_clothing.ipynb" />
+      <option value="LDP\LDPdataset\E_Commerce\LDP_Ecomm.ipynb" />
       <option value="LDP\LDPdataset\Movie\LDP_movie.ipynb" />
     </option>
   </component>
@@ -92,19 +93,22 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/LDP/LDPdataset/Amazon" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/LDP/LDPdataset/E_Commerce" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/LDP/LDPdataset/Clothing" />
-      <recent name="$PROJECT_DIR$/LDP" />
-      <recent name="D:\Workplace\pyworkplace\DifferentialPrivacywork\dataset\APDPkmeans" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Workplace\pyworkplace\DifferentialPrivacywork\LDP\LDPdataset\E_Commerce" />
+      <recent name="D:\Workplace\pyworkplace\DifferentialPrivacywork\LDP\LDPdataset\E_Commerce\data" />
       <recent name="D:\Workplace\pyworkplace\DifferentialPrivacywork\LDP\LDPdataset\Amazon" />
       <recent name="$PROJECT_DIR$/LDP/DPKV" />
       <recent name="D:\Git\DifferentialPrivacywork\dataset" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Workplace\pyworkplace\DifferentialPrivacywork\LDP\LDPdataset\E_Commerce" />
+      <recent name="$PROJECT_DIR$/LDP/LDPdataset/Clothing" />
+      <recent name="$PROJECT_DIR$/LDP" />
+      <recent name="D:\Workplace\pyworkplace\DifferentialPrivacywork\dataset\APDPkmeans" />
     </key>
   </component>
   <component name="RunManager" selected="Python.SH">
@@ -358,6 +362,8 @@
       <workItem from="1593270287539" duration="829000" />
       <workItem from="1593352611681" duration="4556000" />
       <workItem from="1593438058731" duration="5049000" />
+      <workItem from="1593525232119" duration="10686000" />
+      <workItem from="1593698184506" duration="3536000" />
     </task>
     <task id="LOCAL-00001" summary="添加experiment2">
       <created>1551254580680</created>
@@ -400,25 +406,25 @@
       <screen x="0" y="23" width="1920" height="1006" />
     </state>
     <state x="635" y="224" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.23.1920.1006@0.23.1920.1006" timestamp="1589459934855" />
-    <state width="1420" height="177" key="GridCell.Tab.0.bottom" timestamp="1593358387470">
+    <state width="1420" height="177" key="GridCell.Tab.0.bottom" timestamp="1593530792223">
       <screen x="0" y="0" width="1463" height="874" />
     </state>
-    <state width="1420" height="177" key="GridCell.Tab.0.bottom/0.0.1463.874@0.0.1463.874" timestamp="1593358387470" />
+    <state width="1420" height="177" key="GridCell.Tab.0.bottom/0.0.1463.874@0.0.1463.874" timestamp="1593530792223" />
     <state width="1868" height="284" key="GridCell.Tab.0.bottom/0.23.1920.1006@0.23.1920.1006" timestamp="1590383786490" />
-    <state width="1420" height="177" key="GridCell.Tab.0.center" timestamp="1593358387469">
+    <state width="1420" height="177" key="GridCell.Tab.0.center" timestamp="1593530792222">
       <screen x="0" y="0" width="1463" height="874" />
     </state>
-    <state width="1420" height="177" key="GridCell.Tab.0.center/0.0.1463.874@0.0.1463.874" timestamp="1593358387469" />
+    <state width="1420" height="177" key="GridCell.Tab.0.center/0.0.1463.874@0.0.1463.874" timestamp="1593530792222" />
     <state width="1868" height="284" key="GridCell.Tab.0.center/0.23.1920.1006@0.23.1920.1006" timestamp="1590383786490" />
-    <state width="1420" height="177" key="GridCell.Tab.0.left" timestamp="1593358387469">
+    <state width="1420" height="177" key="GridCell.Tab.0.left" timestamp="1593530792222">
       <screen x="0" y="0" width="1463" height="874" />
     </state>
-    <state width="1420" height="177" key="GridCell.Tab.0.left/0.0.1463.874@0.0.1463.874" timestamp="1593358387469" />
+    <state width="1420" height="177" key="GridCell.Tab.0.left/0.0.1463.874@0.0.1463.874" timestamp="1593530792222" />
     <state width="1868" height="284" key="GridCell.Tab.0.left/0.23.1920.1006@0.23.1920.1006" timestamp="1590383786489" />
-    <state width="1420" height="177" key="GridCell.Tab.0.right" timestamp="1593358387470">
+    <state width="1420" height="177" key="GridCell.Tab.0.right" timestamp="1593530792222">
       <screen x="0" y="0" width="1463" height="874" />
     </state>
-    <state width="1420" height="177" key="GridCell.Tab.0.right/0.0.1463.874@0.0.1463.874" timestamp="1593358387470" />
+    <state width="1420" height="177" key="GridCell.Tab.0.right/0.0.1463.874@0.0.1463.874" timestamp="1593530792222" />
     <state width="1868" height="284" key="GridCell.Tab.0.right/0.23.1920.1006@0.23.1920.1006" timestamp="1590383786490" />
     <state x="316" y="93" width="914" height="780" key="SettingsEditor" timestamp="1593266798317">
       <screen x="0" y="0" width="1463" height="874" />
