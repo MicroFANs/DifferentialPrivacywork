@@ -150,7 +150,7 @@ def LDP(n,l,k,total_eps,L):
 
 
 if __name__ == '__main__':
-    LDP(n=105571,l=5850,k=20,total_eps=6,L=2)
+    LDP(n=105571,l=5850,k=20,total_eps=2,L=2)
 
 
 
