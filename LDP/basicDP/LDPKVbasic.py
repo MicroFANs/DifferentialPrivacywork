@@ -139,8 +139,8 @@ def AEC_UE(all_kv_p, d, l, n, a, p, b):
         tmp = mat[:, k]
         n1.append(sum(tmp == 1))
         n2.append(sum(tmp == -1))
-    print(n1)
-    print(n2)
+    # print(n1)
+    # print(n2)
     n1 = np.array(n1)
     n2 = np.array(n2)
 

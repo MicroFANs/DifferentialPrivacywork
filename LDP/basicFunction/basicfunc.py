@@ -56,6 +56,8 @@ def savecsv(nparry, path, header=False, index=False):
     """
     df = pd.DataFrame(nparry)
     df.to_csv(path, header=header, index=index)
+    print("保存文件成功")
+
 
 
 
@@ -88,11 +90,21 @@ def readtxt(path,numtype='float'):
     f.close()
     return data_list
 
-def savetxt(data:list,path):
+def savetxt(data:list,path,flag=True):
+    '''
+    保存文件，flag为true每行末尾追加换行符，false是不加，保存为一行
+    @param data: list类型数据
+    @param path: 路径
+    @param flag: 每一行是否加换行符\n，默认是加换行符
+    @return:
+    '''
     file = open(path,'a')
     for i in range(len(data)):
         s = str(data[i]).replace('[','').replace(']','').replace('(','').replace(')','')#去除[],这两行按数据不同，可以选择
-        s = s.replace("'",'').replace(',','') +'\n'  #去除单引号，逗号，每行末尾追加换行符
+        s = s.replace("'",'').replace(',','')  #去除单引号，逗号，每行末尾追加换行符
+        if(flag):
+            s+='\n'
+        else:s+=' '# 不加换行符用空格隔开
         file.write(s)
     file.close()
     print("保存文件成功")

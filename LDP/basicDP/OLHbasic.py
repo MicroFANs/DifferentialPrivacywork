@@ -130,7 +130,7 @@ def aggregator(item, y: list, g: int, n: int, p: int):
 
 
 # 封装成OLH
-def OLH_1(epsilon: int, valuelist: list, n: int,l):
+def OLH_1(epsilon: int, valuelist: list, n: int, l: int):
     """
     标签标准化成[1,l]之后就可以用这个函数
     @param l: l是key的维度
@@ -151,13 +151,13 @@ def OLH_1(epsilon: int, valuelist: list, n: int,l):
     # x = [olh_hash(valuelist[i], g, i) for i in range(n)]  # 这种写法速度快
     # y = [olh_grr(p, x[i], g) for i in range(n)]
 
-    y = [olh_grr(p, olh_hash(valuelist[i],g,i), g) for i in range(n)]
+    y = [olh_grr(p, olh_hash(valuelist[i], g, i), g) for i in range(n)]
 
     """
     Aggregation
 
     """
-    estimat = [(i+1,aggregator(i + 1, y, g, n, p)) for i in range(l)]
+    estimat = [(i + 1, aggregator(i + 1, y, g, n, p)) for i in range(l)]
 
     return estimat
 
@@ -188,6 +188,6 @@ def OLH(epsilon, valuelist: list, n: int, label: list):
     Aggregation
     
     """
-    estimat = [(label[i],aggregator(label[i], y, g, n, p)) for i in range(len(label))]
+    estimat = [(label[i], aggregator(label[i], y, g, n, p)) for i in range(len(label))]
 
     return estimat
