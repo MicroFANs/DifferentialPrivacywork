@@ -138,10 +138,14 @@ def LDP(n,l,k,total_eps,L):
     # id_true_c_est_c_true_a_est_a简写成下面的把
     id_tcectaea = []
 
+    #聚合结果的topk，用来和真实结果的topk做比较,里面存的是id值（并不是归一化后的值index值）
+    esttopk=[]
+
     for i in range(2 * k):
         index = int(candi_k[i])
         tmp = id_count[index - 1]
         id_tcectaea.append((index, tmp[0], tmp[1], n * f_k[i], 0, m_k[i]))
+        esttopk.append()
 
     # 获取时间作为文件名后缀
     s = time.strftime('%m%d_%H%M%S', time.localtime(time.time()))
