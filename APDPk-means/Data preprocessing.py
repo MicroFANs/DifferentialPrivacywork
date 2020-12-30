@@ -23,6 +23,7 @@ def loadDataSettxt(fileName):      #general function to parse tab -delimited flo
 def normalization(list): #  0-1归一化
     dataset=np.array(list)
     min_max_scaler=preprocessing.MinMaxScaler()
+
     normaldataset=min_max_scaler.fit_transform(dataset)
     return normaldataset
 

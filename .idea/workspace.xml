@@ -76,7 +76,11 @@
     <setting file="file://$PROJECT_DIR$/LDP/LDPMiner/SH.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/LDP/basicDP/mybasic.py" root0="SKIP_INSPECTION" />
   </component>
-  <component name="JupyterTrust" id="61adf35f-fdee-4939-9ea4-699a853dbd3d" />
+  <component name="JupyterTrust" id="61adf35f-fdee-4939-9ea4-699a853dbd3d">
+    <option name="files">
+      <option value="LDP/MLPKV/MLPKV.ipynb" />
+    </option>
+  </component>
   <component name="ProjectId" id="1V9JYTJP50RiHMWRZutXq5uDkZW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -90,12 +94,6 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Workplace\pyworkplace\DifferentialPrivacywork\LDP\LDPdataset\E_Commerce" />
-      <recent name="$PROJECT_DIR$/LDP/LDPdataset/Clothing" />
-      <recent name="$PROJECT_DIR$/LDP" />
-      <recent name="D:\Workplace\pyworkplace\DifferentialPrivacywork\dataset\APDPkmeans" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Workplace\pyworkplace\DifferentialPrivacywork\LDP\LDPdataset\E_Commerce" />
       <recent name="D:\Workplace\pyworkplace\DifferentialPrivacywork\LDP\LDPdataset\Movie" />
@@ -103,8 +101,15 @@
       <recent name="D:\Workplace\pyworkplace\DifferentialPrivacywork\LDP\LDPdataset\Clothing" />
       <recent name="D:\Workplace\pyworkplace\DifferentialPrivacywork\LDP\LDPdataset\E_Commerce\data" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/LDP/MLPKV" />
+      <recent name="D:\Workplace\pyworkplace\DifferentialPrivacywork\LDP\LDPdataset\E_Commerce" />
+      <recent name="$PROJECT_DIR$/LDP/LDPdataset/Clothing" />
+      <recent name="$PROJECT_DIR$/LDP" />
+      <recent name="D:\Workplace\pyworkplace\DifferentialPrivacywork\dataset\APDPkmeans" />
+    </key>
   </component>
-  <component name="RunManager" selected="Python.hitrate">
+  <component name="RunManager" selected="Python.Record">
     <configuration name="DifferentialPrivacywork" type="JupiterNotebook" factoryName="Jupyter Notebook">
       <module name="DifferentialPrivacywork" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -187,6 +192,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Record" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DifferentialPrivacywork" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LDP/MLPKV/Util" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LDP/MLPKV/Util/Record.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="SH" type="PythonConfigurationType" factoryName="Python">
       <module name="DifferentialPrivacywork" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -201,28 +228,6 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LDP/LDPMiner/SH.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="basicfunc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DifferentialPrivacywork" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LDP/basicFunction" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LDP/basicFunction/basicfunc.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -255,19 +260,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.SH" />
-      <item itemvalue="Python.basicfunc" />
       <item itemvalue="Python.Movie_AutoRun" />
       <item itemvalue="Python.Clothing_AutoRun" />
       <item itemvalue="Python.E_Commerce_AutoRun" />
       <item itemvalue="Python.hitrate" />
+      <item itemvalue="Python.Record" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Record" />
         <item itemvalue="Python.hitrate" />
         <item itemvalue="Python.Clothing_AutoRun" />
         <item itemvalue="Python.Movie_AutoRun" />
         <item itemvalue="Python.E_Commerce_AutoRun" />
-        <item itemvalue="Python.basicfunc" />
       </list>
     </recent_temporary>
   </component>
@@ -379,6 +384,15 @@
       <workItem from="1607590088305" duration="553000" />
       <workItem from="1607591059835" duration="9000" />
       <workItem from="1607924316824" duration="50000" />
+      <workItem from="1608604553284" duration="980000" />
+      <workItem from="1608806423057" duration="548000" />
+      <workItem from="1609042427548" duration="221000" />
+      <workItem from="1609069561792" duration="1542000" />
+      <workItem from="1609094125423" duration="1736000" />
+      <workItem from="1609241240334" duration="4213000" />
+      <workItem from="1609315738395" duration="578000" />
+      <workItem from="1609327582264" duration="116000" />
+      <workItem from="1609327987156" duration="3018000" />
     </task>
     <task id="LOCAL-00001" summary="添加experiment2">
       <created>1551254580680</created>
@@ -404,40 +418,38 @@
     <option name="LAST_COMMIT_MESSAGE" value="添加experiment2" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="323" y="139" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1593874051056">
-      <screen x="0" y="0" width="1463" height="874" />
+    <state x="793" y="216" key="#com.intellij.ide.util.MemberChooser" timestamp="1609328922784">
+      <screen x="0" y="23" width="2048" height="1071" />
     </state>
-    <state x="323" y="139" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1463.874@0.0.1463.874" timestamp="1593874051056" />
-    <state width="1868" height="205" key="GridCell.Tab.0.bottom" timestamp="1599612226941">
-      <screen x="0" y="23" width="1920" height="1004" />
+    <state x="793" y="216" key="#com.intellij.ide.util.MemberChooser/0.23.2048.1071/2048.-324.1080.1897@0.23.2048.1071" timestamp="1609328922784" />
+    <state width="1996" height="306" key="GridCell.Tab.0.bottom" timestamp="1609331244753">
+      <screen x="0" y="23" width="2048" height="1071" />
     </state>
-    <state width="1420" height="206" key="GridCell.Tab.0.bottom/0.0.1463.874@0.0.1463.874" timestamp="1593918799141" />
-    <state width="1868" height="205" key="GridCell.Tab.0.bottom/0.23.1920.1004@0.23.1920.1004" timestamp="1599612226941" />
-    <state width="1868" height="205" key="GridCell.Tab.0.center" timestamp="1599612226940">
-      <screen x="0" y="23" width="1920" height="1004" />
+    <state width="1996" height="306" key="GridCell.Tab.0.bottom/0.23.2048.1071/2048.-324.1080.1897@0.23.2048.1071" timestamp="1609331244753" />
+    <state width="1996" height="306" key="GridCell.Tab.0.center" timestamp="1609331244752">
+      <screen x="0" y="23" width="2048" height="1071" />
     </state>
-    <state width="1420" height="206" key="GridCell.Tab.0.center/0.0.1463.874@0.0.1463.874" timestamp="1593918799141" />
-    <state width="1868" height="205" key="GridCell.Tab.0.center/0.23.1920.1004@0.23.1920.1004" timestamp="1599612226940" />
-    <state width="1868" height="205" key="GridCell.Tab.0.left" timestamp="1599612226940">
-      <screen x="0" y="23" width="1920" height="1004" />
+    <state width="1996" height="306" key="GridCell.Tab.0.center/0.23.2048.1071/2048.-324.1080.1897@0.23.2048.1071" timestamp="1609331244752" />
+    <state width="1996" height="306" key="GridCell.Tab.0.left" timestamp="1609331244752">
+      <screen x="0" y="23" width="2048" height="1071" />
     </state>
-    <state width="1420" height="206" key="GridCell.Tab.0.left/0.0.1463.874@0.0.1463.874" timestamp="1593918799141" />
-    <state width="1868" height="205" key="GridCell.Tab.0.left/0.23.1920.1004@0.23.1920.1004" timestamp="1599612226940" />
-    <state width="1868" height="205" key="GridCell.Tab.0.right" timestamp="1599612226941">
-      <screen x="0" y="23" width="1920" height="1004" />
+    <state width="1996" height="306" key="GridCell.Tab.0.left/0.23.2048.1071/2048.-324.1080.1897@0.23.2048.1071" timestamp="1609331244752" />
+    <state width="1996" height="306" key="GridCell.Tab.0.right" timestamp="1609331244753">
+      <screen x="0" y="23" width="2048" height="1071" />
     </state>
-    <state width="1420" height="206" key="GridCell.Tab.0.right/0.0.1463.874@0.0.1463.874" timestamp="1593918799141" />
-    <state width="1868" height="205" key="GridCell.Tab.0.right/0.23.1920.1004@0.23.1920.1004" timestamp="1599612226941" />
-    <state x="415" y="130" width="914" height="780" key="SettingsEditor" timestamp="1599550813075">
-      <screen x="0" y="23" width="1920" height="1004" />
+    <state width="1996" height="306" key="GridCell.Tab.0.right/0.23.2048.1071/2048.-324.1080.1897@0.23.2048.1071" timestamp="1609331244753" />
+    <state x="2048" y="176" key="SettingsEditor" timestamp="1609330894547">
+      <screen x="2048" y="-324" width="1080" height="1897" />
     </state>
-    <state x="316" y="93" width="914" height="780" key="SettingsEditor/0.0.1463.874@0.0.1463.874" timestamp="1593266798317" />
-    <state x="415" y="130" key="SettingsEditor/0.23.1920.1004@0.23.1920.1004" timestamp="1599550813075" />
-    <state x="541" y="23" width="882" height="1031" key="search.everywhere.popup" timestamp="1599568773129">
-      <screen x="0" y="23" width="1920" height="1004" />
+    <state x="2048" y="176" key="SettingsEditor/0.23.2048.1071/2048.-324.1080.1897@0.23.2048.1071" timestamp="1609330894547" />
+    <state x="2042" y="-324" width="1080" height="1417" maximized="true" key="dock-window-1" timestamp="1609330699563">
+      <screen x="2048" y="-324" width="1080" height="1897" />
     </state>
-    <state x="412" y="0" width="672" height="897" key="search.everywhere.popup/0.0.1463.874@0.0.1463.874" timestamp="1593827511485" />
-    <state x="541" y="23" width="882" height="1031" key="search.everywhere.popup/0.23.1920.1004@0.23.1920.1004" timestamp="1599568773129" />
+    <state x="2042" y="-324" width="1080" height="1417" maximized="true" key="dock-window-1/0.23.2048.1071/2048.-324.1080.1897@0.23.2048.1071" timestamp="1609330699563" />
+    <state x="605" y="62" key="search.everywhere.popup" timestamp="1609328909168">
+      <screen x="0" y="23" width="2048" height="1071" />
+    </state>
+    <state x="605" y="62" key="search.everywhere.popup/0.23.2048.1071/2048.-324.1080.1897@0.23.2048.1071" timestamp="1609328909168" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$Laplace_Mechanism_Problem_4.coverage" NAME="Laplace_Mechanism_Problem_4 Coverage Results" MODIFIED="1577441051285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../github/differential_priivacy-master" />
@@ -461,6 +473,7 @@
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$Clothing_AutoRun.coverage" NAME="Clothing_AutoRun Coverage Results" MODIFIED="1599552131990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPdataset/Clothing" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$LDPKV.coverage" NAME="LDPKV Coverage Results" MODIFIED="1589698978731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/DPKV" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$myLDPAlgorithm.coverage" NAME="myLDPAlgorithm Coverage Results" MODIFIED="1579183916825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$Record.coverage" NAME="Record Coverage Results" MODIFIED="1609329314735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/MLPKV/Util" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$PCKV.coverage" NAME="PCKV Coverage Results" MODIFIED="1589369318415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/DPKV" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$hitrate.coverage" NAME="hitrate Coverage Results" MODIFIED="1599568631333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/DPKV" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$loadjson.coverage" NAME="loadjson Coverage Results" MODIFIED="1589508918989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/DPKV" />
