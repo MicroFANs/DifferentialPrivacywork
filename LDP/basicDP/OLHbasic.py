@@ -4,10 +4,17 @@
 @time:2020/1/14 7:05 下午
 """
 
+import threading
+import time
+from concurrent.futures import ThreadPoolExecutor
+import multiprocessing
+from multiprocessing import Process
+from multiprocessing import Pool
 import numpy as np
 import random
 import LDP.basicFunction.basicfunc as bf
 import LDP.basicDP.PCKVbasic as pckv
+import os
 
 # 这里需要导入xxhash这个包
 import xxhash
@@ -39,15 +46,15 @@ def olh_hash(value, size, seed):
     return h
 
 
-def grr(p, bit, g):
-    v = [i for i in range(g)]
-    rnd = np.random.random()
-    if rnd <= p:
-        perturbed_bit = bit
-    else:
-        del (v[bit])
-        perturbed_bit = random.choice(v)
-    return perturbed_bit
+# def grr(p, bit, g):
+#     v = [i for i in range(g)]
+#     rnd = np.random.random()
+#     if rnd <= p:
+#         perturbed_bit = bit
+#     else:
+#         del (v[bit])
+#         perturbed_bit = random.choice(v)
+#     return perturbed_bit
 
 
 def olh_grr(p, bit, g):
@@ -67,20 +74,20 @@ def olh_grr(p, bit, g):
     return perturbed_bit
 
 
-def support(v, report, g, n):
-    """
-    这个support函数是和我自己写的bf下的hash相匹配
-    :param v:
-    :param report:
-    :param g:
-    :param n:
-    :return:
-    """
-    c = 0
-    for j in range(n):
-        if bf.hash(v, g, j) == report[j]:
-            c = c + 1
-    return c
+# def support(v, report, g, n):
+#     """
+#     这个support函数是和我自己写的bf下的hash相匹配
+#     :param v:
+#     :param report:
+#     :param g:
+#     :param n:
+#     :return:
+#     """
+#     c = 0
+#     for j in range(n):
+#         if bf.hash(v, g, j) == report[j]:
+#             c = c + 1
+#     return c
 
 
 def olh_support(v, y, g, n):
@@ -97,6 +104,7 @@ def olh_support(v, y, g, n):
         if olh_hash(v, g, i) == y[i]:
             c += 1
     return c
+
 
 
 def aggregation(c, n, g, p):
@@ -191,3 +199,100 @@ def OLH(epsilon, valuelist: list, n: int, label: list):
     estimat = [(label[i], aggregator(label[i], y, g, n, p)) for i in range(len(label))]
 
     return estimat
+
+
+# OLH扰动函数
+def OLH_perturbation(epsilon: int, value: int, seed: int):
+    """
+    OLH扰动的函数
+    @param epsilon: 隐私预算
+    @param value: 值
+    @param seed: 种子，用户编号作为种子，第一个用户0，下一个为1
+    @return: 扰动后的值，在[0,g)之间
+    """
+    g = int(np.exp(epsilon)) + 1  # 参数g
+    p = p_values(epsilon, n=g)  # 参数p
+    h = olh_hash(value, g, seed)
+    x = olh_grr(p, h, g)
+    return x
+
+
+def OLH_aggregation_multithread(epsilon: int, perturbed_value: list, n:int,d: int, num_thread,func):
+    """
+    使用多线程来计算聚合
+    @param func:跑在线程里的函数
+    @param epsilon: 隐私预算
+    @param perturbed_value: 上传的扰动值list
+    @param n: 用户数
+    @param d: 数据域的维度
+    @param num_thread: 线程数
+    @return: 估计值list
+    """
+    g = int(np.exp(epsilon)) + 1  # 参数g
+    p = p_values(epsilon, n=g)  # 参数p
+    pvs = np.array_split(perturbed_value, num_thread) # 切分成相应的线程数，即每个线程就是一个边缘节点
+    for i in range(num_thread):
+        pvs[i] = pvs[i].tolist()
+
+    with ThreadPoolExecutor(max_workers=11) as pool:
+        results = pool.map(func, pvs, [g for i in range(num_thread)],
+                           [d for i in range(num_thread)])
+    temp = []
+    for r in results:
+        print(r)
+        temp.append(r)
+    support = np.sum(temp, axis=0)
+
+    est = aggregation(support, n,g, p).tolist()
+    return est
+
+def OLH_aggregation_mutilprocess(epsilon: int, perturbed_value: list, n:int,d: int ,func,num_process=6):
+    """
+    多进程，火力全开
+    @param epsilon: 隐私预算
+    @param perturbed_value: 上传的扰动值list
+    @param n: 用户数
+    @param d: 数据域的维度
+    @param func: 跑在进程里的函数
+    @param num_process: 分片数，默认是6个，因为我的CPU是8核，所以开6个核心同时跑
+    @return:
+    """
+    g = int(np.exp(epsilon)) + 1  # 参数g
+    p = p_values(epsilon, n=g)  # 参数p
+    pvs = np.array_split(perturbed_value, num_process) # 切分成相应的线程数，即每个线程就是一个边缘节点
+    for i in range(num_process):
+        pvs[i] = pvs[i].tolist()
+    pool=Pool()
+
+    res=[pool.apply_async(func,args=([pvs[j],g,d,])) for j in range(num_process)]
+    pool.close()
+    pool.join()
+    temp=[]
+    for r in res:
+        print(r.get())
+        temp.append(r.get())
+    support=np.sum(temp,axis=0)
+    print(sum(support))
+    est = aggregation(support, n,g, p).tolist()
+    return est
+
+
+def get_support(y: list, g, d):
+    """
+    计算support值
+    @param y:
+    @param g:
+    @param n:
+    @param d:
+    @return:
+    """
+    print(multiprocessing.current_process().name,"启动")
+    support = []
+    for i in range(d):
+        c = 0
+        for j in range(len(y)):
+            if olh_hash(i+1, g, y[j][1]) == y[j][0]:
+                c += 1
+        support.append(c)
+    return support
+

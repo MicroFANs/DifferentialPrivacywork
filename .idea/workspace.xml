@@ -91,7 +91,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -109,7 +109,7 @@
       <recent name="D:\Workplace\pyworkplace\DifferentialPrivacywork\dataset\APDPkmeans" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.Record">
+  <component name="RunManager" selected="Python.OLHbasic">
     <configuration name="DifferentialPrivacywork" type="JupiterNotebook" factoryName="Jupyter Notebook">
       <module name="DifferentialPrivacywork" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -148,28 +148,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="E_Commerce_AutoRun" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true" nameIsGenerated="true">
-      <module name="DifferentialPrivacywork" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LDP/LDPdataset/E_Commerce" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LDP/LDPdataset/E_Commerce/E_Commerce_AutoRun.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="Movie_AutoRun" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true" nameIsGenerated="true">
       <module name="DifferentialPrivacywork" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -184,6 +162,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LDP/LDPdataset/Movie/Movie_AutoRun.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="OLHbasic" type="PythonConfigurationType" factoryName="Python" singleton="false" temporary="true" nameIsGenerated="true">
+      <module name="DifferentialPrivacywork" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LDP/basicDP" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LDP/basicDP/OLHbasic.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -262,17 +262,17 @@
       <item itemvalue="Python.SH" />
       <item itemvalue="Python.Movie_AutoRun" />
       <item itemvalue="Python.Clothing_AutoRun" />
-      <item itemvalue="Python.E_Commerce_AutoRun" />
       <item itemvalue="Python.hitrate" />
       <item itemvalue="Python.Record" />
+      <item itemvalue="Python.OLHbasic" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.OLHbasic" />
         <item itemvalue="Python.Record" />
         <item itemvalue="Python.hitrate" />
         <item itemvalue="Python.Clothing_AutoRun" />
         <item itemvalue="Python.Movie_AutoRun" />
-        <item itemvalue="Python.E_Commerce_AutoRun" />
       </list>
     </recent_temporary>
   </component>
@@ -393,6 +393,63 @@
       <workItem from="1609315738395" duration="578000" />
       <workItem from="1609327582264" duration="116000" />
       <workItem from="1609327987156" duration="3018000" />
+      <workItem from="1609566721941" duration="14285000" />
+      <workItem from="1609584335222" duration="2257000" />
+      <workItem from="1609586611677" duration="2662000" />
+      <workItem from="1609589938886" duration="119000" />
+      <workItem from="1609590060479" duration="294000" />
+      <workItem from="1609590392451" duration="322000" />
+      <workItem from="1609590737004" duration="58000" />
+      <workItem from="1609590797158" duration="144000" />
+      <workItem from="1609590943612" duration="173000" />
+      <workItem from="1609591119427" duration="27000" />
+      <workItem from="1609591147854" duration="910000" />
+      <workItem from="1609592117089" duration="959000" />
+      <workItem from="1609593085706" duration="82000" />
+      <workItem from="1609593169823" duration="156000" />
+      <workItem from="1609593327919" duration="672000" />
+      <workItem from="1609594098522" duration="146000" />
+      <workItem from="1609594282940" duration="31000" />
+      <workItem from="1609594315417" duration="89000" />
+      <workItem from="1609594406741" duration="539000" />
+      <workItem from="1609595540851" duration="77000" />
+      <workItem from="1609595619430" duration="93000" />
+      <workItem from="1609595714776" duration="175000" />
+      <workItem from="1609595942884" duration="116000" />
+      <workItem from="1609596060731" duration="75000" />
+      <workItem from="1609596137570" duration="31000" />
+      <workItem from="1609596170639" duration="87000" />
+      <workItem from="1609596259609" duration="36000" />
+      <workItem from="1609596297814" duration="133000" />
+      <workItem from="1609596432692" duration="35000" />
+      <workItem from="1609596469512" duration="125000" />
+      <workItem from="1609596596023" duration="34000" />
+      <workItem from="1609596631465" duration="48000" />
+      <workItem from="1609596680989" duration="81000" />
+      <workItem from="1609596763732" duration="216000" />
+      <workItem from="1609596981783" duration="640000" />
+      <workItem from="1609597629777" duration="29000" />
+      <workItem from="1609597660558" duration="158000" />
+      <workItem from="1609597821225" duration="120000" />
+      <workItem from="1609597942813" duration="112000" />
+      <workItem from="1609598057267" duration="78000" />
+      <workItem from="1609598137738" duration="420000" />
+      <workItem from="1609598560442" duration="2732000" />
+      <workItem from="1609639202619" duration="2806000" />
+      <workItem from="1609649081105" duration="2965000" />
+      <workItem from="1609653209402" duration="251000" />
+      <workItem from="1609653558212" duration="2945000" />
+      <workItem from="1609656589994" duration="1130000" />
+      <workItem from="1609658113830" duration="3077000" />
+      <workItem from="1609661302044" duration="780000" />
+      <workItem from="1609662086381" duration="990000" />
+      <workItem from="1609663135507" duration="2073000" />
+      <workItem from="1609667275589" duration="1506000" />
+      <workItem from="1609668874244" duration="261000" />
+      <workItem from="1609669796577" duration="1110000" />
+      <workItem from="1609670911427" duration="671000" />
+      <workItem from="1609671622449" duration="507000" />
+      <workItem from="1609672190228" duration="909000" />
     </task>
     <task id="LOCAL-00001" summary="添加experiment2">
       <created>1551254580680</created>
@@ -418,34 +475,42 @@
     <option name="LAST_COMMIT_MESSAGE" value="添加experiment2" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="379" y="131" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1609592099231">
+      <screen x="0" y="23" width="2048" height="1071" />
+    </state>
+    <state x="379" y="131" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.2048.1071/2048.-324.1080.1897@0.23.2048.1071" timestamp="1609592099231" />
     <state x="793" y="216" key="#com.intellij.ide.util.MemberChooser" timestamp="1609328922784">
       <screen x="0" y="23" width="2048" height="1071" />
     </state>
     <state x="793" y="216" key="#com.intellij.ide.util.MemberChooser/0.23.2048.1071/2048.-324.1080.1897@0.23.2048.1071" timestamp="1609328922784" />
-    <state width="1996" height="306" key="GridCell.Tab.0.bottom" timestamp="1609331244753">
+    <state width="1996" height="288" key="GridCell.Tab.0.bottom" timestamp="1609672193732">
       <screen x="0" y="23" width="2048" height="1071" />
     </state>
-    <state width="1996" height="306" key="GridCell.Tab.0.bottom/0.23.2048.1071/2048.-324.1080.1897@0.23.2048.1071" timestamp="1609331244753" />
-    <state width="1996" height="306" key="GridCell.Tab.0.center" timestamp="1609331244752">
+    <state width="1996" height="288" key="GridCell.Tab.0.bottom/0.23.2048.1071/2048.-324.1080.1897@0.23.2048.1071" timestamp="1609672193732" />
+    <state width="1996" height="288" key="GridCell.Tab.0.center" timestamp="1609672193731">
       <screen x="0" y="23" width="2048" height="1071" />
     </state>
-    <state width="1996" height="306" key="GridCell.Tab.0.center/0.23.2048.1071/2048.-324.1080.1897@0.23.2048.1071" timestamp="1609331244752" />
-    <state width="1996" height="306" key="GridCell.Tab.0.left" timestamp="1609331244752">
+    <state width="1996" height="288" key="GridCell.Tab.0.center/0.23.2048.1071/2048.-324.1080.1897@0.23.2048.1071" timestamp="1609672193731" />
+    <state width="1996" height="288" key="GridCell.Tab.0.left" timestamp="1609672193730">
       <screen x="0" y="23" width="2048" height="1071" />
     </state>
-    <state width="1996" height="306" key="GridCell.Tab.0.left/0.23.2048.1071/2048.-324.1080.1897@0.23.2048.1071" timestamp="1609331244752" />
-    <state width="1996" height="306" key="GridCell.Tab.0.right" timestamp="1609331244753">
+    <state width="1996" height="288" key="GridCell.Tab.0.left/0.23.2048.1071/2048.-324.1080.1897@0.23.2048.1071" timestamp="1609672193730" />
+    <state width="1996" height="288" key="GridCell.Tab.0.right" timestamp="1609672193731">
       <screen x="0" y="23" width="2048" height="1071" />
     </state>
-    <state width="1996" height="306" key="GridCell.Tab.0.right/0.23.2048.1071/2048.-324.1080.1897@0.23.2048.1071" timestamp="1609331244753" />
-    <state x="2048" y="176" key="SettingsEditor" timestamp="1609330894547">
+    <state width="1996" height="288" key="GridCell.Tab.0.right/0.23.2048.1071/2048.-324.1080.1897@0.23.2048.1071" timestamp="1609672193731" />
+    <state x="2048" y="176" width="1080" height="897" key="SettingsEditor" timestamp="1609590679176">
       <screen x="2048" y="-324" width="1080" height="1897" />
     </state>
-    <state x="2048" y="176" key="SettingsEditor/0.23.2048.1071/2048.-324.1080.1897@0.23.2048.1071" timestamp="1609330894547" />
-    <state x="2042" y="-324" width="1080" height="1417" maximized="true" key="dock-window-1" timestamp="1609330699563">
+    <state x="2048" y="176" width="1080" height="897" key="SettingsEditor/0.23.2048.1071/2048.-324.1080.1897@0.23.2048.1071" timestamp="1609590679176" />
+    <state width="1024" height="535" key="XDebugger.FullValuePopup" timestamp="1609659471925">
+      <screen x="0" y="23" width="2048" height="1071" />
+    </state>
+    <state width="1024" height="535" key="XDebugger.FullValuePopup/0.23.2048.1071/2048.-324.1080.1897@0.23.2048.1071" timestamp="1609659471925" />
+    <state x="2048" y="-324" width="1080" height="1897" key="dock-window-1" timestamp="1609672934392">
       <screen x="2048" y="-324" width="1080" height="1897" />
     </state>
-    <state x="2042" y="-324" width="1080" height="1417" maximized="true" key="dock-window-1/0.23.2048.1071/2048.-324.1080.1897@0.23.2048.1071" timestamp="1609330699563" />
+    <state x="2048" y="-324" width="1080" height="1897" key="dock-window-1/0.23.2048.1071/2048.-324.1080.1897@0.23.2048.1071" timestamp="1609672934392" />
     <state x="605" y="62" key="search.everywhere.popup" timestamp="1609328909168">
       <screen x="0" y="23" width="2048" height="1071" />
     </state>
@@ -469,8 +534,8 @@
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$PrivKV.coverage" NAME="PrivKV Coverage Results" MODIFIED="1589285612002" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/DPKV" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$PCKVbasic.coverage" NAME="PCKVbasic Coverage Results" MODIFIED="1590050497320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/basicDP" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$SH_rebuild.coverage" NAME="SH_rebuild Coverage Results" MODIFIED="1579186341313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$OLHbasic.coverage" NAME="OLHbasic Coverage Results" MODIFIED="1589185297888" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/basicDP" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$Clothing_AutoRun.coverage" NAME="Clothing_AutoRun Coverage Results" MODIFIED="1599552131990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPdataset/Clothing" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$OLHbasic.coverage" NAME="OLHbasic Coverage Results" MODIFIED="1609662237688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/basicDP" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$LDPKV.coverage" NAME="LDPKV Coverage Results" MODIFIED="1589698978731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/DPKV" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$myLDPAlgorithm.coverage" NAME="myLDPAlgorithm Coverage Results" MODIFIED="1579183916825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$Record.coverage" NAME="Record Coverage Results" MODIFIED="1609329314735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/MLPKV/Util" />
