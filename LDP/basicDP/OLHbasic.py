@@ -269,10 +269,9 @@ def OLH_aggregation_mutilprocess(epsilon: int, perturbed_value: list, n:int,d: i
     pool.join()
     temp=[]
     for r in res:
-        print(r.get())
+        #print(r.get())
         temp.append(r.get())
     support=np.sum(temp,axis=0)
-    print(sum(support))
     est = aggregation(support, n,g, p).tolist()
     return est
 

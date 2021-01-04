@@ -323,10 +323,11 @@ if __name__ == '__main__':
 
 
 
-    x=[(1,2),(3,4),(4,5)]
+
+    x=[[4,'Closs',4.33,0.03101]]
     savetxt(x,'../LDPdataset/test.txt')
-    s=readtxt('../LDPdataset/test.txt')
-    print(s)
+
+
 
 
 

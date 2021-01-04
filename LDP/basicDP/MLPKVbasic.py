@@ -174,7 +174,7 @@ def hit_ratio(l1, l2, topk):
     @param topk: 前k项
     @return:
     """
-    num = len(list(set(l1[:topk]).intersection(set(l2[:topk]))))
+    num = len(set(l1[:topk]).intersection(set(l2[:topk])))
     return num / topk
 
 
@@ -183,4 +183,6 @@ def MSE(candidate, est, true, topk):
     for i in range(topk):
         k = candidate[i]
         square += np.square(est[k] - true[k])
-    return square / topk
+    res=square / topk
+
+    return float('{:.9f}'.format(res))
