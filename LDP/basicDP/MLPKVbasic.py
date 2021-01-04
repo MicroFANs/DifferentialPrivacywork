@@ -28,6 +28,7 @@ def divide_list(input_list: list, ratio_a: int, ratio_b: int, ratio_c: int, shuf
     list_c = input_list[div2:]
     return list_a, list_b, list_c
 
+
 def mpp(candidate: list, p: list):
     """
     多概率扰动函数 mutil_prob_perturbation
@@ -39,6 +40,7 @@ def mpp(candidate: list, p: list):
     """
     v = np.random.choice(candidate, p=p)
     return v
+
 
 def correct(low, high, value):
     """
@@ -53,6 +55,7 @@ def correct(low, high, value):
     elif value > high:
         value = high
     return value
+
 
 def P_S(k_v, d: int, l: int):
     """
@@ -83,6 +86,7 @@ def P_S(k_v, d: int, l: int):
         v_ps = -1
 
     return k_ps, v_ps
+
 
 def P_UE(k_v, d, l, label, a, p, b):
     """
@@ -120,6 +124,7 @@ def PCKV_UE(all_kv, d, l, label, a, p, b):
     Y = [P_UE(x, d, l, label, a, p, b) for x in all_kv]
     return Y
 
+
 def AEC_UE(all_kv_p, d, l, n, a, p, b):
     """
     重写了AEC_UE
@@ -154,13 +159,14 @@ def AEC_UE(all_kv_p, d, l, n, a, p, b):
 
     # line4 校正n1,n2
 
-    n1_n2_=(n1-n2)/(a*(2*p-1)) # 表示n1_-n2_
+    n1_n2_ = (n1 - n2) / (a * (2 * p - 1))  # 表示n1_-n2_
     m_k_arr = l * (n1_n2_) / (n * np.array(f_k))
     m_k = list(m_k_arr)
 
     return f_k, m_k
 
-def hit_ratio(l1,l2,topk):
+
+def hit_ratio(l1, l2, topk):
     """
     计算命中率
     @param l1: Candidate的list
@@ -168,12 +174,13 @@ def hit_ratio(l1,l2,topk):
     @param topk: 前k项
     @return:
     """
-    num=len(list(set(l1[:topk]).intersection(set(l2[:topk]))))
-    return num/topk
+    num = len(list(set(l1[:topk]).intersection(set(l2[:topk]))))
+    return num / topk
 
-def MSE(candidate,est,true,topk):
-    square=0
+
+def MSE(candidate, est, true, topk):
+    square = 0
     for i in range(topk):
-        k=candidate[i]
-        square+=np.square(est[k]-true[k])
-    return square/topk
+        k = candidate[i]
+        square += np.square(est[k] - true[k])
+    return square / topk
