@@ -157,10 +157,29 @@ def AEC_UE(all_kv_p, d, l, n, a, p, b):
     f_k_arr = ((n1 + n2) / n - b) * l / (a - b)
     f_k = [correct(1 / n, 1, i) for i in f_k_arr]
 
-    # line4 校正n1,n2
+    # # line4 校正n1,n2
+    # n1_n2_ = (n1 - n2) / (a * (2 * p - 1))  # 表示n1_-n2_
+    # m_k_arr = l * (n1_n2_) / (n * np.array(f_k))
+    # m_k = list(m_k_arr)
 
-    n1_n2_ = (n1 - n2) / (a * (2 * p - 1))  # 表示n1_-n2_
-    m_k_arr = l * (n1_n2_) / (n * np.array(f_k))
+    # line4 校正n1,n2
+    A = np.zeros((2, 2))
+    A[0][0] = A[1][1] = a * p - b / 2
+    A[0][1] = A[1][0] = a * (1 - p) - b / 2
+    AI = np.matrix(A).I
+    B1 = n1 - n * b / 2
+    B2 = n2 - n * b / 2
+    B = np.vstack((B1, B2))
+    S = np.array(AI * B)
+    n1_ = S[0]
+    n2_ = S[1]
+    for k in range(d):
+        high = n * f_k[k] / l
+        n1_[k] = correct(0, high, n1_[k])
+        n2_[k] = correct(0, high, n2_[k])
+
+    # line5 计算均值
+    m_k_arr = l * (n1_ - n2_) / (n * np.array(f_k))
     m_k = list(m_k_arr)
 
     return f_k, m_k

@@ -285,7 +285,7 @@ def get_support(y: list, g, d):
     @param d:
     @return:
     """
-    print(multiprocessing.current_process().name,"启动")
+    #print(multiprocessing.current_process().name,"启动")
     support = []
     for i in range(d):
         c = 0
