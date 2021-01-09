@@ -299,11 +299,12 @@ def Group_hit(param):
 def get_parameters():
     eps = [6, 5, 4, 3, 2, 1, 0.5, 0.1]
     data_names = ['Clothing', 'Ecomm', 'Movie', 'Amazon']
+    s_data=['Uniform','Uniform_d','Gaussian','Gaussian_d']
     data_padding = {'Ecomm': 1, 'Clothing': 2, 'Movie': 25, 'Amazon': 2}
     parameters = []
-    for name in data_names[:3]:
+    for name in s_data:
         for e in eps:
-            parameters.append([name, e, data_padding[name], 20])
+            parameters.append([name, e, 1, 20])
     return parameters
 
 
@@ -316,7 +317,7 @@ if __name__ == '__main__':
     parameters = get_parameters()
     print(parameters)
     for param in parameters:
-        for i in range(10):
+        for i in range(5):
             print("执行，data：", param[0], "eps:", param[1], "第", i, "次")
             MPLKV(param)
 
