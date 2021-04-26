@@ -295,3 +295,6 @@ def get_support(y: list, g, d):
         support.append(c)
     return support
 
+if __name__ == '__main__':
+    x=OLH_perturbation(5,123,0)
+    print(x)

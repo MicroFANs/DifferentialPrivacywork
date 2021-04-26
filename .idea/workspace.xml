@@ -75,19 +75,15 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/LDP/LDPMiner/RP.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/LDP/basicDP/RPbasic.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/LDP/LDPMiner/SH.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/LDP/basicDP/SHbasic.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/LDP/basicFunction/basicfunc.py" root0="SKIP_INSPECTION" />
-    <setting file="file://$PROJECT_DIR$/LDP/LDPMiner/myLDPAlgorithm.py" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/LDP/LDPMiner/OLH.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/LDP/LDPMiner/SH.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/LDP/basicDP/RPbasic.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/LDP/LDPMiner/myLDPAlgorithm.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/LDP/LDPMiner/RP.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/LDP/basicFunction/basicfunc.py" root0="SKIP_INSPECTION" />
+    <setting file="file://$PROJECT_DIR$/LDP/basicDP/SHbasic.py" root0="SKIP_INSPECTION" />
   </component>
-  <component name="JupyterTrust" id="61adf35f-fdee-4939-9ea4-699a853dbd3d">
-    <option name="files">
-      <option value="LDP/MLPKV/MLPKV.ipynb" />
-    </option>
-  </component>
+  <component name="JupyterTrust" id="b978b729-3454-420b-b21a-d8c05aade61b" />
   <component name="ProjectId" id="1V9JYTJP50RiHMWRZutXq5uDkZW" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -99,7 +95,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -117,7 +113,7 @@
       <recent name="D:\Workplace\pyworkplace\DifferentialPrivacywork\dataset\APDPkmeans" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.EC_OLH">
+  <component name="RunManager" selected="Python.OLHbasic">
     <configuration name="DifferentialPrivacywork" type="JupiterNotebook" factoryName="Jupyter Notebook">
       <module name="DifferentialPrivacywork" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -170,6 +166,28 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LDP/MLPKV/MLPKV.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="OLHbasic" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="DifferentialPrivacywork" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LDP/basicDP" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LDP/basicDP/OLHbasic.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -244,47 +262,25 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="basicfunc" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="DifferentialPrivacywork" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/LDP/basicFunction" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/LDP/basicFunction/basicfunc.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.SH" />
-      <item itemvalue="Python.basicfunc" />
       <item itemvalue="Python.MLPKV" />
       <item itemvalue="Python.PCKV" />
       <item itemvalue="Python.PrivKV" />
       <item itemvalue="Python.EC_OLH" />
+      <item itemvalue="Python.OLHbasic" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.OLHbasic" />
         <item itemvalue="Python.EC_OLH" />
         <item itemvalue="Python.PrivKV" />
         <item itemvalue="Python.PCKV" />
         <item itemvalue="Python.MLPKV" />
-        <item itemvalue="Python.basicfunc" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -500,6 +496,13 @@
       <workItem from="1609909317878" duration="444000" />
       <workItem from="1609909764668" duration="20048000" />
       <workItem from="1610437508691" duration="2498000" />
+      <workItem from="1610458098810" duration="642000" />
+      <workItem from="1610506872068" duration="607000" />
+      <workItem from="1614248245892" duration="981000" />
+      <workItem from="1614257128244" duration="90000" />
+      <workItem from="1614745309903" duration="8296000" />
+      <workItem from="1617110619978" duration="767000" />
+      <workItem from="1617372571742" duration="184000" />
     </task>
     <task id="LOCAL-00001" summary="添加experiment2">
       <created>1551254580680</created>
@@ -512,7 +515,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
+    <option name="version" value="1" />
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.csv" />
@@ -524,35 +527,58 @@
     <MESSAGE value="添加experiment2" />
     <option name="LAST_COMMIT_MESSAGE" value="添加experiment2" />
   </component>
+  <component name="WindowStateProjectService">
+    <state width="1420" height="206" key="GridCell.Tab.0.bottom" timestamp="1614771301991">
+      <screen x="2560" y="0" width="1463" height="885" />
+    </state>
+    <state width="1420" height="206" key="GridCell.Tab.0.bottom/2560.0.1463.885/0.0.2048.1112@2560.0.1463.885" timestamp="1614771301991" />
+    <state width="1420" height="206" key="GridCell.Tab.0.center" timestamp="1614771301991">
+      <screen x="2560" y="0" width="1463" height="885" />
+    </state>
+    <state width="1420" height="206" key="GridCell.Tab.0.center/2560.0.1463.885/0.0.2048.1112@2560.0.1463.885" timestamp="1614771301991" />
+    <state width="1420" height="206" key="GridCell.Tab.0.left" timestamp="1614771301991">
+      <screen x="2560" y="0" width="1463" height="885" />
+    </state>
+    <state width="1420" height="206" key="GridCell.Tab.0.left/2560.0.1463.885/0.0.2048.1112@2560.0.1463.885" timestamp="1614771301991" />
+    <state width="1420" height="206" key="GridCell.Tab.0.right" timestamp="1614771301991">
+      <screen x="2560" y="0" width="1463" height="885" />
+    </state>
+    <state width="1420" height="206" key="GridCell.Tab.0.right/2560.0.1463.885/0.0.2048.1112@2560.0.1463.885" timestamp="1614771301991" />
+    <state x="376" y="156" key="SettingsEditor" timestamp="1617372754342">
+      <screen x="0" y="0" width="1463" height="874" />
+    </state>
+    <state x="376" y="156" key="SettingsEditor/0.0.1463.874@0.0.1463.874" timestamp="1617372754342" />
+    <state x="526" y="198" key="SettingsEditor/0.0.2048.1112@0.0.2048.1112" timestamp="1610458111631" />
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$Movie_AutoRun.coverage" NAME="Movie_AutoRun Coverage Results" MODIFIED="1593915696759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPdataset/Movie" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$MLPKV.coverage" NAME="MLPKV Coverage Results" MODIFIED="1609952419621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/MLPKV" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$Laplace_Mechanism_Problem_4.coverage" NAME="Laplace_Mechanism_Problem_4 Coverage Results" MODIFIED="1577441051285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../github/differential_priivacy-master" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$E_Commerce_AutoRun.coverage" NAME="E_Commerce_AutoRun Coverage Results" MODIFIED="1593874804058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPdataset/E_Commerce" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$tools.coverage" NAME="tools Coverage Results" MODIFIED="1589428692787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$tool__1_.coverage" NAME="tool (1) Coverage Results" MODIFIED="1589619384846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPdataset/Clothing" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$PrivKVbasic.coverage" NAME="PrivKVbasic Coverage Results" MODIFIED="1609864345346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/basicDP" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$LDPKV.coverage" NAME="LDPKV Coverage Results" MODIFIED="1589698978731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/DPKV" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$PCKV.coverage" NAME="PCKV Coverage Results" MODIFIED="1610003221062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/MLPKV" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$myLDPAlgorithm.coverage" NAME="myLDPAlgorithm Coverage Results" MODIFIED="1579183916825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$loaddata.coverage" NAME="loaddata Coverage Results" MODIFIED="1589444499475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPdataset/ E_Commerce" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$tool.coverage" NAME="tool Coverage Results" MODIFIED="1589463312931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPdataset/Movie" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$hitrate.coverage" NAME="hitrate Coverage Results" MODIFIED="1599568631333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/DPKV" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$SH.coverage" NAME="SH Coverage Results" MODIFIED="1579186497771" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$Clothing_AutoRun.coverage" NAME="Clothing_AutoRun Coverage Results" MODIFIED="1599552131990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPdataset/Clothing" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$test.coverage" NAME="test Coverage Results" MODIFIED="1577064688855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$OLHbasic.coverage" NAME="OLHbasic Coverage Results" MODIFIED="1609662237688" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/basicDP" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$EC_OLH.coverage" NAME="EC_OLH Coverage Results" MODIFIED="1610446473471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/MLPKV" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$OLH.coverage" NAME="OLH Coverage Results" MODIFIED="1589935172790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$sampling_RP.coverage" NAME="sampling_RP Coverage Results" MODIFIED="1578035389478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$PrivKV.coverage" NAME="PrivKV Coverage Results" MODIFIED="1610013960027" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/MLPKV" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$SH_rebuild.coverage" NAME="SH_rebuild Coverage Results" MODIFIED="1579186341313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$EC_OLH.coverage" NAME="EC_OLH Coverage Results" MODIFIED="1610446473471" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/MLPKV" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$PCKVbasic.coverage" NAME="PCKVbasic Coverage Results" MODIFIED="1590050497320" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/basicDP" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$LDPKV.coverage" NAME="LDPKV Coverage Results" MODIFIED="1589698978731" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/DPKV" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$PrivKVbasic.coverage" NAME="PrivKVbasic Coverage Results" MODIFIED="1609864345346" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/basicDP" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$OLHbasic.coverage" NAME="OLHbasic Coverage Results" MODIFIED="1614751461980" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/basicDP" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$tool.coverage" NAME="tool Coverage Results" MODIFIED="1589463312931" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPdataset/Movie" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$OLH.coverage" NAME="OLH Coverage Results" MODIFIED="1589935172790" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$Record.coverage" NAME="Record Coverage Results" MODIFIED="1609329314735" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/MLPKV/Util" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$basicfunc.coverage" NAME="basicfunc Coverage Results" MODIFIED="1609927800626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/basicFunction" />
-    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$RP.coverage" NAME="RP Coverage Results" MODIFIED="1579183343621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$datapreprocess.coverage" NAME="datapreprocess Coverage Results" MODIFIED="1589616669016" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/DPKV" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$PCKV.coverage" NAME="PCKV Coverage Results" MODIFIED="1610003221062" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/MLPKV" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$LDPKVbasic.coverage" NAME="LDPKVbasic Coverage Results" MODIFIED="1590372315417" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/basicDP" />
     <SUITE FILE_PATH="coverage/DifferentialPrivacywork$loadjson.coverage" NAME="loadjson Coverage Results" MODIFIED="1589508918989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/DPKV" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$hitrate.coverage" NAME="hitrate Coverage Results" MODIFIED="1599568631333" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/DPKV" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$sampling_RP.coverage" NAME="sampling_RP Coverage Results" MODIFIED="1578035389478" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$MLPKV.coverage" NAME="MLPKV Coverage Results" MODIFIED="1609952419621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/MLPKV" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$Laplace_Mechanism_Problem_4.coverage" NAME="Laplace_Mechanism_Problem_4 Coverage Results" MODIFIED="1577441051285" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/../github/differential_priivacy-master" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$Movie_AutoRun.coverage" NAME="Movie_AutoRun Coverage Results" MODIFIED="1593915696759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPdataset/Movie" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$Clothing_AutoRun.coverage" NAME="Clothing_AutoRun Coverage Results" MODIFIED="1599552131990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPdataset/Clothing" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$tools.coverage" NAME="tools Coverage Results" MODIFIED="1589428692787" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$tool__1_.coverage" NAME="tool (1) Coverage Results" MODIFIED="1589619384846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPdataset/Clothing" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$basicfunc.coverage" NAME="basicfunc Coverage Results" MODIFIED="1609927800626" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/basicFunction" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$E_Commerce_AutoRun.coverage" NAME="E_Commerce_AutoRun Coverage Results" MODIFIED="1593874804058" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPdataset/E_Commerce" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$RP.coverage" NAME="RP Coverage Results" MODIFIED="1579183343621" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$myLDPAlgorithm.coverage" NAME="myLDPAlgorithm Coverage Results" MODIFIED="1579183916825" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$loaddata.coverage" NAME="loaddata Coverage Results" MODIFIED="1589444499475" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPdataset/ E_Commerce" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$test.coverage" NAME="test Coverage Results" MODIFIED="1577064688855" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
+    <SUITE FILE_PATH="coverage/DifferentialPrivacywork$SH_rebuild.coverage" NAME="SH_rebuild Coverage Results" MODIFIED="1579186341313" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/LDP/LDPMiner" />
   </component>
 </project>
